@@ -79,65 +79,85 @@ Both deltas sit under the 8% noise floor. On this machine, this network,
 this afternoon: **pick a provider on cost, quota, or ergonomics — not on
 TTFT.**
 
-### 5. Tool lookups destroy TTFT, and streaming cannot rescue them
+### 5. Strands adds no measurable overhead over raw Bedrock
 
-`results/frameworks-*.json` — strands, sonnet-4.5, streaming, n=7
+`results/frameworks-20260901-163231.json` — sonnet-4.5, n=7, `gap=6`
 
-| scenario | TTFT |
-|---|---|
-| plain | 1901ms |
-| lookup (two hops) | **8869ms (+367%)** |
+| scenario / path | bedrock | strands | delta |
+|---|---|---|---|
+| plain / blocking | 2276ms | 2200ms | −75ms (−3%) — noise |
+| plain / streaming | 1243ms | 1266ms | +23ms (+2%) — noise |
+| schema / blocking | 2264ms | 2385ms | +122ms (+5%) — noise |
+| schema / streaming | 1244ms | 1335ms | +91ms (+7%) — noise |
+| lookup / blocking | 3485ms | 3556ms | +70ms (+2%) — noise |
 
-The mechanism matters more than the number. On a two-hop turn the first
-hop emits tool-call JSON, which is not speech. Nothing is audible until
-the *second* hop starts generating — so the streaming advantage from
-finding 1 collapses:
+Blocking rows compared on `total_p50`, streaming rows on `spoken_p50`.
+Every delta sits inside the 8% noise floor, and the sign is not even
+consistent — Strands is faster on one row and slower on four.
 
-| path | total p50 |
-|---|---|
-| lookup, blocking | 8943ms |
-| lookup, streaming | 9245ms (+3%, noise) |
+An earlier run at `gap=2.0` could not make this comparison at all: 5 of 6
+bedrock rows died of throttling while Strands retried through the same
+errors, so the suite was measuring retry policy rather than speed.
+Raising the gap to 6s recovered 11 of 12 rows and removed the
+absorbed-retry bulge from the tails.
 
-**Take:** a tool call is not a latency cost to shave, it is a turn where
-the caller hears silence for ~9 seconds. Fill it (an acknowledgement
-before dispatching the tool), avoid it, or make the first hop speak before
-it calls.
+**Take:** the framework is not the cost. Choose it on ergonomics.
+
+### 6. A tool lookup costs ~1.2s, and its TTFT is still unmeasured
+
+`results/frameworks-20260901-163231.json` — sonnet-4.5, blocking, n=7
+
+| provider | plain | lookup (two hops) | penalty |
+|---|---|---|---|
+| bedrock | 2276ms | 3485ms | +1210ms (+53%) |
+| strands | 2200ms | 3556ms | +1355ms (+62%) |
+
+An earlier contaminated run put this at 8943ms and +288%. That was
+throttling, not tool cost. **A second hop costs roughly 1.2s, not 6.6s.**
+
+The mechanism still argues that lookups hurt TTFT more than they hurt
+totals: the first hop emits tool-call JSON, which is not speech, so
+nothing is audible until the second hop starts generating. The
+measurement that would confirm it does not exist yet — see below.
+
+**Take:** budget ~1.2s per hop. Whether streaming rescues a two-hop turn
+is an open question here, not a settled one.
 
 ### Results that are NOT trustworthy
 
 Stated plainly so they are not quoted later as if they were findings.
 
-**The framework comparison did not happen.** The `frameworks` suite exists
-to measure Bedrock-vs-Strands overhead. 5 of 6 bedrock rows died with
-`ThrottlingException`; 6 of 6 strands rows survived. That asymmetry is
-retry policy, not speed — see the retry rule under [Method](#method).
-Every strands row is visibly bimodal:
+**There is no clean TTFT for a two-hop streaming turn.** In the `gap=6`
+run, `lookup / streaming` was the one row that still hit throttling:
+bedrock failed outright, and Strands retried through it, leaving a
+visibly bimodal sample —
 
 ```
-strands plain  blocking  [1969, 2061, 2106, 2303, 2406, 6911, 6991]
-strands schema blocking  [2058, 2110, 2139, 2571, 6542, 6959, 7349]
+strands lookup streaming  [3417, 3497, 4207, 4970, 8257, 9506, 9577]
 ```
 
-A tight cluster plus a second cluster ~4.5s higher. Those are absorbed
-retries, not tails. **No framework overhead number should be quoted from
-this run.** One bedrock-vs-strands pair did survive (plain/blocking, 2409
-vs 2303ms, −4%, inside the noise floor) — a hint, not the answer.
-
-**`schema` appearing 24% faster than `plain`** (1439ms vs 1901ms) is
-almost certainly contamination, not a finding. An attached-but-unused
-schema should cost slightly more, never less. Both rows carry the retry
-bimodality above.
+— a clean cluster at 3.4-4.2s and a second ~4.5s above it. Its median
+(4970ms) and its 4450ms TTFT are both inflated by absorbed retries, and
+the `+40% streaming vs blocking` line in that run's PATH table follows
+the same contamination. Finding 6 is deliberately silent on these
+numbers. Rerunning the lookup rows at a higher gap would settle it.
 
 **Strands `tokens: 0` on blocking rows** is hardcoded in `providers.py`,
 not measured. It reads like data. It isn't.
 
+**Now resolved.** An earlier `gap=2.0` run appeared to show `schema` 24%
+*faster* than `plain`, flagged here as probable contamination. The clean
+run confirms that reading: schema costs +0% (bedrock) and +5% (strands)
+on TTFT, both noise. An attached-but-unused schema is close to free, and
+was never faster.
+
 ### Conditions
 
 One machine, one residential network, us-east-1, on-demand capacity
-throughout, medians of n=7 after discarding each row's warm-up run,
-`gap=2.0s`. p95 at n=7 is indicative only. The `frameworks` run was
-additionally throttle-contaminated as described above. Reproduce before
-trusting any of it.
+throughout, medians of n=7 after discarding each row's warm-up run. p95
+at n=7 is indicative only. Findings 1-4 come from runs at `gap=2.0s`;
+findings 5 and 6 from `gap=6s`, which this account needed to keep
+sonnet-4.5 rows alive. Reproduce before trusting any of it.
 
 ---
 
@@ -192,11 +212,14 @@ Each rule exists because skipping it produced a wrong answer first.
   *longer* than the complete blocking response — an impossible result, and
   the one that started this project. **This holds at the SDK layer only.**
   Strands wraps its own throttle-retry around the model call and defeats it,
-  which is why strands rows survive throttling that kills raw bedrock rows,
-  and why the framework comparison above is not usable.
+  which is why strands rows survive throttling that kills raw bedrock rows.
+  Asymmetric row failure is therefore a red flag: the suite is measuring
+  retry policy, not speed. Raise `--gap` until both sides survive before
+  reading any provider delta.
 - **Calls paced.** A burst measures your quota, not the model. `gap=2.0s`
-  was still not enough for sonnet-4.5 on on-demand capacity; raise it if
-  rows fail.
+  was not enough for sonnet-4.5 on on-demand capacity here — it lost 5 of 6
+  bedrock rows. `gap=6s` recovered 11 of 12. Raise it until rows stop
+  failing; a failed row costs a whole rerun, a slow run costs minutes.
 - **First run discarded.** Warm-up, and cache-write on cached scenarios.
 - **Rows interleaved**, provider varying fastest. Comparing a number taken
   this morning against one taken this evening measures capacity drift.

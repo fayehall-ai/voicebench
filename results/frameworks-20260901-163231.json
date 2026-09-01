@@ -1,0 +1,833 @@
+{
+  "manifest": {
+    "voicebench": "0.1.0",
+    "timestamp_utc": "2026-09-01T23:32:31+00:00",
+    "suite": "frameworks",
+    "runs_per_row": 8,
+    "gap_seconds": 6.0,
+    "max_tokens": 256,
+    "noise_pct": 8.0,
+    "big_system_approx_tokens": 3000,
+    "python": "3.11.15",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "providers": [
+      {
+        "provider": "bedrock",
+        "region": "us-east-1",
+        "boto3": "1.43.83"
+      },
+      {
+        "provider": "strands",
+        "region": "us-east-1",
+        "strands": "unknown"
+      }
+    ],
+    "known_deviations": [
+      "temperature not matched across providers; the Anthropic SDK removed sampling parameters in 1.x",
+      "effort parameter shape is inferred from a capability flag, not documentation; treat effort rows as unverified",
+      "large system prompt is realistic in size and shape, filler in content",
+      "on-demand capacity everywhere; no provisioned throughput"
+    ]
+  },
+  "rows": [
+    {
+      "provider": "bedrock",
+      "model": "sonnet-4.5",
+      "scenario": "plain",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 2275.6247090001125,
+      "total_p95": 3231.6627079999307,
+      "tokens": 43,
+      "chars": 163,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 2622.500666999258,
+          "tokens": 64,
+          "chars": 288,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3020.7179590070155,
+          "tokens": 50,
+          "chars": 211,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2180.436082999222,
+          "tokens": 37,
+          "chars": 157,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2275.6247090001125,
+          "tokens": 48,
+          "chars": 182,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1768.54820799781,
+          "tokens": 31,
+          "chars": 99,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2203.1582920026267,
+          "tokens": 38,
+          "chars": 163,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3231.6627079999307,
+          "tokens": 43,
+          "chars": 145,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "strands",
+      "model": "sonnet-4.5",
+      "scenario": "plain",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 2200.1492499985034,
+      "total_p95": 3643.7882500031264,
+      "tokens": 0,
+      "chars": 175,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 2119.179457993596,
+          "tokens": 0,
+          "chars": 167,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2372.958459003712,
+          "tokens": 0,
+          "chars": 175,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2200.1492499985034,
+          "tokens": 0,
+          "chars": 193,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2080.539292001049,
+          "tokens": 0,
+          "chars": 172,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2457.3675419960637,
+          "tokens": 0,
+          "chars": 202,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3643.7882500031264,
+          "tokens": 0,
+          "chars": 219,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1842.5006669858703,
+          "tokens": 0,
+          "chars": 167,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "bedrock",
+      "model": "sonnet-4.5",
+      "scenario": "plain",
+      "path": "streaming",
+      "spoken_p50": 1242.6276249898365,
+      "total_p50": 2131.9361250061775,
+      "total_p95": 2974.29016600654,
+      "tokens": 43,
+      "chars": 163,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 1242.6276249898365,
+          "total_ms": 2071.428957991884,
+          "tokens": 44,
+          "chars": 154,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1354.3202089931583,
+          "total_ms": 2263.2642499957,
+          "tokens": 39,
+          "chars": 163,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1206.4568329951726,
+          "total_ms": 2037.3698329931358,
+          "tokens": 43,
+          "chars": 177,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2277.779708005255,
+          "total_ms": 2974.29016600654,
+          "tokens": 32,
+          "chars": 106,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1152.137249999214,
+          "total_ms": 2131.9361250061775,
+          "tokens": 52,
+          "chars": 190,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1347.1339169918792,
+          "total_ms": 2159.6709579898743,
+          "tokens": 42,
+          "chars": 189,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1176.8228750006529,
+          "total_ms": 2058.9863330096705,
+          "tokens": 45,
+          "chars": 163,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "strands",
+      "model": "sonnet-4.5",
+      "scenario": "plain",
+      "path": "streaming",
+      "spoken_p50": 1265.950792003423,
+      "total_p50": 2192.988584007253,
+      "total_p95": 2916.284499995527,
+      "tokens": 42,
+      "chars": 179,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 1396.118500008015,
+          "total_ms": 2228.8771669991547,
+          "tokens": 42,
+          "chars": 190,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1174.0967089863261,
+          "total_ms": 1901.2561669951538,
+          "tokens": 36,
+          "chars": 149,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1265.950792003423,
+          "total_ms": 2916.284499995527,
+          "tokens": 45,
+          "chars": 189,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1635.4072499962058,
+          "total_ms": 2673.7692919996334,
+          "tokens": 42,
+          "chars": 179,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1263.5391660005553,
+          "total_ms": 2158.258957992075,
+          "tokens": 42,
+          "chars": 186,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1220.4436669999268,
+          "total_ms": 2184.845249998034,
+          "tokens": 44,
+          "chars": 150,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1300.3302090073703,
+          "total_ms": 2192.988584007253,
+          "tokens": 44,
+          "chars": 165,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "bedrock",
+      "model": "sonnet-4.5",
+      "scenario": "schema",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 2263.61850000103,
+      "total_p95": 2800.8877499960363,
+      "tokens": 38,
+      "chars": 193,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 2207.358542000293,
+          "tokens": 38,
+          "chars": 193,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2048.1187499972293,
+          "tokens": 36,
+          "chars": 189,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2800.8877499960363,
+          "tokens": 54,
+          "chars": 262,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2787.980749999406,
+          "tokens": 43,
+          "chars": 211,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2263.61850000103,
+          "tokens": 45,
+          "chars": 220,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2419.080749998102,
+          "tokens": 35,
+          "chars": 182,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2138.6418329930166,
+          "tokens": 37,
+          "chars": 192,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "strands",
+      "model": "sonnet-4.5",
+      "scenario": "schema",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 2385.1936659921193,
+      "total_p95": 3437.6189579925267,
+      "tokens": 0,
+      "chars": 200,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 2385.1936659921193,
+          "tokens": 0,
+          "chars": 177,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2065.2300419897074,
+          "tokens": 0,
+          "chars": 200,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2445.7126669876743,
+          "tokens": 0,
+          "chars": 207,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2240.5582499923185,
+          "tokens": 0,
+          "chars": 188,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2754.6533340064343,
+          "tokens": 0,
+          "chars": 267,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3437.6189579925267,
+          "tokens": 0,
+          "chars": 177,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 2187.347041006433,
+          "tokens": 0,
+          "chars": 203,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "bedrock",
+      "model": "sonnet-4.5",
+      "scenario": "schema",
+      "path": "streaming",
+      "spoken_p50": 1244.3881249928381,
+      "total_p50": 2285.9364169999026,
+      "total_p95": 2933.033332999912,
+      "tokens": 39,
+      "chars": 196,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 1244.3881249928381,
+          "total_ms": 2285.9364169999026,
+          "tokens": 37,
+          "chars": 196,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1297.3600830009673,
+          "total_ms": 2933.033332999912,
+          "tokens": 48,
+          "chars": 240,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1325.12974999554,
+          "total_ms": 2276.7810839868616,
+          "tokens": 37,
+          "chars": 190,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1622.6190409943229,
+          "total_ms": 2495.487415988464,
+          "tokens": 44,
+          "chars": 221,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1214.6216249966528,
+          "total_ms": 2348.776375001762,
+          "tokens": 43,
+          "chars": 228,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1237.2922500071581,
+          "total_ms": 2217.842500002007,
+          "tokens": 37,
+          "chars": 179,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1216.764166005305,
+          "total_ms": 2049.8703330085846,
+          "tokens": 39,
+          "chars": 180,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "strands",
+      "model": "sonnet-4.5",
+      "scenario": "schema",
+      "path": "streaming",
+      "spoken_p50": 1334.9306250020163,
+      "total_p50": 2445.882750005694,
+      "total_p95": 2926.9734999979846,
+      "tokens": 37,
+      "chars": 182,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 1494.457708002301,
+          "total_ms": 2445.882750005694,
+          "tokens": 35,
+          "chars": 182,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1624.8388329986483,
+          "total_ms": 2590.913416002877,
+          "tokens": 37,
+          "chars": 155,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1270.6207080045715,
+          "total_ms": 2023.9410000067437,
+          "tokens": 34,
+          "chars": 181,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1334.9306250020163,
+          "total_ms": 2926.9734999979846,
+          "tokens": 47,
+          "chars": 242,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1265.4115839977749,
+          "total_ms": 2345.8241670014104,
+          "tokens": 42,
+          "chars": 218,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1346.6565409908071,
+          "total_ms": 2583.903915990959,
+          "tokens": 34,
+          "chars": 172,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1135.3762499929871,
+          "total_ms": 2115.781083004549,
+          "tokens": 40,
+          "chars": 221,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "bedrock",
+      "model": "sonnet-4.5",
+      "scenario": "lookup",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 3485.4849170078523,
+      "total_p95": 3787.338958005421,
+      "tokens": 112,
+      "chars": 84,
+      "tool_fired_runs": 7,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 3402.9571669962024,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3787.338958005421,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3404.6832080057357,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3527.543541000341,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3493.58537500666,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3414.655833999859,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3485.4849170078523,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "strands",
+      "model": "sonnet-4.5",
+      "scenario": "lookup",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 3555.589833005797,
+      "total_p95": 5145.525290994556,
+      "tokens": 0,
+      "chars": 85,
+      "tool_fired_runs": 7,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 3540.3657499991823,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3713.0039159965236,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3555.589833005797,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 5145.525290994556,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3553.82312501024,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3337.240416003624,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 3570.60570800968,
+          "tokens": 0,
+          "chars": 85,
+          "tool_fired": true,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "bedrock",
+      "model": "sonnet-4.5",
+      "scenario": "lookup",
+      "path": "streaming",
+      "skipped": true
+    },
+    {
+      "provider": "strands",
+      "model": "sonnet-4.5",
+      "scenario": "lookup",
+      "path": "streaming",
+      "spoken_p50": 4450.4333330114605,
+      "total_p50": 4970.002791000297,
+      "total_p95": 9577.47695800208,
+      "tokens": 112,
+      "chars": 84,
+      "tool_fired_runs": 7,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 7973.806374997366,
+          "total_ms": 8257.061041993438,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 3051.6357500018785,
+          "total_ms": 3416.9317920022877,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 9355.93787500693,
+          "total_ms": 9577.47695800208,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 4450.4333330114605,
+          "total_ms": 4970.002791000297,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 3077.568541004439,
+          "total_ms": 3497.3710000049323,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 9176.285207999172,
+          "total_ms": 9505.629915991449,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 3960.490541998297,
+          "total_ms": 4207.325708994176,
+          "tokens": 112,
+          "chars": 84,
+          "tool_fired": true,
+          "cache_read": 0
+        }
+      ]
+    }
+  ]
+}
