@@ -91,6 +91,14 @@ TTFT.**
 | schema / streaming | 1244ms | 1335ms | +91ms (+7%) — noise |
 | lookup / blocking | 3485ms | 3556ms | +70ms (+2%) — noise |
 
+A later `gap=12` run of the lookup rows alone adds two more, including the
+streaming comparison that had failed twice:
+
+| scenario / path | bedrock | strands | delta |
+|---|---|---|---|
+| lookup / blocking | 3917ms | 3650ms | −267ms (−7%) — noise |
+| lookup / streaming | 3267ms | 3255ms | −12ms (−0%) — noise |
+
 Blocking rows compared on `total_p50`, streaming rows on `spoken_p50`.
 Every delta sits inside the 8% noise floor, and the sign is not even
 consistent — Strands is faster on one row and slower on four.
@@ -103,9 +111,10 @@ absorbed-retry bulge from the tails.
 
 **Take:** the framework is not the cost. Choose it on ergonomics.
 
-### 6. A tool lookup costs ~1.2s, and its TTFT is still unmeasured
+### 6. A tool lookup costs ~1.2s, and the caller hears none of it
 
-`results/frameworks-20260901-163231.json` — sonnet-4.5, blocking, n=7
+`results/frameworks-20260901-163231.json` (`gap=6`) — sonnet-4.5,
+blocking, n=7
 
 | provider | plain | lookup (two hops) | penalty |
 |---|---|---|---|
@@ -115,32 +124,44 @@ absorbed-retry bulge from the tails.
 An earlier contaminated run put this at 8943ms and +288%. That was
 throttling, not tool cost. **A second hop costs roughly 1.2s, not 6.6s.**
 
-The mechanism still argues that lookups hurt TTFT more than they hurt
-totals: the first hop emits tool-call JSON, which is not speech, so
-nothing is audible until the second hop starts generating. The
-measurement that would confirm it does not exist yet — see below.
+`results/custom-20260901-165804.json` (`gap=12`) — lookup rows only, n=7
 
-**Take:** budget ~1.2s per hop. Whether streaming rescues a two-hop turn
-is an open question here, not a settled one.
+The interesting number is not the penalty but where it falls. On a
+lookup turn, first audible token arrives at **89-92% of total**:
+
+| provider | TTFT | total p50 | TTFT as % of total |
+|---|---|---|---|
+| bedrock | 3267ms | 3651ms | **89%** |
+| strands | 3255ms | 3538ms | **92%** |
+
+Against ~58% on a plain turn (finding 2). The mechanism is confirmed:
+the first hop emits tool-call JSON, which is not speech, so the caller
+waits out almost the entire turn before hearing anything.
+
+Streaming still helps, but far less than it does on a single hop. Within
+the `gap=12` run, blocking total against streaming TTFT:
+
+| provider | blocking total | streaming TTFT | audio arrives earlier by |
+|---|---|---|---|
+| bedrock | 3917ms | 3267ms | 650ms (17%) |
+| strands | 3650ms | 3255ms | 395ms (11%) |
+
+Compare finding 1, where streaming removed 45% of the wait on a plain
+turn. **Take:** budget ~1.2s per hop, and expect streaming to recover
+only 11-17% of a tool turn instead of ~45%. The silence is structural,
+not a tuning problem — fill it, or make the first hop speak before it
+calls.
 
 ### Results that are NOT trustworthy
 
 Stated plainly so they are not quoted later as if they were findings.
 
-**There is no clean TTFT for a two-hop streaming turn.** In the `gap=6`
-run, `lookup / streaming` was the one row that still hit throttling:
-bedrock failed outright, and Strands retried through it, leaving a
-visibly bimodal sample —
-
-```
-strands lookup streaming  [3417, 3497, 4207, 4970, 8257, 9506, 9577]
-```
-
-— a clean cluster at 3.4-4.2s and a second ~4.5s above it. Its median
-(4970ms) and its 4450ms TTFT are both inflated by absorbed retries, and
-the `+40% streaming vs blocking` line in that run's PATH table follows
-the same contamination. Finding 6 is deliberately silent on these
-numbers. Rerunning the lookup rows at a higher gap would settle it.
+**Now resolved.** An earlier `gap=6` run left `lookup / streaming` as
+the one throttled row — bedrock failed outright, Strands retried through
+it, and the sample was visibly bimodal. Rerunning those rows alone at
+`gap=12`, which matches the per-request spacing single-hop rows get
+because a lookup makes two calls per run, recovered all four rows with
+no bimodality (spreads 1.11-1.73x). Finding 6 now rests on that run.
 
 **Strands `tokens: 0` on blocking rows** is hardcoded in `providers.py`,
 not measured. It reads like data. It isn't.
@@ -156,8 +177,10 @@ was never faster.
 One machine, one residential network, us-east-1, on-demand capacity
 throughout, medians of n=7 after discarding each row's warm-up run. p95
 at n=7 is indicative only. Findings 1-4 come from runs at `gap=2.0s`;
-findings 5 and 6 from `gap=6s`, which this account needed to keep
-sonnet-4.5 rows alive. Reproduce before trusting any of it.
+finding 5 from `gap=6s`, and finding 6's TTFT numbers from `gap=12s` on
+the lookup rows alone. Each step up was needed to stop sonnet-4.5 rows
+throttling; a lookup row makes two calls per run and so needs twice the
+spacing. Reproduce before trusting any of it.
 
 ---
 
