@@ -11,6 +11,3 @@ wheels/
 
 # macOS
 .DS_Store
-
-# benchmark output; regenerate with a suite run
-results/

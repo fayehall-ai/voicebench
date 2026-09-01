@@ -1,0 +1,173 @@
+{
+  "manifest": {
+    "voicebench": "0.1.0",
+    "timestamp_utc": "2026-09-01T20:36:29+00:00",
+    "suite": "quick",
+    "runs_per_row": 8,
+    "gap_seconds": 2.0,
+    "max_tokens": 256,
+    "noise_pct": 8.0,
+    "big_system_approx_tokens": 3000,
+    "python": "3.11.15",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "providers": [
+      {
+        "provider": "anthropic",
+        "anthropic_sdk": "1.2.0",
+        "workspace_scoped": true
+      }
+    ],
+    "known_deviations": [
+      "temperature not matched across providers; the Anthropic SDK removed sampling parameters in 1.x",
+      "effort parameter shape is inferred from a capability flag, not documentation; treat effort rows as unverified",
+      "large system prompt is realistic in size and shape, filler in content",
+      "on-demand capacity everywhere; no provisioned throughput"
+    ]
+  },
+  "rows": [
+    {
+      "provider": "anthropic",
+      "model": "haiku-4.5",
+      "scenario": "plain",
+      "path": "blocking",
+      "spoken_p50": null,
+      "total_p50": 1041.4580420037964,
+      "total_p95": 1161.044624997885,
+      "tokens": 34,
+      "chars": 142,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": null,
+          "total_ms": 935.8181669958867,
+          "tokens": 32,
+          "chars": 131,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1041.4580420037964,
+          "tokens": 37,
+          "chars": 159,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1026.0047079937067,
+          "tokens": 34,
+          "chars": 142,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 950.9385419951286,
+          "tokens": 35,
+          "chars": 142,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1088.19870800653,
+          "tokens": 33,
+          "chars": 132,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1049.4715840031859,
+          "tokens": 34,
+          "chars": 143,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": null,
+          "total_ms": 1161.044624997885,
+          "tokens": 43,
+          "chars": 189,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "haiku-4.5",
+      "scenario": "plain",
+      "path": "streaming",
+      "spoken_p50": 700.2036250050878,
+      "total_p50": 1042.87987499265,
+      "total_p95": 1198.1803749949904,
+      "tokens": 35,
+      "chars": 142,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 700.2036250050878,
+          "total_ms": 1005.457249993924,
+          "tokens": 32,
+          "chars": 127,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 753.4582919906825,
+          "total_ms": 1042.87987499265,
+          "tokens": 35,
+          "chars": 140,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 857.9131660080748,
+          "total_ms": 1151.065790996654,
+          "tokens": 35,
+          "chars": 142,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 645.1248750090599,
+          "total_ms": 988.0688340053894,
+          "tokens": 35,
+          "chars": 142,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 675.6553329905728,
+          "total_ms": 1198.1803749949904,
+          "tokens": 34,
+          "chars": 143,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 660.0997499917867,
+          "total_ms": 967.1623339963844,
+          "tokens": 34,
+          "chars": 92,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 714.7797499928856,
+          "total_ms": 1133.7564999994356,
+          "tokens": 35,
+          "chars": 148,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    }
+  ]
+}
