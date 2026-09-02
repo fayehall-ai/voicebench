@@ -19,6 +19,7 @@ import json
 import platform
 import statistics
 import sys
+from dataclasses import replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -29,17 +30,22 @@ from .providers import active_providers, get_provider
 from .measure import Cell, Result, percentile
 
 
-def build_cells(providers, models, scenarios, paths) -> list[Cell]:
+def build_cells(providers, models, scenarios, paths,
+                efforts=(None,)) -> list[Cell]:
     """Provider varies FASTEST.
 
     Provider comparison is the measurement most easily corrupted by
     capacity drift, so the two legs of it should be seconds apart rather
     than minutes. Everything else varies more slowly.
+
+    efforts defaults to (None,) so a suite that never mentions effort
+    produces exactly the rows it did before this axis existed.
     """
     cells = []
-    for scenario, path, model in itertools.product(scenarios, paths, models):
+    for scenario, path, model, effort in itertools.product(
+            scenarios, paths, models, efforts):
         for provider in providers:
-            cells.append(Cell(provider, model, scenario, path))
+            cells.append(Cell(provider, model, scenario, path, effort))
     return cells
 
 
@@ -47,10 +53,15 @@ async def run_cell(cell: Cell, runs: int = RUNS, gap: float = GAP) -> Result | N
     provider = get_provider(cell.provider)
     model = MODELS[cell.model]
     scenario = SCENARIOS[cell.scenario]
+    if cell.effort is not None:
+        # The axis is applied here rather than threaded through every
+        # provider method: providers already read scenario.effort, so the
+        # composed scenario is the whole integration.
+        scenario = replace(scenario, effort=cell.effort)
 
     supported, why = provider.supports(model, scenario)
     if not supported:
-        print(f"  {cell.label():<62} SKIP — {why}")
+        print(f"  {cell.label():<66} SKIP — {why}")
         return None
 
     samples = []
@@ -61,7 +72,7 @@ async def run_cell(cell: Cell, runs: int = RUNS, gap: float = GAP) -> Result | N
             else:
                 samples.append(await provider.streaming(model, scenario))
         except Exception as exc:
-            print(f"  {cell.label():<62} FAIL — {type(exc).__name__}")
+            print(f"  {cell.label():<66} FAIL — {type(exc).__name__}")
             print(f"    {exc}")
             return None
         if i < runs - 1:
@@ -73,7 +84,7 @@ async def run_cell(cell: Cell, runs: int = RUNS, gap: float = GAP) -> Result | N
     if scenario.run_loop:
         samples = [s for s in samples if s.tool_fired]
         if not samples:
-            print(f"  {cell.label():<62} tool never fired — prompt is not "
+            print(f"  {cell.label():<66} tool never fired — prompt is not "
                   f"forcing the loop, or the probe is wrong")
             return None
 
@@ -96,7 +107,7 @@ async def run_cell(cell: Cell, runs: int = RUNS, gap: float = GAP) -> Result | N
     tool_col = f"{fired}/{runs - 1}" if scenario.run_loop else "-"
     cache_col = f"{result.cache_read:.0f}" if scenario.cache else "-"
 
-    print(f"  {cell.label():<62} {spoken_col} {result.total_p50:8.0f} "
+    print(f"  {cell.label():<66} {spoken_col} {result.total_p50:8.0f} "
           f"{result.total_p95:8.0f} {result.tokens:7.0f} "
           f"{tool_col:>6} {cache_col:>7}  n={result.n}")
     return result
@@ -109,9 +120,9 @@ async def run_suite(cells: list[Cell], runs: int = RUNS,
     print("first run of each row discarded; provider varies fastest so "
           "variants sit adjacent in time\n")
     print(f"  {'provider':<16} {'model':<11} {'scenario':<17} {'path':<10} "
-          f"{'spoken':>8} {'tot50':>8} {'tot95':>8} {'tokens':>7} "
-          f"{'tool':>6} {'cache':>7}")
-    print("  " + "-" * 104)
+          f"{'effort':<8} {'spoken':>8} {'tot50':>8} {'tot95':>8} "
+          f"{'tokens':>7} {'tool':>6} {'cache':>7}")
+    print("  " + "-" * 113)
 
     results: dict[Cell, Result | None] = {}
     for i, cell in enumerate(cells):
@@ -175,7 +186,10 @@ def load(path: Path) -> tuple[dict[Cell, Result | None], dict]:
     results: dict[Cell, Result | None] = {}
 
     for row in payload["rows"]:
-        cell = Cell(row["provider"], row["model"], row["scenario"], row["path"])
+        # .get for effort: every result committed before this axis existed
+        # has no such key, and those runs must stay replayable.
+        cell = Cell(row["provider"], row["model"], row["scenario"],
+                    row["path"], row.get("effort"))
         if row.get("skipped"):
             results[cell] = None
             continue

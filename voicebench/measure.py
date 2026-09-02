@@ -31,14 +31,22 @@ class Cell:
     model: str
     scenario: str
     path: str                     # "blocking" | "streaming"
+    effort: str | None = None     # None means the parameter is not sent
+
+    def effort_label(self) -> str:
+        """None is not "no effort" -- it is whatever the API defaults to.
+        Printing it blank invites reading it as a missing measurement."""
+        return self.effort or "default"
 
     def label(self) -> str:
         return (f"{self.provider:<16} {self.model:<11} "
-                f"{self.scenario:<17} {self.path}")
+                f"{self.scenario:<17} {self.path:<10} "
+                f"{self.effort_label():<8}")
 
     def as_dict(self) -> dict:
         return {"provider": self.provider, "model": self.model,
-                "scenario": self.scenario, "path": self.path}
+                "scenario": self.scenario, "path": self.path,
+                "effort": self.effort}
 
 
 @dataclass

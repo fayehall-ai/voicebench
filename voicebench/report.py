@@ -13,7 +13,14 @@ from __future__ import annotations
 from .config import NOISE_PCT, RUNS
 from .measure import Cell, Result
 
-AXES = ("provider", "model", "scenario", "path")
+AXES = ("provider", "model", "scenario", "path", "effort")
+
+
+def axis_label(value) -> str:
+    """None on the effort axis means the parameter was not sent, which
+    is the API default. It needs a name, or it prints as a blank that
+    reads like a hole in the data."""
+    return "default" if value is None else str(value)
 
 
 def field_for_group(axis: str, cells: list[Cell]) -> str:
@@ -82,12 +89,12 @@ def compare_axis(results: dict[Cell, Result | None], axis: str) -> list[tuple]:
         for key, (field, cells) in comparable.items():
             # The metric can differ BETWEEN groups, so each one states
             # which it used rather than relying on a single header.
-            print(f"  {' / '.join(key)}  ({field})")
+            print(f"  {' / '.join(axis_label(k) for k in key)}  ({field})")
             base = cells[0]
             base_value = _value(results, base, field)
             for cell in cells:
                 value = _value(results, cell, field)
-                name = getattr(cell, axis)
+                name = axis_label(getattr(cell, axis))
                 if cell is base:
                     print(f"      {name:<20} {value:8.0f}ms   (baseline)")
                 else:
@@ -118,9 +125,10 @@ def report(results: dict[Cell, Result | None], runs: int = RUNS) -> None:
         print("  too few of them produced data. Absence here is a result: it is")
         print("  not evidence that the variants are equivalent.\n")
         for axis, key, cells, have in missing:
-            names = {getattr(c, axis) for c in cells}
-            got = {getattr(c, axis) for c in have}
-            print(f"  varying {axis.upper():<9} {' / '.join(key)}")
+            names = {axis_label(getattr(c, axis)) for c in cells}
+            got = {axis_label(getattr(c, axis)) for c in have}
+            label = ' / '.join(axis_label(k) for k in key)
+            print(f"  varying {axis.upper():<9} {label}")
             print(f"      have: {', '.join(sorted(got)) or '(none)'}"
                   f"      no data: {', '.join(sorted(names - got))}")
 

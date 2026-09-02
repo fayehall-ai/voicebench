@@ -28,6 +28,7 @@ TOOL_REQUIRED = ["member_id", "date_of_service"]
 
 class Provider:
     name: str = "?"
+    sends_effort: bool = False    # does this provider actually transmit it
 
     def model_id(self, model: ModelSpec) -> str | None:
         raise NotImplementedError
@@ -37,6 +38,11 @@ class Provider:
             return False, f"{model.name} not offered on {self.name}"
         if scenario.effort and not model.supports_effort:
             return False, f"{model.name} has no effort capability"
+        if scenario.effort and not self.sends_effort:
+            # Skipping beats measuring. A provider that quietly drops the
+            # parameter would return a real-looking number for a request it
+            # never made, and the row would read as "effort changed nothing".
+            return False, f"{self.name} does not send the effort parameter"
         return True, ""
 
     def blocking(self, model: ModelSpec, scenario: Scenario) -> Sample:
@@ -205,6 +211,7 @@ class BedrockProvider(Provider):
 
 class AnthropicProvider(Provider):
     name = "anthropic"
+    sends_effort = True
 
     def __init__(self) -> None:
         import anthropic

@@ -186,10 +186,12 @@ against, which is the opposite of the intuitive assumption.
 **Scope limit, and it is a real one.** The `plain` prompt is a
 one-sentence question, so adaptive thinking has almost nothing to engage.
 This is good evidence that effort does not move TTFT on trivial turns and
-weak evidence about anything harder. The fair test would run effort
-against `lookup` or `bigprompt`, which the suite cannot currently express:
-effort is a property of a scenario rather than an axis that composes with
-one.
+weak evidence about anything harder.
+
+Effort is now an axis rather than a scenario, so `--suite effort` crosses
+it with `lookup` and the harder test is expressible. **It has not been run
+yet** — this finding still rests on `plain` alone, and the numbers above
+should not be read as covering tool turns.
 
 ### Results that are NOT trustworthy
 
@@ -263,8 +265,13 @@ python -m voicebench \
 |---|---|
 | provider | `bedrock`, `bedrock:us-west-2`, `anthropic`, `strands` |
 | model | `haiku-4.5`, `sonnet-4.5`, `sonnet-4.6`, `sonnet-5`, `opus-5` |
-| scenario | `plain`, `schema`, `lookup`, `bigprompt`, `bigprompt-cached`, `effort-*` |
+| scenario | `plain`, `schema`, `lookup`, `bigprompt`, `bigprompt-cached` |
 | path | `blocking`, `streaming` |
+| effort | `default`, `low`, `medium`, `high`, `xhigh`, `max` |
+
+`effort` crosses with every scenario, so "what does effort cost on a turn
+hard enough to think about" is expressible. `default` sends no
+`output_config` at all and is the baseline the levels are read against.
 
 ## Method
 

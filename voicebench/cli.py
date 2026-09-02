@@ -8,8 +8,8 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from .config import (GAP, MODELS, RUNS, SCENARIOS, SUITES, SYSTEM_BIG,
-                     Scenario)
+from .config import (EFFORTS, GAP, MODELS, RUNS, SCENARIOS, SUITES,
+                     SYSTEM_BIG, Scenario)
 from .providers import get_provider
 from .report import report
 from .runner import build_cells, load, run_suite, save
@@ -28,6 +28,10 @@ def show_list() -> None:
     for name, spec in SCENARIOS.items():
         print(f"  {name:<18} {spec.note}")
 
+    print("\nefforts")
+    print("  " + ", ".join("default" if e is None else e for e in EFFORTS))
+    print("    default means output_config is not sent at all")
+
     print("\nproviders")
     for name in ("bedrock", "bedrock:<region>", "anthropic", "strands"):
         print(f"  {name}")
@@ -35,7 +39,8 @@ def show_list() -> None:
     print("\nsuites")
     for name, spec in SUITES.items():
         rows = (len(spec["providers"]) * len(spec["models"])
-                * len(spec["scenarios"]) * len(spec["paths"]))
+                * len(spec["scenarios"]) * len(spec["paths"])
+                * len(spec.get("efforts", [None])))
         print(f"  {name:<14} {rows:2} rows  ~{rows * RUNS * GAP / 60:.0f} min  "
               f"[{', '.join(spec['providers'])}]")
     print()
@@ -121,6 +126,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--scenarios", help="comma separated")
     parser.add_argument("--paths", default="streaming",
                         help="blocking, streaming, or both")
+    parser.add_argument("--efforts", default="default",
+                        help="comma separated; 'default' sends no effort param")
     parser.add_argument("--runs", type=int, default=RUNS)
     parser.add_argument("--gap", type=float, default=GAP)
     parser.add_argument("--out", type=Path, default=None,
@@ -152,7 +159,9 @@ def main(argv: list[str] | None = None) -> int:
         spec = dict(providers=args.providers.split(","),
                     models=args.models.split(","),
                     scenarios=args.scenarios.split(","),
-                    paths=args.paths.split(","))
+                    paths=args.paths.split(","),
+                    efforts=[None if e in ("default", "none") else e
+                             for e in args.efforts.split(",")])
     else:
         parser.error("pass --suite NAME, or --providers/--models/--scenarios. "
                      "--list shows the options.")
@@ -161,6 +170,11 @@ def main(argv: list[str] | None = None) -> int:
         for name in spec[key]:
             if name not in table:
                 parser.error(f"unknown {key[:-1]}: {name}")
+
+    for effort in spec.get("efforts", [None]):
+        if effort not in EFFORTS:
+            known = ", ".join("default" if e is None else e for e in EFFORTS)
+            parser.error(f"unknown effort: {effort}. try: {known}")
 
     cells = build_cells(**spec)
     results = asyncio.run(run_suite(cells, args.runs, args.gap))

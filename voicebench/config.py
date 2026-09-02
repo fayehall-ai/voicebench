@@ -98,8 +98,19 @@ class Scenario:
     tools: bool = False          # attach the schema
     run_loop: bool = False       # execute the tool hop
     cache: bool = False          # prefix caching on the system block
-    effort: str | None = None    # output_config.effort; GA, no beta header
+    effort: str | None = None    # set by the runner from the effort axis,
+                                 # never in the table below
     note: str = ""
+
+
+# Effort is an AXIS, not a scenario. Baking it into a scenario made it
+# impossible to ask the only question worth asking -- what effort costs on a
+# turn hard enough to think about -- because a scenario cannot compose with
+# another scenario. As an axis it crosses with every one of them.
+#
+# None is not a level. It means output_config is not sent at all, which is
+# the API default, and it is the baseline every other level is read against.
+EFFORTS: tuple[str | None, ...] = (None, "low", "medium", "high", "xhigh", "max")
 
 
 SCENARIOS: dict[str, Scenario] = {
@@ -114,10 +125,6 @@ SCENARIOS: dict[str, Scenario] = {
                  note="~3k token system prompt: does prefill cost anything?"),
         Scenario("bigprompt-cached", system=SYSTEM_BIG, cache=True,
                  note="does prefix caching recover it?"),
-        Scenario("effort-low", effort="low",
-                 note="thinking depth below the default"),
-        Scenario("effort-medium", effort="medium",
-                 note="thinking depth below the default"),
     ]
 }
 
@@ -156,11 +163,12 @@ SUITES: dict[str, dict] = {
         providers=["anthropic"], models=["haiku-4.5"],
         scenarios=["plain", "schema", "lookup"], paths=["blocking", "streaming"]),
 
-    # plain sends no output_config at all, so it runs at the API default
-    # effort. Without it the suite compares two settings against each other
-    # and answers nothing about what either buys over leaving it unset.
+    # Crosses effort with a trivial turn and a two-hop one. plain alone
+    # cannot answer whether effort matters: a one-sentence question gives
+    # adaptive thinking almost nothing to engage, so a null there says
+    # little about a turn that has to reason.
     "effort": dict(
         providers=["anthropic"], models=["sonnet-5"],
-        scenarios=["plain", "effort-low", "effort-medium"],
-        paths=["streaming"]),
+        scenarios=["plain", "lookup"], paths=["streaming"],
+        efforts=[None, "low", "medium"]),
 }
