@@ -44,11 +44,29 @@ def build_big_system(approx_tokens: int = 3000) -> str:
               "of ninety days require a documented exception reason and "
               "supervisor review before reprocessing. Escalate to a human "
               "representative if the caller disputes the determination.\n")
-    text = header + "".join(clause.format(i=i) for i in range(500))
-    return text[: approx_tokens * 4]          # ~4 chars per token
+
+    # 5.2, not the usual 4: measured against the tokenizer for THIS filler
+    # text (120,000 chars -> 23,109 tokens on haiku-4.5). The generic
+    # estimate undershot by 23%, which on a scaling curve is a mislabelled
+    # x-axis rather than a rounding error.
+    target = int(approx_tokens * 5.2)
+    # Clause count is DERIVED from the request. A fixed pool caps the output
+    # silently: asking for 30k and 50k both returned the same 29,244-token
+    # string, so a scaling curve built on it would read "prefill cost goes
+    # flat above 29k" when what went flat is the prompt.
+    per_clause = len(clause.format(i=0))
+    count = max(1, (target - len(header)) // per_clause + 2)
+    text = header + "".join(clause.format(i=i) for i in range(count))
+
+    if len(text) < target:                    # never silently under-deliver
+        raise ValueError(
+            f"build_big_system({approx_tokens}) produced {len(text)//4} tokens")
+    return text[:target]
 
 
 SYSTEM_BIG = build_big_system()
+SYSTEM_MID = build_big_system(10_000)
+SYSTEM_HUGE = build_big_system(30_000)
 
 
 # --------------------------------------------------------------------------
@@ -125,6 +143,10 @@ SCENARIOS: dict[str, Scenario] = {
                  note="~3k token system prompt: does prefill cost anything?"),
         Scenario("bigprompt-cached", system=SYSTEM_BIG, cache=True,
                  note="does prefix caching recover it?"),
+        Scenario("midprompt", system=SYSTEM_MID,
+                 note="~10k token system prompt"),
+        Scenario("hugeprompt", system=SYSTEM_HUGE,
+                 note="~30k token system prompt: prefill cost at 10x bigprompt"),
     ]
 }
 
@@ -154,6 +176,15 @@ SUITES: dict[str, dict] = {
         providers=["anthropic"],
         models=["haiku-4.5", "sonnet-4.5", "sonnet-4.6", "sonnet-5"],
         scenarios=["plain"], paths=["streaming"]),
+
+    # Four points on one axis -- 0, 3k, 10k, 30k tokens -- across two model
+    # sizes. Two points cannot distinguish a slope from a step, and a null
+    # at 3k alone cannot distinguish "prefill is free" from "prefill is
+    # below the noise floor at this size".
+    "scaling": dict(
+        providers=["anthropic"], models=["haiku-4.5", "sonnet-4.5"],
+        scenarios=["plain", "bigprompt", "midprompt", "hugeprompt"],
+        paths=["streaming"]),
 
     "prompt": dict(
         providers=["anthropic"], models=["haiku-4.5", "sonnet-4.5"],

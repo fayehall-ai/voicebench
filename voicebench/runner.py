@@ -105,7 +105,12 @@ async def run_cell(cell: Cell, runs: int = RUNS, gap: float = GAP) -> Result | N
 
     spoken_col = f"{result.spoken_p50:8.0f}" if result.spoken_p50 else f"{'-':>8}"
     tool_col = f"{fired}/{runs - 1}" if scenario.run_loop else "-"
-    cache_col = f"{result.cache_read:.0f}" if scenario.cache else "-"
+    # Shown whenever the API reports a cache read, not only when the
+    # scenario asked for one. An unrequested non-zero here means the
+    # service cached on its own -- which is the first thing to check when a
+    # large prompt costs less than it should.
+    cache_col = (f"{result.cache_read:.0f}"
+                 if scenario.cache or result.cache_read else "-")
 
     print(f"  {cell.label():<66} {spoken_col} {result.total_p50:8.0f} "
           f"{result.total_p95:8.0f} {result.tokens:7.0f} "
@@ -148,7 +153,9 @@ def manifest(runs: int, gap: float, suite: str | None) -> dict:
         "gap_seconds": gap,
         "max_tokens": MAX_TOKENS,
         "noise_pct": NOISE_PCT,
-        "big_system_approx_tokens": len(SYSTEM_BIG) // 4,
+        # //5.2, matching the generator's measured calibration. //4 read
+        # 3,900 for a prompt the tokenizer puts at 3,025.
+        "big_system_approx_tokens": int(len(SYSTEM_BIG) // 5.2),
         "python": sys.version.split()[0],
         "platform": platform.platform(),
         "providers": [p.env() for p in active_providers()],

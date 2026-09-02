@@ -1,0 +1,612 @@
+{
+  "manifest": {
+    "voicebench": "0.1.0",
+    "timestamp_utc": "2026-09-02T01:26:12+00:00",
+    "suite": "scaling",
+    "runs_per_row": 8,
+    "gap_seconds": 6.0,
+    "max_tokens": 256,
+    "noise_pct": 8.0,
+    "big_system_approx_tokens": 2999,
+    "python": "3.11.15",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "providers": [
+      {
+        "provider": "anthropic",
+        "anthropic_sdk": "1.2.0",
+        "workspace_scoped": true
+      }
+    ],
+    "known_deviations": [
+      "temperature not matched across providers; the Anthropic SDK removed sampling parameters in 1.x",
+      "large system prompt is realistic in size and shape, filler in content",
+      "on-demand capacity everywhere; no provisioned throughput"
+    ]
+  },
+  "rows": [
+    {
+      "provider": "anthropic",
+      "model": "haiku-4.5",
+      "scenario": "plain",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 697.0109589892672,
+      "total_p50": 1074.1782500117552,
+      "total_p95": 1318.1479579943698,
+      "tokens": 34,
+      "chars": 140,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 741.3113750080811,
+          "total_ms": 1074.1782500117552,
+          "tokens": 36,
+          "chars": 150,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 639.7034580004402,
+          "total_ms": 1318.1479579943698,
+          "tokens": 55,
+          "chars": 263,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 697.0109589892672,
+          "total_ms": 1002.6373339933343,
+          "tokens": 33,
+          "chars": 135,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 693.8528339960612,
+          "total_ms": 1052.3763340024743,
+          "tokens": 34,
+          "chars": 142,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 637.8374170017196,
+          "total_ms": 990.5293339979835,
+          "tokens": 34,
+          "chars": 140,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 699.3372079887195,
+          "total_ms": 1081.967457997962,
+          "tokens": 34,
+          "chars": 140,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 854.0225000033388,
+          "total_ms": 1170.995167005458,
+          "tokens": 33,
+          "chars": 136,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "sonnet-4.5",
+      "scenario": "plain",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 1467.716625003959,
+      "total_p50": 2354.7158340079477,
+      "total_p95": 2554.019541988964,
+      "tokens": 44,
+      "chars": 180,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 1394.7566249989904,
+          "total_ms": 1971.4474159991369,
+          "tokens": 44,
+          "chars": 169,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1467.716625003959,
+          "total_ms": 2291.682708004373,
+          "tokens": 45,
+          "chars": 187,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1342.080916991108,
+          "total_ms": 2165.3284589992836,
+          "tokens": 52,
+          "chars": 191,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1517.2095419984544,
+          "total_ms": 2554.019541988964,
+          "tokens": 44,
+          "chars": 151,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1561.698500008788,
+          "total_ms": 2354.7158340079477,
+          "tokens": 42,
+          "chars": 180,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1448.0384170019533,
+          "total_ms": 2380.0584580021678,
+          "tokens": 37,
+          "chars": 177,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1580.4817500029458,
+          "total_ms": 2419.7977920121048,
+          "tokens": 47,
+          "chars": 193,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "haiku-4.5",
+      "scenario": "bigprompt",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 725.1306660036789,
+      "total_p50": 1248.1518749991665,
+      "total_p95": 1418.1550840003183,
+      "tokens": 43,
+      "chars": 221,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 709.7913329926087,
+          "total_ms": 1194.0237910021096,
+          "tokens": 43,
+          "chars": 221,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 864.1076249914477,
+          "total_ms": 1248.1518749991665,
+          "tokens": 44,
+          "chars": 226,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 858.0884580005659,
+          "total_ms": 1304.4789160048822,
+          "tokens": 49,
+          "chars": 237,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 817.7418339910218,
+          "total_ms": 1418.1550840003183,
+          "tokens": 43,
+          "chars": 223,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 708.0874590028543,
+          "total_ms": 1258.4274589898996,
+          "tokens": 42,
+          "chars": 206,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 725.1306660036789,
+          "total_ms": 1160.9557500050869,
+          "tokens": 42,
+          "chars": 206,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 638.9825420046691,
+          "total_ms": 1089.7182090120623,
+          "tokens": 41,
+          "chars": 201,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "sonnet-4.5",
+      "scenario": "bigprompt",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 2041.5790830011247,
+      "total_p50": 3214.9326670041773,
+      "total_p95": 3502.1526250056922,
+      "tokens": 40,
+      "chars": 188,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 2278.34362500289,
+          "total_ms": 3305.943875006051,
+          "tokens": 40,
+          "chars": 194,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2232.9115419997834,
+          "total_ms": 3214.9326670041773,
+          "tokens": 40,
+          "chars": 188,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1668.0619999970077,
+          "total_ms": 2548.7909999937983,
+          "tokens": 36,
+          "chars": 162,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2234.181207997608,
+          "total_ms": 3313.9279169990914,
+          "tokens": 45,
+          "chars": 192,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2040.4276250046678,
+          "total_ms": 2638.9936250052415,
+          "tokens": 26,
+          "chars": 115,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1917.6626249973197,
+          "total_ms": 2709.0135410107905,
+          "tokens": 38,
+          "chars": 183,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2041.5790830011247,
+          "total_ms": 3502.1526250056922,
+          "tokens": 51,
+          "chars": 260,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "haiku-4.5",
+      "scenario": "midprompt",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 746.8625830078963,
+      "total_p50": 1359.8737090069335,
+      "total_p95": 1657.099999996717,
+      "tokens": 52,
+      "chars": 280,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 778.7526250031078,
+          "total_ms": 1314.2877079953905,
+          "tokens": 61,
+          "chars": 280,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 711.5539160004118,
+          "total_ms": 1402.4544579879148,
+          "tokens": 61,
+          "chars": 297,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 743.4422909864224,
+          "total_ms": 1323.1665829953272,
+          "tokens": 46,
+          "chars": 238,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 684.2389590019593,
+          "total_ms": 1048.5515420004958,
+          "tokens": 38,
+          "chars": 175,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 948.0706250033109,
+          "total_ms": 1359.8737090069335,
+          "tokens": 39,
+          "chars": 172,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 746.8625830078963,
+          "total_ms": 1558.5822919965722,
+          "tokens": 52,
+          "chars": 283,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1025.3027500002645,
+          "total_ms": 1657.099999996717,
+          "tokens": 53,
+          "chars": 284,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "sonnet-4.5",
+      "scenario": "midprompt",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 1992.8667500062147,
+      "total_p50": 2833.9587499940535,
+      "total_p95": 3662.3750839935383,
+      "tokens": 26,
+      "chars": 115,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 2181.3023339927895,
+          "total_ms": 2833.9587499940535,
+          "tokens": 26,
+          "chars": 114,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1853.871707993676,
+          "total_ms": 2464.133874993422,
+          "tokens": 26,
+          "chars": 114,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2171.5781670063734,
+          "total_ms": 2856.0159589978866,
+          "tokens": 26,
+          "chars": 114,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1830.1542090048315,
+          "total_ms": 2776.3538340077503,
+          "tokens": 38,
+          "chars": 126,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1889.6283750073053,
+          "total_ms": 2504.9300829996355,
+          "tokens": 26,
+          "chars": 115,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2354.72462499456,
+          "total_ms": 3662.3750839935383,
+          "tokens": 39,
+          "chars": 180,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1992.8667500062147,
+          "total_ms": 2946.8270000070333,
+          "tokens": 40,
+          "chars": 201,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "haiku-4.5",
+      "scenario": "hugeprompt",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 820.1142079924466,
+      "total_p50": 1652.5388339941856,
+      "total_p95": 1934.3262079928536,
+      "tokens": 72,
+      "chars": 351,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 963.8244999950984,
+          "total_ms": 1934.3262079928536,
+          "tokens": 73,
+          "chars": 360,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 878.0342920072144,
+          "total_ms": 1817.0325829996727,
+          "tokens": 78,
+          "chars": 358,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 735.2838329970837,
+          "total_ms": 1683.4988329937914,
+          "tokens": 72,
+          "chars": 351,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 820.1142079924466,
+          "total_ms": 1473.3997500006808,
+          "tokens": 55,
+          "chars": 268,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 831.4763749949634,
+          "total_ms": 1458.887707995018,
+          "tokens": 54,
+          "chars": 242,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 752.2083749936428,
+          "total_ms": 1556.572083994979,
+          "tokens": 65,
+          "chars": 327,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 761.7728339973837,
+          "total_ms": 1652.5388339941856,
+          "tokens": 84,
+          "chars": 392,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "model": "sonnet-4.5",
+      "scenario": "hugeprompt",
+      "path": "streaming",
+      "effort": null,
+      "spoken_p50": 1921.0279580001952,
+      "total_p50": 3113.717665997683,
+      "total_p95": 3849.9849999934668,
+      "tokens": 38,
+      "chars": 186,
+      "tool_fired_runs": 0,
+      "n": 7,
+      "cache_read": 0,
+      "raw_samples": [
+        {
+          "spoken_ms": 2402.6959579932736,
+          "total_ms": 3849.9849999934668,
+          "tokens": 43,
+          "chars": 213,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2009.5340839907294,
+          "total_ms": 3175.3492089919746,
+          "tokens": 38,
+          "chars": 182,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1921.0279580001952,
+          "total_ms": 3032.3477500060108,
+          "tokens": 38,
+          "chars": 186,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1877.3567500029458,
+          "total_ms": 2998.4687920077704,
+          "tokens": 39,
+          "chars": 192,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 2188.720457997988,
+          "total_ms": 3337.636583004496,
+          "tokens": 38,
+          "chars": 187,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1864.9312919878867,
+          "total_ms": 2912.9158750001807,
+          "tokens": 35,
+          "chars": 158,
+          "tool_fired": false,
+          "cache_read": 0
+        },
+        {
+          "spoken_ms": 1864.8924159933813,
+          "total_ms": 3113.717665997683,
+          "tokens": 38,
+          "chars": 180,
+          "tool_fired": false,
+          "cache_read": 0
+        }
+      ]
+    }
+  ]
+}
