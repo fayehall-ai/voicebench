@@ -28,7 +28,7 @@ all came back null, why prefill stays invisible until 30k tokens
 (finding 8), and why the two things that did move are which model pool
 you land in (finding 3) and how many hops the turn takes (finding 6).
 Four nulls in a row is not a boring result; it locates where the time
-actually lives. Region is the obvious fourth null to check and **has not
+actually lives — and finding 9 is what you do about it once you know. Region is the obvious fourth null to check and **has not
 been run here** — the suite exists, the data does not.
 
 ### 1. Streaming buys ~350ms of perceived latency and costs nothing
@@ -195,7 +195,8 @@ turn — 341ms off a 1041ms wait, and 37% on the replicate run.
 
 **Take:** budget ~1.2s per hop, and expect streaming to recover only
 11-17% of a tool turn instead of ~33%. The silence is structural, not a
-tuning problem — fill it, or make the first hop speak before it calls.
+tuning problem — but structural is not unavoidable: **finding 9 removes
+65% of it with one sentence of prompt.**
 
 ### 7. Effort does not buy time to first token
 
@@ -283,6 +284,51 @@ should not be quoted as sonnet's slope.
 
 This is the measurement finding 3 leans on: at 30 tokens, 4.1 µs/token is
 0.12ms, which is why prefill cannot account for a 658ms model gap.
+
+### 9. One sentence of instruction removes 65% of the tool-call silence
+
+Finding 6 says the silence on a two-hop turn is structural, because the
+first hop emits tool JSON rather than speech. Structural is not the same
+as unavoidable. `lookup-preamble` is the identical turn with one sentence
+added to the system prompt:
+
+> If you need to look something up, say so first in one short sentence,
+> then look it up.
+
+`results/preamble-20260901-185856.json` — anthropic, streaming, n=7,
+`gap=8`
+
+| model | scenario | TTFT | total | tokens |
+|---|---|---|---|---|
+| haiku-4.5 | lookup | 1943ms | 2133ms | 113 |
+| haiku-4.5 | lookup-preamble | **681ms (−65%)** | 2322ms (+9%) | 123 |
+| sonnet-4.5 | lookup | 2723ms | 3088ms | 112 |
+| sonnet-4.5 | lookup-preamble | **1303ms (−52%)** | 3841ms (+24%) | 120 |
+
+**The caller starts hearing speech 1.3-1.4 seconds sooner.**
+
+The mechanism is confirmed rather than assumed: preamble TTFT lands on
+the same number as a *single-hop* turn, because with the instruction the
+first hop is a single-hop turn as far as the ear is concerned.
+
+| model | plain TTFT | lookup-preamble TTFT | difference |
+|---|---|---|---|
+| haiku-4.5 | 697ms | 681ms | −16ms (−2%) |
+| sonnet-4.5 | 1468ms | 1303ms | −165ms (−11%) |
+
+**What it costs:** total grows 9% on haiku and 24% on sonnet, because the
+model emits ~8-10 extra tokens and still makes both hops. That is the
+right trade for voice. Total is not what a caller perceives — during
+those extra milliseconds they are listening to a sentence instead of to
+nothing.
+
+**Take:** this is the only change here that alters what the caller
+experiences rather than describing it, and it is one line of prompt. Do
+it on every tool-calling turn.
+
+One caveat: haiku's preamble row carries a single 2179ms outlier against
+a cluster of `[667, 667, 676, 681, 681, 765]`, giving it a 3.27x spread.
+The median is solid; the tail is not characterised at n=7.
 
 ### Results that are NOT trustworthy
 
