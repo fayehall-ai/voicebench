@@ -242,9 +242,10 @@ class AnthropicProvider(Provider):
                                  "required": TOOL_REQUIRED},
             }]
         if scenario.effort:
-            # UNVERIFIED. Inferred from a capability flag, not documentation.
-            # If every effort row 400s with the same message, this shape is
-            # wrong — that is a bug, not a latency finding.
+            # Verified against the API reference and by a clean run: effort is
+            # GA, needs no beta header, and nests inside output_config.
+            # Omitting it entirely is not "no effort" — it is the default,
+            # which is why the effort suite carries a plain baseline row.
             kwargs["output_config"] = {"effort": scenario.effort}
 
         # temperature is absent because the SDK removed sampling parameters

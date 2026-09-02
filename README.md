@@ -272,9 +272,9 @@ committed in `results/`.
 
 - Temperature cannot be matched across providers; the Anthropic SDK removed
   sampling parameters in 1.x.
-- The `effort` parameter shape is inferred from a capability flag, not
-  documentation. Treat those rows as unverified until an error confirms or
-  refutes the shape.
+- Effort rows compare `low` and `medium` against a `plain` baseline, which
+  sends no `output_config` and therefore runs at the API default. There is no
+  explicit-default row, so "default" here means "parameter omitted".
 - Prefix caching is implemented for the Anthropic provider only. Bedrock
   uses `cachePoint` blocks, a different shape.
 - The large system prompt is realistic in size and structure, filler in

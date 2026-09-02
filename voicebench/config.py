@@ -98,7 +98,7 @@ class Scenario:
     tools: bool = False          # attach the schema
     run_loop: bool = False       # execute the tool hop
     cache: bool = False          # prefix caching on the system block
-    effort: str | None = None    # UNVERIFIED parameter shape — see providers
+    effort: str | None = None    # output_config.effort; GA, no beta header
     note: str = ""
 
 
@@ -114,8 +114,10 @@ SCENARIOS: dict[str, Scenario] = {
                  note="~3k token system prompt: does prefill cost anything?"),
         Scenario("bigprompt-cached", system=SYSTEM_BIG, cache=True,
                  note="does prefix caching recover it?"),
-        Scenario("effort-low", effort="low", note="UNVERIFIED parameter shape"),
-        Scenario("effort-medium", effort="medium", note="UNVERIFIED parameter shape"),
+        Scenario("effort-low", effort="low",
+                 note="thinking depth below the default"),
+        Scenario("effort-medium", effort="medium",
+                 note="thinking depth below the default"),
     ]
 }
 
@@ -154,7 +156,11 @@ SUITES: dict[str, dict] = {
         providers=["anthropic"], models=["haiku-4.5"],
         scenarios=["plain", "schema", "lookup"], paths=["blocking", "streaming"]),
 
+    # plain sends no output_config at all, so it runs at the API default
+    # effort. Without it the suite compares two settings against each other
+    # and answers nothing about what either buys over leaving it unset.
     "effort": dict(
         providers=["anthropic"], models=["sonnet-5"],
-        scenarios=["effort-low", "effort-medium"], paths=["streaming"]),
+        scenarios=["plain", "effort-low", "effort-medium"],
+        paths=["streaming"]),
 }

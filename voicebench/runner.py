@@ -144,8 +144,6 @@ def manifest(runs: int, gap: float, suite: str | None) -> dict:
         "known_deviations": [
             "temperature not matched across providers; the Anthropic SDK "
             "removed sampling parameters in 1.x",
-            "effort parameter shape is inferred from a capability flag, "
-            "not documentation; treat effort rows as unverified",
             "large system prompt is realistic in size and shape, filler in "
             "content",
             "on-demand capacity everywhere; no provisioned throughput",
