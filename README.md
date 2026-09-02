@@ -152,46 +152,59 @@ only 11-17% of a tool turn instead of ~45%. The silence is structural,
 not a tuning problem — fill it, or make the first hop speak before it
 calls.
 
-### 7. Lowering effort does not buy time to first token
+### 7. Effort does not buy time to first token
 
-`results/effort-20260901-172130.json` — anthropic, sonnet-5, streaming, n=7
+Not on a trivial turn, and not on a tool turn either.
 
-| scenario | TTFT | total p50 | tokens |
+`results/effort-20260901-172130.json` — sonnet-5, plain, streaming, n=7
+
+| effort | TTFT | total p50 | tokens |
 |---|---|---|---|
-| plain (effort unset → API default) | 1112ms | 1492ms | 34 |
-| effort-low | 1048ms (−6%) — noise | 1349ms | 31 |
-| effort-medium | 1024ms (−8%) — noise | 1570ms | 37 |
+| default | 1112ms | 1492ms | 34 |
+| low | 1048ms (−6%) — noise | 1349ms | 31 |
+| medium | 1024ms (−8%) — noise | 1570ms | 37 |
 
-Both deltas sit inside the noise floor, and three independent checks say
-that is a real null rather than a small effect the sample is too thin to
-resolve:
+Three checks say that is a real null rather than an effect too small for
+n=7 to resolve. It is **non-monotonic** — if effort drove TTFT the order
+would be default > medium > low, and it is 1112 > 1024 < 1048. Every raw
+range **contains every other median**, in all six pairwise directions
+(default 990-1928, low 921-1434, medium 925-1345). And `total_p50` is
+non-monotonic too (1492 / 1349 / 1570) while tracking token count
+(34 / 31 / 37) — the response got longer, not more considered. An earlier
+two-row run reproduces the low-vs-medium half at 955ms vs 952ms.
 
-- **Non-monotonic.** If effort drove TTFT the order would be
-  default > medium > low. It is 1112 > 1024 < 1048 — medium beats low,
-  which effort cannot explain.
-- **Fully overlapping.** Every row's raw range contains every other row's
-  median, in all six pairwise directions: plain 990-1928, low 921-1434,
-  medium 925-1345.
-- **Totals track tokens, not effort.** `total_p50` is non-monotonic too
-  (1492 / 1349 / 1570) and follows token count (34 / 31 / 37). The
-  response got longer, not more considered.
+`plain` is a one-sentence question, so that null could always be dismissed
+as "adaptive thinking had nothing to engage". Effort is an axis now, so
+the same sweep runs against a two-hop turn:
 
-An earlier two-row run reproduces the low-vs-medium half: 955ms vs 952ms,
-a −0.3% difference at a different absolute level.
+`results/custom-20260901-180525.json` — sonnet-5, lookup, streaming, n=7,
+`gap=12`
 
-**Take:** effort is a cost and quality lever, not a latency one. Set it on
-quality grounds — for a voice turn there is no TTFT penalty to trade
-against, which is the opposite of the intuitive assumption.
+| effort | TTFT | vs default | spread | tokens |
+|---|---|---|---|---|
+| default | 2410ms | (baseline) | 1.14x | 120 |
+| high | 2347ms | −3% — noise | 1.19x | 121 |
+| low | 2559ms | +6% — noise | 3.54x | 117 |
+| xhigh | 2596ms | +8% — noise | 1.54x | 143 |
+| max | 2872ms | +19% | 1.22x | 121 |
+| medium | 3138ms | +30% | 1.72x | 119 |
 
-**Scope limit, and it is a real one.** The `plain` prompt is a
-one-sentence question, so adaptive thinking has almost nothing to engage.
-This is good evidence that effort does not move TTFT on trivial turns and
-weak evidence about anything harder.
+**`high` measures the same as `default`** — −3%, inside the noise floor,
+on the two cleanest rows in the set. That is the documented behaviour
+(omitting `output_config` means `high`) confirmed end to end, and it is
+the check that makes the rest of the table worth reading: the harness is
+sending what it claims to send.
 
-Effort is now an axis rather than a scenario, so `--suite effort` crosses
-it with `lookup` and the harder test is expressible. **It has not been run
-yet** — this finding still rests on `plain` alone, and the numbers above
-should not be read as covering tool turns.
+Across `low` through `xhigh` the curve is flat within noise. `max` at
++19% on a clean row is the one plausible monotonic signal — most
+thinking, slowest first token. `medium` is out of place and is **not**
+treated as a finding; see below.
+
+**Take:** effort is a cost and quality lever, not a latency one, on
+trivial and tool turns alike. Set it on quality grounds — for a voice
+turn there is no TTFT penalty to trade against, which inverts the
+intuitive assumption. `max` is the one level worth measuring before
+adopting.
 
 ### Results that are NOT trustworthy
 
@@ -203,6 +216,27 @@ it, and the sample was visibly bimodal. Rerunning those rows alone at
 `gap=12`, which matches the per-request spacing single-hop rows get
 because a lookup makes two calls per run, recovered all four rows with
 no bimodality (spreads 1.11-1.73x). Finding 6 now rests on that run.
+
+**`medium` effort on lookup turns is unexplained, and is not a finding.**
+It reads +30% above default on the cleanest run, but its magnitude tracks
+its own contamination across four runs rather than holding steady:
+
+| spread | TTFT |
+|---|---|
+| 6.97x | 4998ms |
+| 4.21x | 4630ms |
+| 2.96x | 4921ms |
+| 1.72x | 3138ms |
+
+As the distribution tightens the median falls toward the pack, which is
+what contamination looks like and not what a real effect looks like. Row
+position was tested and ruled out — `medium` measured the same slow value
+from first and last slot, and `default` the same fast value from both — so
+it is not ordering. What remains unexplained is why that one level also
+draws the widest spreads. An earlier draft of this section called the
+effect real on the strength of the position test alone; ruling out one
+alternative is not the same as establishing the cause. Treat any `medium`
+number here as unresolved.
 
 **Strands `tokens: 0` on blocking rows** is hardcoded in `providers.py`,
 not measured. It reads like data. It isn't.
@@ -221,8 +255,9 @@ at n=7 is indicative only. Findings 1-4 and 7 come from runs at
 `gap=2.0s`; finding 5 from `gap=6s`, and finding 6's TTFT numbers from
 `gap=12s` on the lookup rows alone. Each step up was needed to stop
 sonnet-4.5 rows throttling; a lookup row makes two calls per run and so
-needs twice the spacing. Finding 7 runs sonnet-5, which did not throttle
-at `gap=2.0s`. Reproduce before trusting any of it.
+needs twice the spacing. Finding 7's plain rows run sonnet-5 at `gap=2.0s`,
+which did not throttle; its lookup rows need `gap=12s`, since a lookup
+makes two calls per run. Reproduce before trusting any of it.
 
 ---
 
