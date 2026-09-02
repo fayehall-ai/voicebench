@@ -146,11 +146,12 @@ the `gap=12` run, blocking total against streaming TTFT:
 | bedrock | 3917ms | 3267ms | 650ms (17%) |
 | strands | 3650ms | 3255ms | 395ms (11%) |
 
-Compare finding 1, where streaming removed 45% of the wait on a plain
-turn. **Take:** budget ~1.2s per hop, and expect streaming to recover
-only 11-17% of a tool turn instead of ~45%. The silence is structural,
-not a tuning problem — fill it, or make the first hop speak before it
-calls.
+Compare finding 1, where streaming removed 33% of the wait on a plain
+turn — 341ms off a 1041ms wait, and 37% on the replicate run.
+
+**Take:** budget ~1.2s per hop, and expect streaming to recover only
+11-17% of a tool turn instead of ~33%. The silence is structural, not a
+tuning problem — fill it, or make the first hop speak before it calls.
 
 ### 7. Effort does not buy time to first token
 
