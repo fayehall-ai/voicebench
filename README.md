@@ -378,3 +378,7 @@ voicebench/
 Split by **layer**, not by scenario. Splitting by scenario would split
 along the axis you most need to compare across, and separate processes
 cannot interleave — which makes cross-scenario deltas invalid.
+
+---
+
+Built while working on production voice-agent evaluation at voiciee.ai.
