@@ -152,6 +152,45 @@ only 11-17% of a tool turn instead of ~45%. The silence is structural,
 not a tuning problem — fill it, or make the first hop speak before it
 calls.
 
+### 7. Lowering effort does not buy time to first token
+
+`results/effort-20260901-172130.json` — anthropic, sonnet-5, streaming, n=7
+
+| scenario | TTFT | total p50 | tokens |
+|---|---|---|---|
+| plain (effort unset → API default) | 1112ms | 1492ms | 34 |
+| effort-low | 1048ms (−6%) — noise | 1349ms | 31 |
+| effort-medium | 1024ms (−8%) — noise | 1570ms | 37 |
+
+Both deltas sit inside the noise floor, and three independent checks say
+that is a real null rather than a small effect the sample is too thin to
+resolve:
+
+- **Non-monotonic.** If effort drove TTFT the order would be
+  default > medium > low. It is 1112 > 1024 < 1048 — medium beats low,
+  which effort cannot explain.
+- **Fully overlapping.** Every row's raw range contains every other row's
+  median, in all six pairwise directions: plain 990-1928, low 921-1434,
+  medium 925-1345.
+- **Totals track tokens, not effort.** `total_p50` is non-monotonic too
+  (1492 / 1349 / 1570) and follows token count (34 / 31 / 37). The
+  response got longer, not more considered.
+
+An earlier two-row run reproduces the low-vs-medium half: 955ms vs 952ms,
+a −0.3% difference at a different absolute level.
+
+**Take:** effort is a cost and quality lever, not a latency one. Set it on
+quality grounds — for a voice turn there is no TTFT penalty to trade
+against, which is the opposite of the intuitive assumption.
+
+**Scope limit, and it is a real one.** The `plain` prompt is a
+one-sentence question, so adaptive thinking has almost nothing to engage.
+This is good evidence that effort does not move TTFT on trivial turns and
+weak evidence about anything harder. The fair test would run effort
+against `lookup` or `bigprompt`, which the suite cannot currently express:
+effort is a property of a scenario rather than an axis that composes with
+one.
+
 ### Results that are NOT trustworthy
 
 Stated plainly so they are not quoted later as if they were findings.
@@ -176,11 +215,12 @@ was never faster.
 
 One machine, one residential network, us-east-1, on-demand capacity
 throughout, medians of n=7 after discarding each row's warm-up run. p95
-at n=7 is indicative only. Findings 1-4 come from runs at `gap=2.0s`;
-finding 5 from `gap=6s`, and finding 6's TTFT numbers from `gap=12s` on
-the lookup rows alone. Each step up was needed to stop sonnet-4.5 rows
-throttling; a lookup row makes two calls per run and so needs twice the
-spacing. Reproduce before trusting any of it.
+at n=7 is indicative only. Findings 1-4 and 7 come from runs at
+`gap=2.0s`; finding 5 from `gap=6s`, and finding 6's TTFT numbers from
+`gap=12s` on the lookup rows alone. Each step up was needed to stop
+sonnet-4.5 rows throttling; a lookup row makes two calls per run and so
+needs twice the spacing. Finding 7 runs sonnet-5, which did not throttle
+at `gap=2.0s`. Reproduce before trusting any of it.
 
 ---
 
