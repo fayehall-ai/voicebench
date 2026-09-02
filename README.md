@@ -13,9 +13,11 @@ is not a 700ms pause for the person on the phone.
 
 **TL;DR**
 
-1. **One sentence of system prompt removes 65% of the silence in a
-   tool-calling turn** — first audible token drops 1943ms → 681ms on
-   haiku, 2723ms → 1303ms on sonnet, for ~8 extra tokens. [Finding 9]
+1. **One sentence of system prompt removes ~60% of the silence in a
+   tool-calling turn** — first audible token drops 1945ms → 728ms on
+   haiku, 2804ms → 1203ms on sonnet, for ~8 extra tokens. It depends on
+   the model actually complying: 79% of the time on haiku, 95% on
+   sonnet. [Finding 9]
 2. **Stream, always.** 33% of the wait on a single-hop turn, at no cost
    to total time. [Finding 1]
 3. **Almost everything else is a null** — provider, framework and effort
@@ -297,7 +299,7 @@ should not be quoted as sonnet's slope.
 This is the measurement finding 3 leans on: at 30 tokens, 4.1 µs/token is
 0.12ms, which is why prefill cannot account for a 658ms model gap.
 
-### 9. One sentence of instruction removes 65% of the tool-call silence
+### 9. One sentence of prompt removes ~60% of the tool-call silence, when the model complies
 
 Finding 6 says the silence on a two-hop turn is structural, because the
 first hop emits tool JSON rather than speech. Structural is not the same
@@ -307,40 +309,54 @@ added to the system prompt:
 > If you need to look something up, say so first in one short sentence,
 > then look it up.
 
-`results/preamble-20260901-185856.json` — anthropic, streaming, n=7,
+`results/preamble-20260901-192659.json` — anthropic, streaming, **n=19**,
 `gap=8`
 
 | model | scenario | TTFT | total | tokens |
 |---|---|---|---|---|
-| haiku-4.5 | lookup | 1943ms | 2133ms | 113 |
-| haiku-4.5 | lookup-preamble | **681ms (−65%)** | 2322ms (+9%) | 123 |
-| sonnet-4.5 | lookup | 2723ms | 3088ms | 112 |
-| sonnet-4.5 | lookup-preamble | **1303ms (−52%)** | 3841ms (+24%) | 120 |
+| haiku-4.5 | lookup | 1945ms | 2153ms | 113 |
+| haiku-4.5 | lookup-preamble | **728ms (−63%)** | 2281ms (+6%) | 123 |
+| sonnet-4.5 | lookup | 2804ms | 3230ms | 112 |
+| sonnet-4.5 | lookup-preamble | **1203ms (−57%)** | 3631ms (+12%) | 120 |
 
-**The caller starts hearing speech 1.3-1.4 seconds sooner.**
+**The caller starts hearing speech 1.2-1.6 seconds sooner.**
 
-The mechanism is confirmed rather than assumed: preamble TTFT lands on
-the same number as a *single-hop* turn, because with the instruction the
-first hop is a single-hop turn as far as the ear is concerned.
+**But the median hides a compliance rate, and n=7 could not see it.** The
+preamble rows are bimodal, not tailed: runs either speak first or go
+straight to tool JSON as if the instruction were absent, with nothing in
+between.
 
-| model | plain TTFT | lookup-preamble TTFT | difference |
-|---|---|---|---|
-| haiku-4.5 | 697ms | 681ms | −16ms (−2%) |
-| sonnet-4.5 | 1468ms | 1303ms | −165ms (−11%) |
+| model | complied | TTFT when it does | ignored it | TTFT then |
+|---|---|---|---|---|
+| haiku-4.5 | **15/19 (79%)** | 635-906ms, median 727 | 4/19 (21%) | 1927-2205ms |
+| sonnet-4.5 | **18/19 (95%)** | 1079-1570ms, median 1203 | 1/19 (5%) | 1916ms |
 
-**What it costs:** total grows 9% on haiku and 24% on sonnet, because the
-model emits ~8-10 extra tokens and still makes both hops. That is the
-right trade for voice. Total is not what a caller perceives — during
-those extra milliseconds they are listening to a sentence instead of to
-nothing.
+The non-complying runs land on the un-preambled baseline (1945ms and
+2804ms), which is what identifies them: the model skipped the preamble
+entirely rather than speaking late. **So roughly one haiku call in five
+gets no benefit at all**, and a product that promises the caller a
+prompt response has to survive that case. Sonnet complies far more
+reliably.
+
+The mechanism is confirmed rather than assumed: when the preamble fires,
+TTFT lands on the same number as a *single-hop* turn — haiku's complied
+median of 727ms against a `plain` TTFT of 697ms. With the instruction
+obeyed, the first hop is a single-hop turn as far as the ear is
+concerned.
+
+**What it costs:** total grows 6% on haiku and 12% on sonnet, from ~8-10
+extra tokens with both hops still running. That is the right trade for
+voice. Total is not what a caller perceives — during those milliseconds
+they are listening to a sentence instead of to nothing.
 
 **Take:** this is the only change here that alters what the caller
 experiences rather than describing it, and it is one line of prompt. Do
-it on every tool-calling turn.
+it on every tool-calling turn — and measure your own compliance rate
+rather than assuming the instruction is followed.
 
-One caveat: haiku's preamble row carries a single 2179ms outlier against
-a cluster of `[667, 667, 676, 681, 681, 765]`, giving it a 3.27x spread.
-The median is solid; the tail is not characterised at n=7.
+An earlier n=7 run of the same rows gave −65% and −52%, close on the
+medians but with too few samples to reveal that the distribution is
+bimodal. The compliance split is the reason this was re-run at n=19.
 
 ### Results that are NOT trustworthy
 
