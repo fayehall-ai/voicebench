@@ -358,6 +358,43 @@ An earlier n=7 run of the same rows gave −65% and −52%, close on the
 medians but with too few samples to reveal that the distribution is
 bimodal. The compliance split is the reason this was re-run at n=19.
 
+### 10. Prefix caching's latency benefit is bounded by prefill — predicted, then measured
+
+Caching can only give back the prefill time it skips. Finding 8 measured
+haiku's prefill at 4.1 µs/token, which turns that into a falsifiable
+number rather than a hand-wave: caching a 30,035-token prompt should save
+about **123ms**, and caching a 3k prompt should save about 12ms — under
+the noise floor, invisible.
+
+`results/caching-20260901-193239.json` — anthropic, haiku-4.5, streaming,
+n=7, `gap=6`
+
+| scenario | prompt | TTFT | cache_read |
+|---|---|---|---|
+| bigprompt | 3,025 tok | 701ms | — |
+| bigprompt-cached | 3,025 tok | 737ms (+5%) noise | **0** |
+| hugeprompt | 30,035 tok | 946ms | — |
+| hugeprompt-cached | 30,035 tok | **812ms (−14%)** | 30,028 |
+
+**At 30k the prediction holds: 134ms measured against 123ms predicted, a
+ratio of 1.09.** Run the arithmetic backwards and this experiment implies
+a prefill rate of 4.47 µs/token, against finding 8's independently
+measured 4.10 µs/token — two different methods, one a prompt-size sweep
+and the other a cache hit, agreeing within 9%.
+
+**The 3k arm is void, not falsified.** `cache_read` is 0: at 3,025 tokens
+the prompt sits under haiku's minimum cacheable prefix, so the
+`cache_control` block was ignored and no caching occurred. That row
+measures nothing about caching. It is only visible because the cache
+column reports unrequested reads — gated on `scenario.cache`, as it was
+originally, this would have printed `-` and read as a genuine null.
+
+**Take:** prefix caching is a **cost** lever. Its latency benefit is
+capped by the prefill share of your TTFT, and on a small model that share
+is tiny — 12ms at 3k, 134ms at 30k. If you are caching to make a voice
+agent feel faster, the ceiling is already set by finding 8 and you can
+compute it before running anything. Cache for the token bill.
+
 ### Results that are NOT trustworthy
 
 Stated plainly so they are not quoted later as if they were findings.
