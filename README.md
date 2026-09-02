@@ -20,6 +20,17 @@ first token that could be *spoken*. Tool-call JSON does not count — nobody
 hears it. On blocking rows the column is deliberately blank, because
 nothing is speakable until the call returns.
 
+**The through-line:** on short prompts against hosted models, this
+instrument is mostly measuring the scheduler — queueing, routing, and
+warm-fleet availability — rather than the network or the weights. That is
+why provider (finding 4), framework (finding 5) and effort (finding 7)
+all came back null, why prefill stays invisible until 30k tokens
+(finding 8), and why the two things that did move are which model pool
+you land in (finding 3) and how many hops the turn takes (finding 6).
+Four nulls in a row is not a boring result; it locates where the time
+actually lives. Region is the obvious fourth null to check and **has not
+been run here** — the suite exists, the data does not.
+
 ### 1. Streaming buys ~350ms of perceived latency and costs nothing
 
 `results/quick-*.json` — anthropic, haiku-4.5, plain, n=7
@@ -42,7 +53,7 @@ that the two runs shared conditions rather than being fully independent.
 **Take:** stream unconditionally on single-hop turns. There is no tradeoff
 to weigh.
 
-### 2. First token lands at ~55–65% of total
+### 2. First token lands at ~55–65% of total, for short answers
 
 `results/providers-*.json` — plain, streaming, n=7
 
@@ -53,10 +64,18 @@ to weigh.
 | bedrock | sonnet-4.5 | 1282ms | 2274ms | 56% |
 | anthropic | sonnet-4.5 | 1290ms | 2332ms | 55% |
 
-Consistent enough across two models and two providers to plan against:
-**budget TTFT at roughly 60% of measured total latency.**
+**This band is a property of short answers, not of the stack.** Total
+decomposes as `TTFT + (n_tokens − 1) × decode_time`. TTFT is roughly
+fixed; the decode term grows linearly with output length. These responses
+are 26-44 tokens, which is what puts the ratio at 55-65%. Using haiku's
+measured 9.9ms/token, a 150-token answer would sit at
+`624 + 149 × 9.9 = 2099ms` total, dropping TTFT to **30%**.
 
-### 3. Model choice is the largest lever measured
+So: **for 30-45 token responses, TTFT is 55-65% of total.** That is the
+right range for a voice turn, where answers are short by design, and
+wrong as a general rule.
+
+### 3. The model gap on a trivial prompt is scheduler, not compute
 
 Same run, holding provider constant:
 
@@ -65,8 +84,33 @@ Same run, holding provider constant:
 | bedrock | 624ms | 1282ms | **+658ms (+105%)** |
 | anthropic | 661ms | 1290ms | **+629ms (+95%)** |
 
-Sonnet roughly doubles TTFT. Nothing else in these runs moves the number
-this much for a single-hop turn.
+Sonnet roughly doubles TTFT, and it is tempting to file that under
+"bigger model is slower". Decompose it and that reading does not survive.
+The `plain` turn is an 18-token system prompt plus a short question,
+about 30 tokens total, and TTFT covers exactly two pieces of compute:
+prefill over those tokens, and one decode step.
+
+| component | haiku | sonnet | difference |
+|---|---|---|---|
+| prefill, 30 tokens @ 4.1 µs/tok (finding 8) | 0.12ms | — | ~0ms |
+| one decode step | 9.9ms | 23.1ms | **13ms** |
+| **measured TTFT gap** | | | **658ms** |
+
+Decode rates come from the same run: haiku 338ms for 34 tokens
+(101 tok/s), sonnet 992ms for 43 tokens (43 tok/s). Prefill on 30 tokens
+is 0.12ms using the slope measured in finding 8.
+
+**Compute explains 13ms of a 658ms gap.** The remaining ~645ms is not
+work the model is doing — it is queueing, routing, and warm-fleet
+availability differing between the two serving pools. That is a
+different claim than "bigger model is slower", and a more useful one:
+it is a property of the pool you are routed to, not of the weights, so
+no amount of prompt engineering moves it and it may not hold on
+dedicated capacity.
+
+Stated honestly, this is inference by elimination — the harness measures
+TTFT, not a scheduler — but the residual is 50x the compute it would
+have to be explained by.
 
 ### 4. Bedrock vs Anthropic: no meaningful TTFT difference
 
@@ -207,6 +251,39 @@ turn there is no TTFT penalty to trade against, which inverts the
 intuitive assumption. `max` is the one level worth measuring before
 adopting.
 
+### 8. Prefill costs ~4 µs/token, and only haiku shows a clean curve
+
+`results/scaling-20260901-182612.json` — anthropic, streaming, n=7,
+`gap=6`. Prompt sizes verified against the tokenizer, not estimated.
+
+| system prompt | haiku TTFT | marginal | sonnet TTFT | marginal |
+|---|---|---|---|---|
+| 22 tok | 697ms | — | 1468ms | — |
+| 3,025 tok | 725ms (+4%) noise | 9.4 µs/tok | 2042ms (+39%) | 191 µs/tok |
+| 10,035 tok | 747ms (+7%) noise | 3.1 µs/tok | 1993ms (+36%) | **−6.9 µs/tok** |
+| 30,035 tok | 820ms (+18%) | 3.7 µs/tok | 1921ms (+31%) | **−3.6 µs/tok** |
+
+**Haiku gives a real slope: 4.1 µs/token end to end**, or ~4.1ms per
+1,000 tokens. All four rows are tight (1.31-1.50x spread), the series is
+monotonic, and marginal cost is stable at 3.1-3.7 µs/tok across the two
+upper segments. Prefill only clears the 8% noise floor at 30k tokens,
+which is why a 3k prompt reads as free.
+
+**`cache_read` is 0 on every row**, so this is genuine prefill and not
+the service caching a large prompt on its own. That alternative is ruled
+out by measurement rather than assumption.
+
+**Sonnet does not produce a prefill curve at all.** It steps +574ms at 3k
+and then *decreases* as the prompt grows; marginal cost goes negative.
+Prefill compute cannot be negative, so whatever moves sonnet here is not
+prompt length. Its rows are individually tight (1.18-1.37x), so this is
+not ordinary contamination either. The end-to-end "15.1 µs/token" that
+falls out of the endpoints is arithmetic on a non-monotonic series and
+should not be quoted as sonnet's slope.
+
+This is the measurement finding 3 leans on: at 30 tokens, 4.1 µs/token is
+0.12ms, which is why prefill cannot account for a 658ms model gap.
+
 ### Results that are NOT trustworthy
 
 Stated plainly so they are not quoted later as if they were findings.
@@ -258,7 +335,13 @@ at n=7 is indicative only. Findings 1-4 and 7 come from runs at
 sonnet-4.5 rows throttling; a lookup row makes two calls per run and so
 needs twice the spacing. Finding 7's plain rows run sonnet-5 at `gap=2.0s`,
 which did not throttle; its lookup rows need `gap=12s`, since a lookup
-makes two calls per run. Reproduce before trusting any of it.
+makes two calls per run. Findings 2-4 measured sonnet at `gap=2.0s`, a spacing later shown to
+kill 5 of 6 bedrock sonnet rows in the frameworks suite. Retries are
+disabled, so a throttled call fails the row rather than inflating it, and
+those rows all reported n=7 — they were not silently retried. But
+near-threshold contention can stretch a number without ever returning a
+429, so the +105% in finding 3 is worth re-running at `gap=6` before
+being leaned on. Reproduce before trusting any of it.
 
 ---
 

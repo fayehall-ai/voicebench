@@ -32,6 +32,15 @@ SYSTEM_SMALL = ("You are a provider services phone assistant. "
 PLAIN_PROMPT = "Hi, are you open on Saturdays?"
 LOOKUP_PROMPT = "Does member A4471 have coverage on March 3rd 2026?"
 
+# On a two-hop turn the first hop emits tool JSON, which is not speech, so
+# the caller hears nothing until hop two starts generating. This asks for a
+# spoken sentence BEFORE the tool call. If the model complies, time to first
+# audible token should collapse toward hop-one TTFT while total is unchanged
+# -- the silence gets filled rather than shortened.
+SYSTEM_PREAMBLE = (SYSTEM_SMALL +
+                   " If you need to look something up, say so first in one "
+                   "short sentence, then look it up.")
+
 
 def build_big_system(approx_tokens: int = 3000) -> str:
     """Realistic in SIZE and SHAPE, filler in content.
@@ -143,6 +152,9 @@ SCENARIOS: dict[str, Scenario] = {
                  note="~3k token system prompt: does prefill cost anything?"),
         Scenario("bigprompt-cached", system=SYSTEM_BIG, cache=True,
                  note="does prefix caching recover it?"),
+        Scenario("lookup-preamble", prompt=LOOKUP_PROMPT, system=SYSTEM_PREAMBLE,
+                 tools=True, run_loop=True,
+                 note="lookup, but told to speak before calling the tool"),
         Scenario("midprompt", system=SYSTEM_MID,
                  note="~10k token system prompt"),
         Scenario("hugeprompt", system=SYSTEM_HUGE,
@@ -176,6 +188,13 @@ SUITES: dict[str, dict] = {
         providers=["anthropic"],
         models=["haiku-4.5", "sonnet-4.5", "sonnet-4.6", "sonnet-5"],
         scenarios=["plain"], paths=["streaming"]),
+
+    # Does filling the tool-call silence actually work? Same two-hop turn,
+    # with and without an instruction to speak before calling. total should
+    # be unchanged; only spoken should move.
+    "preamble": dict(
+        providers=["anthropic"], models=["haiku-4.5", "sonnet-4.5"],
+        scenarios=["lookup", "lookup-preamble"], paths=["streaming"]),
 
     # Four points on one axis -- 0, 3k, 10k, 30k tokens -- across two model
     # sizes. Two points cannot distinguish a slope from a step, and a null
