@@ -155,6 +155,8 @@ SCENARIOS: dict[str, Scenario] = {
         Scenario("lookup-preamble", prompt=LOOKUP_PROMPT, system=SYSTEM_PREAMBLE,
                  tools=True, run_loop=True,
                  note="lookup, but told to speak before calling the tool"),
+        Scenario("hugeprompt-cached", system=SYSTEM_HUGE, cache=True,
+                 note="30k prompt, cached: does it recover the prefill?"),
         Scenario("midprompt", system=SYSTEM_MID,
                  note="~10k token system prompt"),
         Scenario("hugeprompt", system=SYSTEM_HUGE,
@@ -188,6 +190,17 @@ SUITES: dict[str, dict] = {
         providers=["anthropic"],
         models=["haiku-4.5", "sonnet-4.5", "sonnet-4.6", "sonnet-5"],
         scenarios=["plain"], paths=["streaming"]),
+
+    # Tests a PREDICTION from finding 8 rather than exploring. Prefill on
+    # haiku costs 4.1 us/token, so caching can only ever give back the
+    # prefill time it skips: ~12ms at 3k tokens (invisible, far under the
+    # noise floor) and ~123ms at 30k (visible, ~18% of baseline TTFT).
+    # If cached rows beat that bound, prefill is not what caching removes.
+    "caching": dict(
+        providers=["anthropic"], models=["haiku-4.5"],
+        scenarios=["bigprompt", "bigprompt-cached",
+                   "hugeprompt", "hugeprompt-cached"],
+        paths=["streaming"]),
 
     # Does filling the tool-call silence actually work? Same two-hop turn,
     # with and without an instruction to speak before calling. total should

@@ -11,6 +11,17 @@ is not a 700ms pause for the person on the phone.
 
 ## Findings
 
+**TL;DR**
+
+1. **One sentence of system prompt removes 65% of the silence in a
+   tool-calling turn** — first audible token drops 1943ms → 681ms on
+   haiku, 2723ms → 1303ms on sonnet, for ~8 extra tokens. [Finding 9]
+2. **Stream, always.** 33% of the wait on a single-hop turn, at no cost
+   to total time. [Finding 1]
+3. **Almost everything else is a null** — provider, framework and effort
+   all measure the same. On short prompts you are measuring the
+   scheduler, not the model. [Findings 4, 5, 7]
+
 What a caller hears, and when. Every number below comes from a committed run
 in `results/`, named at the point it is used and re-checkable with
 `--replay`.
@@ -28,8 +39,9 @@ all came back null, why prefill stays invisible until 30k tokens
 (finding 8), and why the two things that did move are which model pool
 you land in (finding 3) and how many hops the turn takes (finding 6).
 Four nulls in a row is not a boring result; it locates where the time
-actually lives — and finding 9 is what you do about it once you know. Region is the obvious fourth null to check and **has not
-been run here** — the suite exists, the data does not.
+actually lives — and finding 9 is what you do about it once you know.
+Region is the obvious next null to check and **has not been run here**:
+the suite exists, the data does not.
 
 ### 1. Streaming buys ~350ms of perceived latency and costs nothing
 
