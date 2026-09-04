@@ -1,7 +1,7 @@
 # I predicted a voice agent's latency, then called it 30 times to check
 
-*Companion to the [lab study in the README](./README.md), which measured
-the LLM leg in isolation. This measures whole turns on a real phone line.
+*Companion to the [lab study](./LAB-STUDY.md), which measured the LLM leg
+in isolation. This measures whole turns on a real phone line.
 One rigged test agent, ~30 calls from a cell phone over PSTN, 213 measured
 reply gaps across five configurations — 134 of them in the baseline. Raw
 call JSON is in `calls/`.*
@@ -68,13 +68,13 @@ fast.
 
 ### Prefix caching bought tokens, not milliseconds
 
-From the lab study in the README: four measurements across two models, all
+From the [lab study](./LAB-STUDY.md): four measurements across two models, all
 within noise, including one where the cache verifiably engaged on a model
 with ~700ms of real prefill cost.
 
 ### Reasoning effort did not move time to first token
 
-Also from the lab study, on prompts short enough that nothing triggered
+Also from the [lab study](./LAB-STUDY.md), on prompts short enough that nothing triggered
 extended thinking — so there were no thinking tokens for effort to scale.
 
 ### The generalisation

@@ -20,7 +20,7 @@ Does two things you cannot do by eye:
 
 --summary exists because the write-up once paired one configuration's turn
 count with another's median, and nothing recomputed the pair. Every latency
-figure quoted in FIELD_STUDY.md should be readable off its output.
+figure quoted in FIELD-STUDY.md should be readable off its output.
 """
 
 from __future__ import annotations

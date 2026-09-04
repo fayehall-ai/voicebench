@@ -27,7 +27,7 @@ nouns, and redacting them would remove the evidence.
     python scrub.py --check          # report what is still identifying
     python scrub.py                  # rewrite calls/ in place
 
-Timing fields are never touched: every number in FIELD_STUDY.md is
+Timing fields are never touched: every number in FIELD-STUDY.md is
 recomputed from scrubbed files by review.py.
 """
 
