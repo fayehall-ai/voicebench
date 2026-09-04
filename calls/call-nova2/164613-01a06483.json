@@ -1,0 +1,1132 @@
+{
+  "message": {
+    "timestamp": 1788392773293,
+    "type": "end-of-call-report",
+    "analysis": {},
+    "artifact": {
+      "messages": [
+        {
+          "role": "system",
+          "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+          "time": 1788392719747,
+          "secondsFromStart": 0
+        },
+        {
+          "role": "bot",
+          "message": "Lakeview Family Dental after hours. How can I help?",
+          "time": 1788392720911,
+          "endTime": 1788392724051,
+          "secondsFromStart": 1.093,
+          "duration": 3140,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Does new patient exams include X-ray?",
+          "time": 1788392726711,
+          "endTime": 1788392732071,
+          "secondsFromStart": 6.84,
+          "duration": 3480,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "does",
+                "start": 6.84,
+                "end": 7.34,
+                "confidence": 0.5292969,
+                "punctuated_word": "Does"
+              },
+              {
+                "word": "new",
+                "start": 7.4,
+                "end": 7.72,
+                "confidence": 0.99609375,
+                "punctuated_word": "new"
+              },
+              {
+                "word": "patient",
+                "start": 7.72,
+                "end": 8.219999,
+                "confidence": 0.99902344,
+                "punctuated_word": "patient"
+              },
+              {
+                "word": "exams",
+                "start": 8.92,
+                "end": 9.32,
+                "confidence": 0.9086914,
+                "punctuated_word": "exams"
+              },
+              {
+                "word": "include",
+                "start": 9.32,
+                "end": 9.82,
+                "confidence": 0.99609375,
+                "punctuated_word": "include"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. New patient exams include a cleaning and full x rays.",
+          "time": 1788392734010.999,
+          "endTime": 1788392736671,
+          "secondsFromStart": 14.1929990234375,
+          "duration": 2660.0009765625,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Do you accept state Medicaid plan?",
+          "time": 1788392740551,
+          "endTime": 1788392744411,
+          "secondsFromStart": 20.68,
+          "duration": 3860,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "do",
+                "start": 20.68,
+                "end": 21,
+                "confidence": 0.9223633,
+                "punctuated_word": "Do"
+              },
+              {
+                "word": "you",
+                "start": 21,
+                "end": 21.24,
+                "confidence": 1,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "accept",
+                "start": 21.24,
+                "end": 21.74,
+                "confidence": 0.99902344,
+                "punctuated_word": "accept"
+              },
+              {
+                "word": "state",
+                "start": 22.04,
+                "end": 22.54,
+                "confidence": 0.96777344,
+                "punctuated_word": "state"
+              },
+              {
+                "word": "medicaid",
+                "start": 23.32,
+                "end": 23.82,
+                "confidence": 0.99902344,
+                "punctuated_word": "Medicaid"
+              },
+              {
+                "word": "plan",
+                "start": 24.04,
+                "end": 24.54,
+                "confidence": 0.9831543,
+                "punctuated_word": "plan?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "No. We do not accept state Medicaid plans.",
+          "time": 1788392746561,
+          "endTime": 1788392748661,
+          "secondsFromStart": 26.743,
+          "duration": 2100,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "What about MetLife, Anna?",
+          "time": 1788392749891,
+          "endTime": 1788392752151,
+          "secondsFromStart": 30.02,
+          "duration": 2260,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "what",
+                "start": 30.02,
+                "end": 30.34,
+                "confidence": 0.9921875,
+                "punctuated_word": "What"
+              },
+              {
+                "word": "about",
+                "start": 30.34,
+                "end": 30.82,
+                "confidence": 1,
+                "punctuated_word": "about"
+              },
+              {
+                "word": "metlife",
+                "start": 30.82,
+                "end": 31.32,
+                "confidence": 0.8854167,
+                "punctuated_word": "MetLife,"
+              },
+              {
+                "word": "anna",
+                "start": 31.78,
+                "end": 32.28,
+                "confidence": 0.93847656,
+                "punctuated_word": "Anna?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. We accept MetLife insurance.",
+          "time": 1788392754301,
+          "endTime": 1788392756081,
+          "secondsFromStart": 34.483,
+          "duration": 1780,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "What about Aetna?",
+          "time": 1788392758221,
+          "endTime": 1788392759360.998,
+          "secondsFromStart": 38.35,
+          "duration": 1139.998046875,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "what",
+                "start": 38.35,
+                "end": 38.51,
+                "confidence": 0.98535156,
+                "punctuated_word": "What"
+              },
+              {
+                "word": "about",
+                "start": 38.51,
+                "end": 38.989998,
+                "confidence": 1,
+                "punctuated_word": "about"
+              },
+              {
+                "word": "aetna",
+                "start": 38.989998,
+                "end": 39.489998,
+                "confidence": 0.9975586,
+                "punctuated_word": "Aetna?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. We accept Aetna Insurance.",
+          "time": 1788392761491,
+          "endTime": 1788392763191,
+          "secondsFromStart": 41.673,
+          "duration": 1700,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Thank you. That's it.",
+          "time": 1788392764881,
+          "endTime": 1788392766581,
+          "secondsFromStart": 45.01,
+          "duration": 1700,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "thank",
+                "start": 45.01,
+                "end": 45.25,
+                "confidence": 0.9941406,
+                "punctuated_word": "Thank"
+              },
+              {
+                "word": "you",
+                "start": 45.25,
+                "end": 45.75,
+                "confidence": 1,
+                "punctuated_word": "you."
+              },
+              {
+                "word": "that's",
+                "start": 45.969997,
+                "end": 46.21,
+                "confidence": 0.9995117,
+                "punctuated_word": "That's"
+              },
+              {
+                "word": "it",
+                "start": 46.21,
+                "end": 46.71,
+                "confidence": 0.9995117,
+                "punctuated_word": "it."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "You're welcome. Have a great day. You're welcome. Have",
+          "time": 1788392767821,
+          "endTime": 1788392770851,
+          "secondsFromStart": 47.95,
+          "duration": 3030,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Bye.",
+          "time": 1788392768061.002,
+          "endTime": 1788392768561.002,
+          "secondsFromStart": 48.190001953125,
+          "duration": 500,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "bye",
+                "start": 48.190002,
+                "end": 48.690002,
+                "confidence": 0.99902344,
+                "punctuated_word": "Bye."
+              }
+            ]
+          }
+        }
+      ],
+      "messagesOpenAIFormatted": [
+        {
+          "role": "system",
+          "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "Lakeview Family Dental after hours. How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "Does new patient exams include X-ray?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. New patient exams include a cleaning and full x rays."
+        },
+        {
+          "role": "user",
+          "content": "Do you accept state Medicaid plan?"
+        },
+        {
+          "role": "assistant",
+          "content": "No. We do not accept state Medicaid plans."
+        },
+        {
+          "role": "user",
+          "content": "What about MetLife, Anna?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. We accept MetLife insurance."
+        },
+        {
+          "role": "user",
+          "content": "What about Aetna?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. We accept Aetna Insurance."
+        },
+        {
+          "role": "user",
+          "content": "Thank you. That's it."
+        },
+        {
+          "role": "assistant",
+          "content": "You're welcome. Have a great day. You're welcome. Have"
+        },
+        {
+          "role": "user",
+          "content": "Bye."
+        }
+      ],
+      "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Does new patient exams include X-ray?\nAI: Yes. New patient exams include a cleaning and full x rays.\nUser: Do you accept state Medicaid plan?\nAI: No. We do not accept state Medicaid plans.\nUser: What about MetLife, Anna?\nAI: Yes. We accept MetLife insurance.\nUser: What about Aetna?\nAI: Yes. We accept Aetna Insurance.\nUser: Thank you. That's it.\nAI: You're welcome. Have a great day. You're welcome. Have\nUser: Bye.\n",
+      "nodes": [],
+      "assistantActivations": [
+        {
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "assistantVersion": "v2"
+        }
+      ],
+      "variables": {
+        "now": "Sep 2, 2026, 11:45 PM UTC",
+        "currentDateTime": "Wednesday, September 2, 2026 at 11:45 PM UTC",
+        "date": "Sep 2, 2026 UTC",
+        "time": "11:45 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "2",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "64d5fb70-1531-4bae-a22f-b266017e7807",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a06483-[redacted-digits]8c9b-2b798e38fda6",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-02T23:45:19.688Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "64d5fb70-1531-4bae-a22f-b266017e7807",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "variableValues": {
+        "now": "Sep 2, 2026, 11:45 PM UTC",
+        "currentDateTime": "Wednesday, September 2, 2026 at 11:45 PM UTC",
+        "date": "Sep 2, 2026 UTC",
+        "time": "11:45 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "2",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "64d5fb70-1531-4bae-a22f-b266017e7807",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a06483-[redacted-digits]8c9b-2b798e38fda6",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-02T23:45:19.688Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "64d5fb70-1531-4bae-a22f-b266017e7807",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "performanceMetrics": {
+        "turnLatencies": [
+          {
+            "modelLatency": 928,
+            "voiceLatency": 330,
+            "transcriberLatency": 459,
+            "endpointingLatency": 101,
+            "turnLatency": 1832
+          },
+          {
+            "modelLatency": 992,
+            "voiceLatency": 255,
+            "transcriberLatency": 586,
+            "endpointingLatency": 102,
+            "turnLatency": 1977
+          },
+          {
+            "modelLatency": 955,
+            "voiceLatency": 291,
+            "transcriberLatency": 850,
+            "endpointingLatency": 102,
+            "turnLatency": 2231
+          },
+          {
+            "modelLatency": 699,
+            "voiceLatency": 751,
+            "transcriberLatency": 733,
+            "endpointingLatency": 102,
+            "turnLatency": 2301
+          },
+          {
+            "modelLatency": 721,
+            "voiceLatency": 278,
+            "transcriberLatency": 352,
+            "endpointingLatency": 101,
+            "turnLatency": 1477
+          },
+          {
+            "modelLatency": 400,
+            "voiceLatency": 318,
+            "transcriberLatency": 578,
+            "endpointingLatency": 101,
+            "turnLatency": 1590
+          }
+        ],
+        "modelLatencyAverage": 782.5,
+        "voiceLatencyAverage": 370.5,
+        "transcriberLatencyAverage": 593,
+        "endpointingLatencyAverage": 101.5,
+        "turnLatencyAverage": 1901.33,
+        "numAssistantInterrupted": 1,
+        "fromTransportLatencyAverage": 20,
+        "toTransportLatencyAverage": 20
+      },
+      "scorecards": {},
+      "transfers": [],
+      "presignedUrlsExpiresAt": "2026-09-03T00:16:13.286Z"
+    },
+    "startedAt": "2026-09-02T23:45:19.818Z",
+    "endedAt": "2026-09-02T23:46:09.975Z",
+    "endedReason": "customer-ended-call",
+    "cost": 0.1034,
+    "costBreakdown": {
+      "stt": 0.0086,
+      "llm": 0.0385,
+      "tts": 0.0146,
+      "vapi": 0.0418,
+      "chat": 0,
+      "transport": 0,
+      "total": 0.1034,
+      "llmPromptTokens": 9256,
+      "llmCompletionTokens": 89,
+      "llmCachedPromptTokens": 0,
+      "ttsCharacters": 291,
+      "voicemailDetectionCost": 0,
+      "knowledgeBaseCost": 0,
+      "analysisCostBreakdown": {
+        "summary": 0,
+        "summaryPromptTokens": 0,
+        "summaryCompletionTokens": 0,
+        "summaryCachedPromptTokens": 0,
+        "structuredData": 0,
+        "structuredDataPromptTokens": 0,
+        "structuredDataCompletionTokens": 0,
+        "structuredDataCachedPromptTokens": 0,
+        "successEvaluation": 0,
+        "successEvaluationPromptTokens": 0,
+        "successEvaluationCompletionTokens": 0,
+        "successEvaluationCachedPromptTokens": 0,
+        "structuredOutput": 0,
+        "structuredOutputPromptTokens": 0,
+        "structuredOutputCompletionTokens": 0,
+        "structuredOutputCachedPromptTokens": 0
+      }
+    },
+    "costs": [
+      {
+        "type": "transcriber",
+        "transcriber": {
+          "provider": "deepgram",
+          "model": "nova-2"
+        },
+        "minutes": 0.8779166666666666,
+        "cost": 0.008594926666666666
+      },
+      {
+        "type": "model",
+        "model": {
+          "provider": "openai",
+          "model": "gpt-4o"
+        },
+        "promptTokens": 9256,
+        "completionTokens": 89,
+        "cachedPromptTokens": 0,
+        "reasoningTokens": 0,
+        "cost": 0.0384875
+      },
+      {
+        "type": "voice",
+        "voice": {
+          "provider": "vapi",
+          "voiceId": "Elliot",
+          "model": "vapi-v1"
+        },
+        "characters": 291,
+        "cost": 0.01455
+      },
+      {
+        "type": "vapi",
+        "subType": "normal",
+        "minutes": 0.836,
+        "cost": 0.0418
+      },
+      {
+        "type": "knowledge-base",
+        "model": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "cost": 0
+      }
+    ],
+    "durationMs": 50157,
+    "durationSeconds": 50.157,
+    "durationMinutes": 0.836,
+    "summary": "",
+    "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Does new patient exams include X-ray?\nAI: Yes. New patient exams include a cleaning and full x rays.\nUser: Do you accept state Medicaid plan?\nAI: No. We do not accept state Medicaid plans.\nUser: What about MetLife, Anna?\nAI: Yes. We accept MetLife insurance.\nUser: What about Aetna?\nAI: Yes. We accept Aetna Insurance.\nUser: Thank you. That's it.\nAI: You're welcome. Have a great day. You're welcome. Have\nUser: Bye.\n",
+    "messages": [
+      {
+        "role": "system",
+        "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+        "time": 1788392719747,
+        "secondsFromStart": 0
+      },
+      {
+        "role": "bot",
+        "message": "Lakeview Family Dental after hours. How can I help?",
+        "time": 1788392720911,
+        "endTime": 1788392724051,
+        "secondsFromStart": 1.093,
+        "duration": 3140,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Does new patient exams include X-ray?",
+        "time": 1788392726711,
+        "endTime": 1788392732071,
+        "secondsFromStart": 6.84,
+        "duration": 3480,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "does",
+              "start": 6.84,
+              "end": 7.34,
+              "confidence": 0.5292969,
+              "punctuated_word": "Does"
+            },
+            {
+              "word": "new",
+              "start": 7.4,
+              "end": 7.72,
+              "confidence": 0.99609375,
+              "punctuated_word": "new"
+            },
+            {
+              "word": "patient",
+              "start": 7.72,
+              "end": 8.219999,
+              "confidence": 0.99902344,
+              "punctuated_word": "patient"
+            },
+            {
+              "word": "exams",
+              "start": 8.92,
+              "end": 9.32,
+              "confidence": 0.9086914,
+              "punctuated_word": "exams"
+            },
+            {
+              "word": "include",
+              "start": 9.32,
+              "end": 9.82,
+              "confidence": 0.99609375,
+              "punctuated_word": "include"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. New patient exams include a cleaning and full x rays.",
+        "time": 1788392734010.999,
+        "endTime": 1788392736671,
+        "secondsFromStart": 14.1929990234375,
+        "duration": 2660.0009765625,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Do you accept state Medicaid plan?",
+        "time": 1788392740551,
+        "endTime": 1788392744411,
+        "secondsFromStart": 20.68,
+        "duration": 3860,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "do",
+              "start": 20.68,
+              "end": 21,
+              "confidence": 0.9223633,
+              "punctuated_word": "Do"
+            },
+            {
+              "word": "you",
+              "start": 21,
+              "end": 21.24,
+              "confidence": 1,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "accept",
+              "start": 21.24,
+              "end": 21.74,
+              "confidence": 0.99902344,
+              "punctuated_word": "accept"
+            },
+            {
+              "word": "state",
+              "start": 22.04,
+              "end": 22.54,
+              "confidence": 0.96777344,
+              "punctuated_word": "state"
+            },
+            {
+              "word": "medicaid",
+              "start": 23.32,
+              "end": 23.82,
+              "confidence": 0.99902344,
+              "punctuated_word": "Medicaid"
+            },
+            {
+              "word": "plan",
+              "start": 24.04,
+              "end": 24.54,
+              "confidence": 0.9831543,
+              "punctuated_word": "plan?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "No. We do not accept state Medicaid plans.",
+        "time": 1788392746561,
+        "endTime": 1788392748661,
+        "secondsFromStart": 26.743,
+        "duration": 2100,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "What about MetLife, Anna?",
+        "time": 1788392749891,
+        "endTime": 1788392752151,
+        "secondsFromStart": 30.02,
+        "duration": 2260,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "what",
+              "start": 30.02,
+              "end": 30.34,
+              "confidence": 0.9921875,
+              "punctuated_word": "What"
+            },
+            {
+              "word": "about",
+              "start": 30.34,
+              "end": 30.82,
+              "confidence": 1,
+              "punctuated_word": "about"
+            },
+            {
+              "word": "metlife",
+              "start": 30.82,
+              "end": 31.32,
+              "confidence": 0.8854167,
+              "punctuated_word": "MetLife,"
+            },
+            {
+              "word": "anna",
+              "start": 31.78,
+              "end": 32.28,
+              "confidence": 0.93847656,
+              "punctuated_word": "Anna?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. We accept MetLife insurance.",
+        "time": 1788392754301,
+        "endTime": 1788392756081,
+        "secondsFromStart": 34.483,
+        "duration": 1780,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "What about Aetna?",
+        "time": 1788392758221,
+        "endTime": 1788392759360.998,
+        "secondsFromStart": 38.35,
+        "duration": 1139.998046875,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "what",
+              "start": 38.35,
+              "end": 38.51,
+              "confidence": 0.98535156,
+              "punctuated_word": "What"
+            },
+            {
+              "word": "about",
+              "start": 38.51,
+              "end": 38.989998,
+              "confidence": 1,
+              "punctuated_word": "about"
+            },
+            {
+              "word": "aetna",
+              "start": 38.989998,
+              "end": 39.489998,
+              "confidence": 0.9975586,
+              "punctuated_word": "Aetna?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. We accept Aetna Insurance.",
+        "time": 1788392761491,
+        "endTime": 1788392763191,
+        "secondsFromStart": 41.673,
+        "duration": 1700,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Thank you. That's it.",
+        "time": 1788392764881,
+        "endTime": 1788392766581,
+        "secondsFromStart": 45.01,
+        "duration": 1700,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "thank",
+              "start": 45.01,
+              "end": 45.25,
+              "confidence": 0.9941406,
+              "punctuated_word": "Thank"
+            },
+            {
+              "word": "you",
+              "start": 45.25,
+              "end": 45.75,
+              "confidence": 1,
+              "punctuated_word": "you."
+            },
+            {
+              "word": "that's",
+              "start": 45.969997,
+              "end": 46.21,
+              "confidence": 0.9995117,
+              "punctuated_word": "That's"
+            },
+            {
+              "word": "it",
+              "start": 46.21,
+              "end": 46.71,
+              "confidence": 0.9995117,
+              "punctuated_word": "it."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "You're welcome. Have a great day. You're welcome. Have",
+        "time": 1788392767821,
+        "endTime": 1788392770851,
+        "secondsFromStart": 47.95,
+        "duration": 3030,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Bye.",
+        "time": 1788392768061.002,
+        "endTime": 1788392768561.002,
+        "secondsFromStart": 48.190001953125,
+        "duration": 500,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "bye",
+              "start": 48.190002,
+              "end": 48.690002,
+              "confidence": 0.99902344,
+              "punctuated_word": "Bye."
+            }
+          ]
+        }
+      }
+    ],
+    "call": {
+      "id": "01a06483-[redacted-digits]8c9b-2b798e38fda6",
+      "orgId": "[redacted-id]",
+      "createdAt": "2026-09-02T23:45:19.688Z",
+      "updatedAt": "2026-09-02T23:45:19.688Z",
+      "type": "inboundPhoneCall",
+      "cost": 0,
+      "monitor": {},
+      "transport": {
+        "conversationType": "voice",
+        "provider": "vapi.sip",
+        "callSid": "64d5fb70-1531-4bae-a22f-b266017e7807",
+        "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "phoneCallProvider": "vapi",
+      "phoneCallProviderId": "64d5fb70-1531-4bae-a22f-b266017e7807",
+      "phoneCallTransport": "sip",
+      "phoneCallProviderDetails": {
+        "sip": {
+          "raw": "INVITE sip:[redacted-digits]@[redacted-digits]:5060 SIP/2.0\r\nVia: SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bKv77tcp7FF6D8H;received=[redacted-digits]Max-Forwards: 70\r\nFrom: <sip:[redacted-phone]@[redacted-digits]:5060>;tag=yy9Xtr095FmKB\r\nTo: <sip:[redacted-digits]@[redacted-digits]>\r\nCall-ID: 329a88c0-21cb-1240-6abb-0ec7040a32ad\r\nCSeq: [redacted-digits]INVITE\r\nContact: <sip:[redacted-digits]:5060>\r\nAccept: application/sdp\r\nAllow: PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL\r\nSupported: 100rel, timer\r\nMin-SE: 600\r\nPrivacy: none\r\nContent-Type: application/sdp\r\nContent-Length: 304\r\nX-Account-Sid: c033b672-5b99-42ae-9ce2-b231e9a522fb\r\nX-CID: [redacted-digits]@msc1.382COM.COM\r\nX-Forwarded-For: [redacted-digits]X-Originating-Carrier: 382com\r\nX-Voip-Carrier-Sid: a5569621-84ac-49cc-a8b8-11c7fb96b905\r\nX-Application-Sid: 79d078c8-76b2-452a-99e0-ddd5abbf6269\r\nIdentity: eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4MzkyNzE5LCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.YrMEADaioElN8C8SRoMRkpeIhrgV1943g8VrmXTA4Uk7km8btYe2XPPlGL4XJ1uk7gKQFqGjU9y10RQzWnzIDQ;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken\r\nP-Asserted-Identity: <sip:[redacted-phone]@[redacted-digits]:5060>\r\n\r\nv=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 43964 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:43965\r\n",
+          "uri": "sip:[redacted-digits]@[redacted-digits]:5060",
+          "body": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 43964 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:43965\r\n",
+          "method": "INVITE",
+          "headers": {
+            "to": "<sip:[redacted-phone]@[redacted-digits]>",
+            "via": "SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bKv77tcp7FF6D8H;received=[redacted-digits]",
+            "cseq": "[redacted-digits]INVITE",
+            "from": "<sip:[redacted-phone]@[redacted-digits]:5060>;tag=yy9Xtr095FmKB",
+            "X-CID": "[redacted-digits]@msc1.382COM.COM",
+            "allow": "PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL",
+            "accept": "application/sdp",
+            "min-se": "600",
+            "call-id": "329a88c0-21cb-1240-6abb-0ec7040a32ad",
+            "contact": "<sip:[redacted-digits]:5060>",
+            "privacy": "none",
+            "identity": "eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4MzkyNzE5LCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.YrMEADaioElN8C8SRoMRkpeIhrgV1943g8VrmXTA4Uk7km8btYe2XPPlGL4XJ1uk7gKQFqGjU9y10RQzWnzIDQ;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken",
+            "supported": "100rel, timer",
+            "content-type": "application/sdp",
+            "max-forwards": "70",
+            "X-Account-Sid": "c033b672-5b99-42ae-9ce2-b231e9a522fb",
+            "content-length": "304",
+            "X-Forwarded-For": "[redacted-digits]",
+            "X-Application-Sid": "79d078c8-76b2-452a-99e0-ddd5abbf6269",
+            "X-Voip-Carrier-Sid": "a5569621-84ac-49cc-a8b8-11c7fb96b905",
+            "p-asserted-identity": "<sip:[redacted-phone]@[redacted-digits]:5060>",
+            "X-Originating-Carrier": "382com"
+          },
+          "payload": [
+            {
+              "type": "application/sdp",
+              "content": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 43964 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:43965\r\n"
+            }
+          ],
+          "version": "2.0"
+        },
+        "sbcCallId": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "status": "ringing",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "assistantVersion": "v2",
+      "assistantOverrides": {
+        "variableValues": {
+          "cid": "[redacted-id]",
+          "account-sid": "[redacted-id]",
+          "forwarded-for": "[redacted-ip]",
+          "application-sid": "[redacted-id]",
+          "voip-carrier-sid": "[redacted-id]",
+          "originating-carrier": "382com"
+        }
+      },
+      "phoneNumberId": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "customer": {
+        "number": "[redacted-phone]",
+        "sipUri": "[redacted-sip]"
+      }
+    },
+    "phoneNumber": {
+      "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "orgId": "[redacted-id]",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "number": "[redacted-phone]",
+      "createdAt": "2026-09-02T21:32:56.381Z",
+      "updatedAt": "2026-09-02T23:24:48.608Z",
+      "provider": "vapi",
+      "status": "active",
+      "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+    },
+    "customer": {
+      "number": "[redacted-phone]",
+      "sipUri": "[redacted-sip]"
+    },
+    "assistant": {
+      "id": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "orgId": "[redacted-id]",
+      "name": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+      "voice": {
+        "voiceId": "Elliot",
+        "provider": "vapi"
+      },
+      "createdAt": "2026-09-02T22:46:13.138Z",
+      "updatedAt": "2026-09-02T23:16:54.163Z",
+      "model": {
+        "model": "gpt-4o",
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "take_callback",
+              "parameters": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "phone",
+                  "reason"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Caller's full name."
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "Callback number, digits only."
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Why they are calling."
+                  }
+                }
+              },
+              "description": "Record a callback request from the caller."
+            },
+            "messages": [
+              {
+                "type": "request-complete",
+                "content": "Got it, someone will call you back in the morning."
+              }
+            ]
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+          }
+        ],
+        "provider": "openai",
+        "temperature": 0.3
+      },
+      "recordingEnabled": true,
+      "firstMessage": "Lakeview Family Dental, after hours. How can I help?",
+      "transcriber": {
+        "model": "nova-2",
+        "language": "en",
+        "provider": "deepgram",
+        "endpointing": 300
+      },
+      "silenceTimeoutSeconds": 20,
+      "serverMessages": [
+        "end-of-call-report"
+      ],
+      "maxDurationSeconds": 300,
+      "analysisPlan": {
+        "summaryPlan": {
+          "enabled": false
+        },
+        "successEvaluationPlan": {
+          "enabled": false
+        }
+      },
+      "startSpeakingPlan": {
+        "waitSeconds": 0.4,
+        "transcriptionEndpointingPlan": {
+          "onNumberSeconds": 0.2,
+          "onPunctuationSeconds": 0.1,
+          "onNoPunctuationSeconds": 0.3
+        }
+      },
+      "stopSpeakingPlan": {
+        "numWords": 0,
+        "voiceSeconds": 0.2,
+        "backoffSeconds": 1
+      },
+      "server": {
+        "timeoutSeconds": 20
+      },
+      "compliancePlan": {
+        "pciEnabled": false
+      },
+      "latestVersion": "v2",
+      "variableValues": {
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      }
+    },
+    "assistantVersion": "v2"
+  }
+}

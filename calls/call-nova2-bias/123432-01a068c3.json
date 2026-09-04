@@ -1,0 +1,949 @@
+{
+  "message": {
+    "timestamp": 1788464072811,
+    "type": "end-of-call-report",
+    "analysis": {},
+    "artifact": {
+      "messages": [
+        {
+          "role": "system",
+          "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+          "time": 1788464011509,
+          "secondsFromStart": 0
+        },
+        {
+          "role": "bot",
+          "message": "Lakeview Family Dental after hours. How can I help?",
+          "time": 1788464012738,
+          "endTime": 1788464015718,
+          "secondsFromStart": 1.154,
+          "duration": 2980,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "warfare,",
+          "time": 1788464019608,
+          "endTime": 1788464020108,
+          "secondsFromStart": 7.91,
+          "duration": 500,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "warfare",
+                "start": 7.91,
+                "end": 8.41,
+                "confidence": 0.5296631,
+                "punctuated_word": "warfare,"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I am I'm unable to assist with that topic. If you have questions related to Lakeview Family Dental, feel free to ask.",
+          "time": 1788464021967.9995,
+          "endTime": 1788464028728,
+          "secondsFromStart": 10.38399951171875,
+          "duration": 6360.00048828125,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "The doctor felt work there.",
+          "time": 1788464029128,
+          "endTime": 1788464032113,
+          "secondsFromStart": 17.43,
+          "duration": 2835,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "the",
+                "start": 17.43,
+                "end": 17.67,
+                "confidence": 0.36328125,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "doctor",
+                "start": 17.67,
+                "end": 18.17,
+                "confidence": 0.9301758,
+                "punctuated_word": "doctor"
+              },
+              {
+                "word": "felt",
+                "start": 18.39,
+                "end": 18.89,
+                "confidence": 0.94921875,
+                "punctuated_word": "felt"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. Doctor Anita Reyes and doctor Markus Feld see patients at Lakeview Family Dental. How can I assist you further?",
+          "time": 1788464033897.999,
+          "endTime": 1788464042408,
+          "secondsFromStart": 22.3139990234375,
+          "duration": 7720.001953125,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "What about doctor South?",
+          "time": 1788464043228,
+          "endTime": 1788464044848,
+          "secondsFromStart": 31.53,
+          "duration": 1620,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "what",
+                "start": 31.53,
+                "end": 31.77,
+                "confidence": 0.79833984,
+                "punctuated_word": "What"
+              },
+              {
+                "word": "about",
+                "start": 31.77,
+                "end": 32.170002,
+                "confidence": 1,
+                "punctuated_word": "about"
+              },
+              {
+                "word": "doctor",
+                "start": 32.170002,
+                "end": 32.65,
+                "confidence": 0.7416992,
+                "punctuated_word": "doctor"
+              },
+              {
+                "word": "south",
+                "start": 32.65,
+                "end": 33.15,
+                "confidence": 0.7163086,
+                "punctuated_word": "South?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I don't have any information about a doctor South at Lakeview Family Dental. Would you like leave a callback request for more information?",
+          "time": 1788464046988,
+          "endTime": 1788464056147.997,
+          "secondsFromStart": 35.404,
+          "duration": 8639.9951171875,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "I'm talking to you. What about doctor Ray?",
+          "time": 1788464054288,
+          "endTime": 1788464058948,
+          "secondsFromStart": 42.59,
+          "duration": 4660,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "i'm",
+                "start": 42.59,
+                "end": 43.09,
+                "confidence": 0.6711426,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "talking",
+                "start": 44.83,
+                "end": 45.15,
+                "confidence": 0.40405273,
+                "punctuated_word": "talking"
+              },
+              {
+                "word": "to",
+                "start": 45.15,
+                "end": 45.39,
+                "confidence": 0.98095703,
+                "punctuated_word": "to"
+              },
+              {
+                "word": "you",
+                "start": 45.39,
+                "end": 45.55,
+                "confidence": 0.81591797,
+                "punctuated_word": "you."
+              },
+              {
+                "word": "what",
+                "start": 45.55,
+                "end": 45.79,
+                "confidence": 0.99902344,
+                "punctuated_word": "What"
+              },
+              {
+                "word": "about",
+                "start": 45.79,
+                "end": 46.27,
+                "confidence": 1,
+                "punctuated_word": "about"
+              },
+              {
+                "word": "doctor",
+                "start": 46.27,
+                "end": 46.75,
+                "confidence": 0.8925781,
+                "punctuated_word": "doctor"
+              },
+              {
+                "word": "ray",
+                "start": 46.75,
+                "end": 47.25,
+                "confidence": 0.6347656,
+                "punctuated_word": "Ray?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Doctor Anita Reyes works at Lakeview Family Dental. If you need further assistance, I can take a callback request. Would you like me to do that?",
+          "time": 1788464060838,
+          "endTime": 1788464069538,
+          "secondsFromStart": 49.254,
+          "duration": 7480.001953125,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        }
+      ],
+      "messagesOpenAIFormatted": [
+        {
+          "role": "system",
+          "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "Lakeview Family Dental after hours. How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "warfare,"
+        },
+        {
+          "role": "assistant",
+          "content": "I am I'm unable to assist with that topic. If you have questions related to Lakeview Family Dental, feel free to ask."
+        },
+        {
+          "role": "user",
+          "content": "The doctor felt work there."
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. Doctor Anita Reyes and doctor Markus Feld see patients at Lakeview Family Dental. How can I assist you further?"
+        },
+        {
+          "role": "user",
+          "content": "What about doctor South?"
+        },
+        {
+          "role": "assistant",
+          "content": "I don't have any information about a doctor South at Lakeview Family Dental. Would you like leave a callback request for more information?"
+        },
+        {
+          "role": "user",
+          "content": "I'm talking to you. What about doctor Ray?"
+        },
+        {
+          "role": "assistant",
+          "content": "Doctor Anita Reyes works at Lakeview Family Dental. If you need further assistance, I can take a callback request. Would you like me to do that?"
+        }
+      ],
+      "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: warfare,\nAI: I am I'm unable to assist with that topic. If you have questions related to Lakeview Family Dental, feel free to ask.\nUser: The doctor felt work there.\nAI: Yes. Doctor Anita Reyes and doctor Markus Feld see patients at Lakeview Family Dental. How can I assist you further?\nUser: What about doctor South?\nAI: I don't have any information about a doctor South at Lakeview Family Dental. Would you like leave a callback request for more information?\nUser: I'm talking to you. What about doctor Ray?\nAI: Doctor Anita Reyes works at Lakeview Family Dental. If you need further assistance, I can take a callback request. Would you like me to do that?\n",
+      "nodes": [],
+      "assistantActivations": [
+        {
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "assistantVersion": "v11"
+        }
+      ],
+      "variables": {
+        "now": "Sep 3, 2026, 7:33 PM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 7:33 PM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "7:33 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "ff93862f-723f-4bc4-b447-03d9ecf8533c",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a068c3-18b8-700e-a03d-85837300c9f7",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T19:33:31.448Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "ff93862f-723f-4bc4-b447-03d9ecf8533c",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "variableValues": {
+        "now": "Sep 3, 2026, 7:33 PM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 7:33 PM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "7:33 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "ff93862f-723f-4bc4-b447-03d9ecf8533c",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a068c3-18b8-700e-a03d-85837300c9f7",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T19:33:31.448Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "ff93862f-723f-4bc4-b447-03d9ecf8533c",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "performanceMetrics": {
+        "turnLatencies": [
+          {
+            "modelLatency": 573,
+            "voiceLatency": 903,
+            "transcriberLatency": 635,
+            "endpointingLatency": 301,
+            "turnLatency": 2442
+          },
+          {
+            "modelLatency": 823,
+            "voiceLatency": 311,
+            "transcriberLatency": 1182,
+            "endpointingLatency": 101,
+            "turnLatency": 2427
+          },
+          {
+            "modelLatency": 1053,
+            "voiceLatency": 623,
+            "transcriberLatency": 718,
+            "endpointingLatency": 101,
+            "turnLatency": 2539
+          },
+          {
+            "modelLatency": 580,
+            "voiceLatency": 666,
+            "transcriberLatency": 482,
+            "endpointingLatency": 101,
+            "turnLatency": 1850
+          }
+        ],
+        "modelLatencyAverage": 757.25,
+        "voiceLatencyAverage": 625.75,
+        "transcriberLatencyAverage": 754.25,
+        "endpointingLatencyAverage": 151,
+        "turnLatencyAverage": 2314.5,
+        "fromTransportLatencyAverage": 20,
+        "toTransportLatencyAverage": 20
+      },
+      "scorecards": {},
+      "transfers": [],
+      "presignedUrlsExpiresAt": "2026-09-03T20:04:32.803Z"
+    },
+    "startedAt": "2026-09-03T19:33:31.584Z",
+    "endedAt": "2026-09-03T19:34:29.008Z",
+    "endedReason": "customer-ended-call",
+    "cost": 0.092,
+    "costBreakdown": {
+      "stt": 0.0098,
+      "llm": 0.0095,
+      "tts": 0.025,
+      "vapi": 0.0479,
+      "chat": 0,
+      "transport": 0,
+      "total": 0.092,
+      "llmPromptTokens": 3231,
+      "llmCompletionTokens": 139,
+      "llmCachedPromptTokens": 0,
+      "ttsCharacters": 499,
+      "voicemailDetectionCost": 0,
+      "knowledgeBaseCost": 0,
+      "analysisCostBreakdown": {
+        "summary": 0,
+        "summaryPromptTokens": 0,
+        "summaryCompletionTokens": 0,
+        "summaryCachedPromptTokens": 0,
+        "structuredData": 0,
+        "structuredDataPromptTokens": 0,
+        "structuredDataCompletionTokens": 0,
+        "structuredDataCachedPromptTokens": 0,
+        "successEvaluation": 0,
+        "successEvaluationPromptTokens": 0,
+        "successEvaluationCompletionTokens": 0,
+        "successEvaluationCachedPromptTokens": 0,
+        "structuredOutput": 0,
+        "structuredOutputPromptTokens": 0,
+        "structuredOutputCompletionTokens": 0,
+        "structuredOutputCachedPromptTokens": 0
+      }
+    },
+    "costs": [
+      {
+        "type": "transcriber",
+        "transcriber": {
+          "provider": "deepgram",
+          "model": "nova-2"
+        },
+        "minutes": 0.99905,
+        "cost": 0.009772069999999999
+      },
+      {
+        "type": "model",
+        "model": {
+          "provider": "openai",
+          "model": "gpt-4o"
+        },
+        "promptTokens": 3231,
+        "completionTokens": 139,
+        "cachedPromptTokens": 0,
+        "reasoningTokens": 0,
+        "cost": 0.0094675
+      },
+      {
+        "type": "voice",
+        "voice": {
+          "provider": "vapi",
+          "voiceId": "Elliot",
+          "model": "vapi-v1"
+        },
+        "characters": 499,
+        "cost": 0.02495
+      },
+      {
+        "type": "vapi",
+        "subType": "normal",
+        "minutes": 0.9571,
+        "cost": 0.047855
+      },
+      {
+        "type": "knowledge-base",
+        "model": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "cost": 0
+      }
+    ],
+    "durationMs": 57424,
+    "durationSeconds": 57.424,
+    "durationMinutes": 0.9571,
+    "summary": "",
+    "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: warfare,\nAI: I am I'm unable to assist with that topic. If you have questions related to Lakeview Family Dental, feel free to ask.\nUser: The doctor felt work there.\nAI: Yes. Doctor Anita Reyes and doctor Markus Feld see patients at Lakeview Family Dental. How can I assist you further?\nUser: What about doctor South?\nAI: I don't have any information about a doctor South at Lakeview Family Dental. Would you like leave a callback request for more information?\nUser: I'm talking to you. What about doctor Ray?\nAI: Doctor Anita Reyes works at Lakeview Family Dental. If you need further assistance, I can take a callback request. Would you like me to do that?\n",
+    "messages": [
+      {
+        "role": "system",
+        "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+        "time": 1788464011509,
+        "secondsFromStart": 0
+      },
+      {
+        "role": "bot",
+        "message": "Lakeview Family Dental after hours. How can I help?",
+        "time": 1788464012738,
+        "endTime": 1788464015718,
+        "secondsFromStart": 1.154,
+        "duration": 2980,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "warfare,",
+        "time": 1788464019608,
+        "endTime": 1788464020108,
+        "secondsFromStart": 7.91,
+        "duration": 500,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "warfare",
+              "start": 7.91,
+              "end": 8.41,
+              "confidence": 0.5296631,
+              "punctuated_word": "warfare,"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I am I'm unable to assist with that topic. If you have questions related to Lakeview Family Dental, feel free to ask.",
+        "time": 1788464021967.9995,
+        "endTime": 1788464028728,
+        "secondsFromStart": 10.38399951171875,
+        "duration": 6360.00048828125,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "The doctor felt work there.",
+        "time": 1788464029128,
+        "endTime": 1788464032113,
+        "secondsFromStart": 17.43,
+        "duration": 2835,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "the",
+              "start": 17.43,
+              "end": 17.67,
+              "confidence": 0.36328125,
+              "punctuated_word": "The"
+            },
+            {
+              "word": "doctor",
+              "start": 17.67,
+              "end": 18.17,
+              "confidence": 0.9301758,
+              "punctuated_word": "doctor"
+            },
+            {
+              "word": "felt",
+              "start": 18.39,
+              "end": 18.89,
+              "confidence": 0.94921875,
+              "punctuated_word": "felt"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. Doctor Anita Reyes and doctor Markus Feld see patients at Lakeview Family Dental. How can I assist you further?",
+        "time": 1788464033897.999,
+        "endTime": 1788464042408,
+        "secondsFromStart": 22.3139990234375,
+        "duration": 7720.001953125,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "What about doctor South?",
+        "time": 1788464043228,
+        "endTime": 1788464044848,
+        "secondsFromStart": 31.53,
+        "duration": 1620,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "what",
+              "start": 31.53,
+              "end": 31.77,
+              "confidence": 0.79833984,
+              "punctuated_word": "What"
+            },
+            {
+              "word": "about",
+              "start": 31.77,
+              "end": 32.170002,
+              "confidence": 1,
+              "punctuated_word": "about"
+            },
+            {
+              "word": "doctor",
+              "start": 32.170002,
+              "end": 32.65,
+              "confidence": 0.7416992,
+              "punctuated_word": "doctor"
+            },
+            {
+              "word": "south",
+              "start": 32.65,
+              "end": 33.15,
+              "confidence": 0.7163086,
+              "punctuated_word": "South?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I don't have any information about a doctor South at Lakeview Family Dental. Would you like leave a callback request for more information?",
+        "time": 1788464046988,
+        "endTime": 1788464056147.997,
+        "secondsFromStart": 35.404,
+        "duration": 8639.9951171875,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "I'm talking to you. What about doctor Ray?",
+        "time": 1788464054288,
+        "endTime": 1788464058948,
+        "secondsFromStart": 42.59,
+        "duration": 4660,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "i'm",
+              "start": 42.59,
+              "end": 43.09,
+              "confidence": 0.6711426,
+              "punctuated_word": "I'm"
+            },
+            {
+              "word": "talking",
+              "start": 44.83,
+              "end": 45.15,
+              "confidence": 0.40405273,
+              "punctuated_word": "talking"
+            },
+            {
+              "word": "to",
+              "start": 45.15,
+              "end": 45.39,
+              "confidence": 0.98095703,
+              "punctuated_word": "to"
+            },
+            {
+              "word": "you",
+              "start": 45.39,
+              "end": 45.55,
+              "confidence": 0.81591797,
+              "punctuated_word": "you."
+            },
+            {
+              "word": "what",
+              "start": 45.55,
+              "end": 45.79,
+              "confidence": 0.99902344,
+              "punctuated_word": "What"
+            },
+            {
+              "word": "about",
+              "start": 45.79,
+              "end": 46.27,
+              "confidence": 1,
+              "punctuated_word": "about"
+            },
+            {
+              "word": "doctor",
+              "start": 46.27,
+              "end": 46.75,
+              "confidence": 0.8925781,
+              "punctuated_word": "doctor"
+            },
+            {
+              "word": "ray",
+              "start": 46.75,
+              "end": 47.25,
+              "confidence": 0.6347656,
+              "punctuated_word": "Ray?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Doctor Anita Reyes works at Lakeview Family Dental. If you need further assistance, I can take a callback request. Would you like me to do that?",
+        "time": 1788464060838,
+        "endTime": 1788464069538,
+        "secondsFromStart": 49.254,
+        "duration": 7480.001953125,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      }
+    ],
+    "call": {
+      "id": "01a068c3-18b8-700e-a03d-85837300c9f7",
+      "orgId": "[redacted-id]",
+      "createdAt": "2026-09-03T19:33:31.448Z",
+      "updatedAt": "2026-09-03T19:33:31.448Z",
+      "type": "inboundPhoneCall",
+      "cost": 0,
+      "monitor": {},
+      "transport": {
+        "conversationType": "voice",
+        "provider": "vapi.sip",
+        "callSid": "ff93862f-723f-4bc4-b447-03d9ecf8533c",
+        "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "phoneCallProvider": "vapi",
+      "phoneCallProviderId": "ff93862f-723f-4bc4-b447-03d9ecf8533c",
+      "phoneCallTransport": "sip",
+      "phoneCallProviderDetails": {
+        "sip": {
+          "raw": "INVITE sip:[redacted-digits]@[redacted-digits]:5060 SIP/2.0\r\nVia: SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bK5029HFrX2mg3a;received=[redacted-digits]Max-Forwards: 70\r\nFrom: <sip:[redacted-phone]@[redacted-digits]:5060>;tag=Xg391tFFtp4Bg\r\nTo: <sip:[redacted-digits]@[redacted-digits]>\r\nCall-ID: 2fcd3f51-[redacted-digits]6abb-0ec7040a32ad\r\nCSeq: [redacted-digits]INVITE\r\nContact: <sip:[redacted-digits]:5060>\r\nAccept: application/sdp\r\nAllow: PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL\r\nSupported: 100rel, timer\r\nMin-SE: 600\r\nPrivacy: none\r\nContent-Type: application/sdp\r\nContent-Length: 306\r\nX-Account-Sid: c033b672-5b99-42ae-9ce2-b231e9a522fb\r\nX-CID: [redacted-digits]@msc1.382COM.COM\r\nX-Forwarded-For: [redacted-digits]X-Originating-Carrier: 382com\r\nX-Voip-Carrier-Sid: a5569621-84ac-49cc-a8b8-11c7fb96b905\r\nX-Application-Sid: 79d078c8-76b2-452a-99e0-ddd5abbf6269\r\nIdentity: eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4NDY0MDExLCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.BgqWvfs3MZRrBAp6p0bvksVG2F3cI88E2X6G6S5mdj6dRXmSPurJ9DKDmUqWowUuglMAT2JOrbd3yT9ZHZVJ7A;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken\r\nP-Asserted-Identity: <sip:[redacted-phone]@[redacted-digits]:5060>\r\n\r\nv=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 46300 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:46301\r\n",
+          "uri": "sip:[redacted-digits]@[redacted-digits]:5060",
+          "body": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 46300 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:46301\r\n",
+          "method": "INVITE",
+          "headers": {
+            "to": "<sip:[redacted-phone]@[redacted-digits]>",
+            "via": "SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bK5029HFrX2mg3a;received=[redacted-digits]",
+            "cseq": "[redacted-digits]INVITE",
+            "from": "<sip:[redacted-phone]@[redacted-digits]:5060>;tag=Xg391tFFtp4Bg",
+            "X-CID": "[redacted-digits]@msc1.382COM.COM",
+            "allow": "PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL",
+            "accept": "application/sdp",
+            "min-se": "600",
+            "call-id": "2fcd3f51-[redacted-digits]6abb-0ec7040a32ad",
+            "contact": "<sip:[redacted-digits]:5060>",
+            "privacy": "none",
+            "identity": "eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4NDY0MDExLCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.BgqWvfs3MZRrBAp6p0bvksVG2F3cI88E2X6G6S5mdj6dRXmSPurJ9DKDmUqWowUuglMAT2JOrbd3yT9ZHZVJ7A;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken",
+            "supported": "100rel, timer",
+            "content-type": "application/sdp",
+            "max-forwards": "70",
+            "X-Account-Sid": "c033b672-5b99-42ae-9ce2-b231e9a522fb",
+            "content-length": "306",
+            "X-Forwarded-For": "[redacted-digits]",
+            "X-Application-Sid": "79d078c8-76b2-452a-99e0-ddd5abbf6269",
+            "X-Voip-Carrier-Sid": "a5569621-84ac-49cc-a8b8-11c7fb96b905",
+            "p-asserted-identity": "<sip:[redacted-phone]@[redacted-digits]:5060>",
+            "X-Originating-Carrier": "382com"
+          },
+          "payload": [
+            {
+              "type": "application/sdp",
+              "content": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 46300 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:46301\r\n"
+            }
+          ],
+          "version": "2.0"
+        },
+        "sbcCallId": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "status": "ringing",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "assistantVersion": "v11",
+      "assistantOverrides": {
+        "variableValues": {
+          "cid": "[redacted-id]",
+          "account-sid": "[redacted-id]",
+          "forwarded-for": "[redacted-ip]",
+          "application-sid": "[redacted-id]",
+          "voip-carrier-sid": "[redacted-id]",
+          "originating-carrier": "382com"
+        }
+      },
+      "phoneNumberId": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "customer": {
+        "number": "[redacted-phone]",
+        "sipUri": "[redacted-sip]"
+      }
+    },
+    "phoneNumber": {
+      "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "orgId": "[redacted-id]",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "number": "[redacted-phone]",
+      "createdAt": "2026-09-02T21:32:56.381Z",
+      "updatedAt": "2026-09-02T23:24:48.608Z",
+      "provider": "vapi",
+      "status": "active",
+      "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+    },
+    "customer": {
+      "number": "[redacted-phone]",
+      "sipUri": "[redacted-sip]"
+    },
+    "assistant": {
+      "id": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "orgId": "[redacted-id]",
+      "name": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+      "voice": {
+        "voiceId": "Elliot",
+        "provider": "vapi"
+      },
+      "createdAt": "2026-09-02T22:46:13.138Z",
+      "updatedAt": "2026-09-03T19:31:41.506Z",
+      "model": {
+        "model": "gpt-4o",
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "take_callback",
+              "parameters": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "phone",
+                  "reason"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Caller's full name."
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "Callback number, digits only."
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Why they are calling."
+                  }
+                }
+              },
+              "description": "Record a callback request from the caller."
+            },
+            "messages": [
+              {
+                "type": "request-complete",
+                "content": "Got it, someone will call you back in the morning."
+              }
+            ]
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+          }
+        ],
+        "provider": "openai",
+        "temperature": 0.3
+      },
+      "recordingEnabled": true,
+      "firstMessage": "Lakeview Family Dental, after hours. How can I help?",
+      "transcriber": {
+        "model": "nova-2",
+        "keywords": [
+          "implant",
+          "implants",
+          "Cigna",
+          "Aetna",
+          "Reyes",
+          "Feld",
+          "Concordia",
+          "orthodontics",
+          "Fairmount",
+          "Bayview"
+        ],
+        "language": "en",
+        "provider": "deepgram",
+        "endpointing": 300
+      },
+      "silenceTimeoutSeconds": 20,
+      "serverMessages": [
+        "end-of-call-report"
+      ],
+      "maxDurationSeconds": 300,
+      "analysisPlan": {
+        "summaryPlan": {
+          "enabled": false
+        },
+        "successEvaluationPlan": {
+          "enabled": false
+        }
+      },
+      "startSpeakingPlan": {
+        "waitSeconds": 0,
+        "transcriptionEndpointingPlan": {
+          "onNumberSeconds": 0.2,
+          "onPunctuationSeconds": 0.1,
+          "onNoPunctuationSeconds": 0.3
+        }
+      },
+      "stopSpeakingPlan": {
+        "numWords": 0,
+        "voiceSeconds": 0.2,
+        "backoffSeconds": 1
+      },
+      "server": {
+        "timeoutSeconds": 20
+      },
+      "compliancePlan": {
+        "pciEnabled": false
+      },
+      "latestVersion": "v11",
+      "variableValues": {
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      }
+    },
+    "assistantVersion": "v11"
+  }
+}

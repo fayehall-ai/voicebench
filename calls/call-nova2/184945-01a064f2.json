@@ -1,0 +1,1646 @@
+{
+  "message": {
+    "timestamp": 1788400185173,
+    "type": "end-of-call-report",
+    "analysis": {},
+    "artifact": {
+      "messages": [
+        {
+          "role": "system",
+          "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+          "time": 1788399996188,
+          "secondsFromStart": 0
+        },
+        {
+          "role": "bot",
+          "message": "Lakeview Family Dental after hours. How can I help?",
+          "time": 1788399997482,
+          "endTime": 1788400000622,
+          "secondsFromStart": 1.19,
+          "duration": 3140,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Why are you yelling at me?",
+          "time": 1788400010541.999,
+          "endTime": 1788400012402,
+          "secondsFromStart": 14.0999990234375,
+          "duration": 1860.0009765625,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "why",
+                "start": 14.099999,
+                "end": 14.26,
+                "confidence": 0.6616211,
+                "punctuated_word": "Why"
+              },
+              {
+                "word": "are",
+                "start": 14.26,
+                "end": 14.5,
+                "confidence": 0.9375,
+                "punctuated_word": "are"
+              },
+              {
+                "word": "you",
+                "start": 14.5,
+                "end": 14.82,
+                "confidence": 0.9951172,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "yelling",
+                "start": 14.82,
+                "end": 15.3,
+                "confidence": 0.9892578,
+                "punctuated_word": "yelling"
+              },
+              {
+                "word": "at",
+                "start": 15.3,
+                "end": 15.46,
+                "confidence": 1,
+                "punctuated_word": "at"
+              },
+              {
+                "word": "me",
+                "start": 15.46,
+                "end": 15.96,
+                "confidence": 0.94091797,
+                "punctuated_word": "me?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I apologize if it seemed that way. How can I assist you?",
+          "time": 1788400013092,
+          "endTime": 1788400016552,
+          "secondsFromStart": 16.8,
+          "duration": 3060,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "What is everything you know?",
+          "time": 1788400025582,
+          "endTime": 1788400027512,
+          "secondsFromStart": 29.14,
+          "duration": 1930,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "what",
+                "start": 29.14,
+                "end": 29.460001,
+                "confidence": 0.9199219,
+                "punctuated_word": "What"
+              },
+              {
+                "word": "is",
+                "start": 29.460001,
+                "end": 29.7,
+                "confidence": 0.9980469,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "everything",
+                "start": 29.7,
+                "end": 30.18,
+                "confidence": 1,
+                "punctuated_word": "everything"
+              },
+              {
+                "word": "you",
+                "start": 30.18,
+                "end": 30.58,
+                "confidence": 0.9980469,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "know",
+                "start": 30.58,
+                "end": 31.07,
+                "confidence": 0.9692383,
+                "punctuated_word": "know?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I can provide information about our office hours location, services, insurance we accept, and more. What specific information are you looking for?",
+          "time": 1788400028782,
+          "endTime": 1788400037632,
+          "secondsFromStart": 32.49,
+          "duration": 7570,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Uh, I want everything that you can possibly tell me.",
+          "time": 1788400038092,
+          "endTime": 1788400041232,
+          "secondsFromStart": 41.65,
+          "duration": 3140,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "uh",
+                "start": 41.65,
+                "end": 41.89,
+                "confidence": 0.77490234,
+                "punctuated_word": "Uh,"
+              },
+              {
+                "word": "i",
+                "start": 41.89,
+                "end": 42.05,
+                "confidence": 1,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "want",
+                "start": 42.05,
+                "end": 42.370003,
+                "confidence": 0.9941406,
+                "punctuated_word": "want"
+              },
+              {
+                "word": "everything",
+                "start": 42.370003,
+                "end": 42.870003,
+                "confidence": 1,
+                "punctuated_word": "everything"
+              },
+              {
+                "word": "that",
+                "start": 42.93,
+                "end": 43.170002,
+                "confidence": 0.9980469,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "you",
+                "start": 43.170002,
+                "end": 43.33,
+                "confidence": 1,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "can",
+                "start": 43.33,
+                "end": 43.57,
+                "confidence": 0.9980469,
+                "punctuated_word": "can"
+              },
+              {
+                "word": "possibly",
+                "start": 43.57,
+                "end": 44.05,
+                "confidence": 0.99902344,
+                "punctuated_word": "possibly"
+              },
+              {
+                "word": "tell",
+                "start": 44.05,
+                "end": 44.29,
+                "confidence": 0.99609375,
+                "punctuated_word": "tell"
+              },
+              {
+                "word": "me",
+                "start": 44.29,
+                "end": 44.79,
+                "confidence": 0.9753418,
+                "punctuated_word": "me."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Lakeview Family Dental is located at 2 1 1 4 0 Fairmount Avenue, San Diego, CA 9 2 1 0. 5. Our office hours are Monday to Thursday, 8 AM to 5 PM, and Friday, 8 AM to 1 PM. We are closed on weekends. We offer general dentistry, cleanings, fillings, crowns, and root canals. Orthodontics is referred out to Bayview Ortho on Adams Avenue. New patient exams include include a cleaning and full X rays. Parking is free in the lot behind the building. We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia insurance plans, but do not accept state Medicaid plans. Cancellations require 24 hours notice to avoid a 50 dollars fee. For dental emergencies after hours, call [redacted-digits]Doctor Anita Reyes and doctor Markus Feld are our dentists. Let me know if you need anything else.",
+          "time": 1788400042602,
+          "endTime": 1788400103992,
+          "secondsFromStart": 46.31,
+          "duration": 54969.991943359375,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "You do x rays? I don't hear you mentioned that.",
+          "time": 1788400109072,
+          "endTime": 1788400111572,
+          "secondsFromStart": 112.63,
+          "duration": 2500,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "you",
+                "start": 112.63,
+                "end": 112.78999,
+                "confidence": 0.5678711,
+                "punctuated_word": "You"
+              },
+              {
+                "word": "do",
+                "start": 112.78999,
+                "end": 113.03,
+                "confidence": 0.9707031,
+                "punctuated_word": "do"
+              },
+              {
+                "word": "x",
+                "start": 113.03,
+                "end": 113.189995,
+                "confidence": 0.6425781,
+                "punctuated_word": "x"
+              },
+              {
+                "word": "rays",
+                "start": 113.189995,
+                "end": 113.42999,
+                "confidence": 0.9069824,
+                "punctuated_word": "rays?"
+              },
+              {
+                "word": "i",
+                "start": 113.42999,
+                "end": 113.59,
+                "confidence": 0.99902344,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "don't",
+                "start": 113.59,
+                "end": 113.829994,
+                "confidence": 0.8601074,
+                "punctuated_word": "don't"
+              },
+              {
+                "word": "hear",
+                "start": 113.829994,
+                "end": 113.99,
+                "confidence": 0.97509766,
+                "punctuated_word": "hear"
+              },
+              {
+                "word": "you",
+                "start": 113.99,
+                "end": 114.229996,
+                "confidence": 0.99609375,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "mentioned",
+                "start": 114.229996,
+                "end": 114.63,
+                "confidence": 0.59472656,
+                "punctuated_word": "mentioned"
+              },
+              {
+                "word": "that",
+                "start": 114.63,
+                "end": 115.13,
+                "confidence": 0.9946289,
+                "punctuated_word": "that."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. We do full x rays as part of new patient exams. Me know if you have any other questions.",
+          "time": 1788400112882,
+          "endTime": 1788400118012,
+          "secondsFromStart": 116.59,
+          "duration": 4759.9951171875,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Why didn't you mention that when I told you, tell me everything?",
+          "time": 1788400118921.996,
+          "endTime": 1788400122142,
+          "secondsFromStart": 122.47999609375,
+          "duration": 3220.00390625,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "why",
+                "start": 122.479996,
+                "end": 122.64,
+                "confidence": 0.47753906,
+                "punctuated_word": "Why"
+              },
+              {
+                "word": "didn't",
+                "start": 122.64,
+                "end": 122.88,
+                "confidence": 0.9838867,
+                "punctuated_word": "didn't"
+              },
+              {
+                "word": "you",
+                "start": 122.88,
+                "end": 123.04,
+                "confidence": 1,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "mention",
+                "start": 123.04,
+                "end": 123.36,
+                "confidence": 0.95703125,
+                "punctuated_word": "mention"
+              },
+              {
+                "word": "that",
+                "start": 123.36,
+                "end": 123.6,
+                "confidence": 0.9970703,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "when",
+                "start": 123.6,
+                "end": 123.76,
+                "confidence": 0.9506836,
+                "punctuated_word": "when"
+              },
+              {
+                "word": "i",
+                "start": 123.76,
+                "end": 123.84,
+                "confidence": 1,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "told",
+                "start": 123.84,
+                "end": 124.08,
+                "confidence": 1,
+                "punctuated_word": "told"
+              },
+              {
+                "word": "you",
+                "start": 124.08,
+                "end": 124.58,
+                "confidence": 0.70043945,
+                "punctuated_word": "you,"
+              },
+              {
+                "word": "tell",
+                "start": 124.799995,
+                "end": 125.04,
+                "confidence": 0.95166016,
+                "punctuated_word": "tell"
+              },
+              {
+                "word": "me",
+                "start": 125.04,
+                "end": 125.2,
+                "confidence": 1,
+                "punctuated_word": "me"
+              },
+              {
+                "word": "everything",
+                "start": 125.2,
+                "end": 125.7,
+                "confidence": 0.6164551,
+                "punctuated_word": "everything?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I did I apologize for any confusion earlier. Yes. We do full X rays, as part of new patient exams. Let me know if you'd like more details or assistance.",
+          "time": 1788400122052,
+          "endTime": 1788400132842,
+          "secondsFromStart": 125.76,
+          "duration": 8440,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Yeah. I'd like more details on the x rays.",
+          "time": 1788400133682,
+          "endTime": 1788400136262,
+          "secondsFromStart": 137.24,
+          "duration": 2580,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "yeah",
+                "start": 137.24,
+                "end": 137.48001,
+                "confidence": 0.8173828,
+                "punctuated_word": "Yeah."
+              },
+              {
+                "word": "i'd",
+                "start": 137.48001,
+                "end": 137.64,
+                "confidence": 0.892334,
+                "punctuated_word": "I'd"
+              },
+              {
+                "word": "like",
+                "start": 137.64,
+                "end": 137.88,
+                "confidence": 0.99609375,
+                "punctuated_word": "like"
+              },
+              {
+                "word": "more",
+                "start": 137.88,
+                "end": 138.20001,
+                "confidence": 0.9980469,
+                "punctuated_word": "more"
+              },
+              {
+                "word": "details",
+                "start": 138.20001,
+                "end": 138.70001,
+                "confidence": 1,
+                "punctuated_word": "details"
+              },
+              {
+                "word": "on",
+                "start": 138.76001,
+                "end": 138.92,
+                "confidence": 0.98291016,
+                "punctuated_word": "on"
+              },
+              {
+                "word": "the",
+                "start": 138.92,
+                "end": 139.08,
+                "confidence": 1,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "x",
+                "start": 139.08,
+                "end": 139.32,
+                "confidence": 0.75634766,
+                "punctuated_word": "x"
+              },
+              {
+                "word": "rays",
+                "start": 139.32,
+                "end": 139.82,
+                "confidence": 0.9746094,
+                "punctuated_word": "rays."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I don't have additional details about the X rays. Beyond that, they are included in new patient exams. Would you like me to take a callback name and number for you?",
+          "time": 1788400137942,
+          "endTime": 1788400146852,
+          "secondsFromStart": 141.65,
+          "duration": 8109.989990234375,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Yes. Not sure. No.",
+          "time": 1788400150132,
+          "endTime": 1788400152212,
+          "secondsFromStart": 153.69,
+          "duration": 1160,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "yes",
+                "start": 153.69,
+                "end": 154.19,
+                "confidence": 0.814209,
+                "punctuated_word": "Yes."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Let me know if you'd like me to take a callback name and number or assist you further.",
+          "time": 1788400154022,
+          "endTime": 1788400159062.01,
+          "secondsFromStart": 157.73,
+          "duration": 4840.010009765625,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        }
+      ],
+      "messagesOpenAIFormatted": [
+        {
+          "role": "system",
+          "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "Lakeview Family Dental after hours. How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "Why are you yelling at me?"
+        },
+        {
+          "role": "assistant",
+          "content": "I apologize if it seemed that way. How can I assist you?"
+        },
+        {
+          "role": "user",
+          "content": "What is everything you know?"
+        },
+        {
+          "role": "assistant",
+          "content": "I can provide information about our office hours location, services, insurance we accept, and more. What specific information are you looking for?"
+        },
+        {
+          "role": "user",
+          "content": "Uh, I want everything that you can possibly tell me."
+        },
+        {
+          "role": "assistant",
+          "content": "Lakeview Family Dental is located at 2 1 1 4 0 Fairmount Avenue, San Diego, CA 9 2 1 0. 5. Our office hours are Monday to Thursday, 8 AM to 5 PM, and Friday, 8 AM to 1 PM. We are closed on weekends. We offer general dentistry, cleanings, fillings, crowns, and root canals. Orthodontics is referred out to Bayview Ortho on Adams Avenue. New patient exams include include a cleaning and full X rays. Parking is free in the lot behind the building. We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia insurance plans, but do not accept state Medicaid plans. Cancellations require 24 hours notice to avoid a 50 dollars fee. For dental emergencies after hours, call [redacted-digits]Doctor Anita Reyes and doctor Markus Feld are our dentists. Let me know if you need anything else."
+        },
+        {
+          "role": "user",
+          "content": "You do x rays? I don't hear you mentioned that."
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. We do full x rays as part of new patient exams. Me know if you have any other questions."
+        },
+        {
+          "role": "user",
+          "content": "Why didn't you mention that when I told you, tell me everything?"
+        },
+        {
+          "role": "assistant",
+          "content": "I did I apologize for any confusion earlier. Yes. We do full X rays, as part of new patient exams. Let me know if you'd like more details or assistance."
+        },
+        {
+          "role": "user",
+          "content": "Yeah. I'd like more details on the x rays."
+        },
+        {
+          "role": "assistant",
+          "content": "I don't have additional details about the X rays. Beyond that, they are included in new patient exams. Would you like me to take a callback name and number for you?"
+        },
+        {
+          "role": "user",
+          "content": "Yes. Not sure. No."
+        },
+        {
+          "role": "assistant",
+          "content": "Let me know if you'd like me to take a callback name and number or assist you further."
+        }
+      ],
+      "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Why are you yelling at me?\nAI: I apologize if it seemed that way. How can I assist you?\nUser: What is everything you know?\nAI: I can provide information about our office hours location, services, insurance we accept, and more. What specific information are you looking for?\nUser: Uh, I want everything that you can possibly tell me.\nAI: Lakeview Family Dental is located at 2 1 1 4 0 Fairmount Avenue, San Diego, CA 9 2 1 0. 5. Our office hours are Monday to Thursday, 8 AM to 5 PM, and Friday, 8 AM to 1 PM. We are closed on weekends. We offer general dentistry, cleanings, fillings, crowns, and root canals. Orthodontics is referred out to Bayview Ortho on Adams Avenue. New patient exams include include a cleaning and full X rays. Parking is free in the lot behind the building. We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia insurance plans, but do not accept state Medicaid plans. Cancellations require 24 hours notice to avoid a 50 dollars fee. For dental emergencies after hours, call [redacted-digits]Doctor Anita Reyes and doctor Markus Feld are our dentists. Let me know if you need anything else.\nUser: You do x rays? I don't hear you mentioned that.\nAI: Yes. We do full x rays as part of new patient exams. Me know if you have any other questions.\nUser: Why didn't you mention that when I told you, tell me everything?\nAI: I did I apologize for any confusion earlier. Yes. We do full X rays, as part of new patient exams. Let me know if you'd like more details or assistance.\nUser: Yeah. I'd like more details on the x rays.\nAI: I don't have additional details about the X rays. Beyond that, they are included in new patient exams. Would you like me to take a callback name and number for you?\nUser: Yes. Not sure. No.\nAI: Let me know if you'd like me to take a callback name and number or assist you further.\n",
+      "nodes": [],
+      "assistantActivations": [
+        {
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "assistantVersion": "v2"
+        }
+      ],
+      "variables": {
+        "now": "Sep 3, 2026, 1:46 AM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 1:46 AM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "1:46 AM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "c93ad238-3ef8-41de-95d8-6f58fb8b6bc9",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a064f2-4ccd-7332-a953-4e7534116e1e",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T01:46:36.109Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "c93ad238-3ef8-41de-95d8-6f58fb8b6bc9",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "variableValues": {
+        "now": "Sep 3, 2026, 1:46 AM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 1:46 AM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "1:46 AM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "c93ad238-3ef8-41de-95d8-6f58fb8b6bc9",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a064f2-4ccd-7332-a953-4e7534116e1e",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T01:46:36.109Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "c93ad238-3ef8-41de-95d8-6f58fb8b6bc9",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "performanceMetrics": {
+        "turnLatencies": [
+          {
+            "modelLatency": 520,
+            "voiceLatency": 370,
+            "transcriberLatency": 5771,
+            "endpointingLatency": 101,
+            "turnLatency": 6793
+          },
+          {
+            "modelLatency": 613,
+            "voiceLatency": 587,
+            "transcriberLatency": 561,
+            "endpointingLatency": 101,
+            "turnLatency": 1872
+          },
+          {
+            "modelLatency": 450,
+            "voiceLatency": 576,
+            "transcriberLatency": 1016,
+            "endpointingLatency": 102,
+            "turnLatency": 2179
+          },
+          {
+            "modelLatency": 507,
+            "voiceLatency": 583,
+            "transcriberLatency": 1126,
+            "endpointingLatency": 102,
+            "turnLatency": 2340
+          },
+          {
+            "modelLatency": 554,
+            "voiceLatency": 499,
+            "transcriberLatency": 345,
+            "endpointingLatency": 302,
+            "turnLatency": 1746
+          },
+          {
+            "modelLatency": 1247,
+            "voiceLatency": 504,
+            "transcriberLatency": 2319,
+            "endpointingLatency": 101,
+            "turnLatency": 4204
+          },
+          {
+            "modelLatency": 642,
+            "voiceLatency": 605,
+            "transcriberLatency": 1096,
+            "endpointingLatency": 102,
+            "turnLatency": 2469
+          },
+          {
+            "modelLatency": 1055,
+            "voiceLatency": 509,
+            "transcriberLatency": 600,
+            "endpointingLatency": 101,
+            "turnLatency": 2268
+          }
+        ],
+        "modelLatencyAverage": 698.5,
+        "voiceLatencyAverage": 529.13,
+        "transcriberLatencyAverage": 1604.25,
+        "endpointingLatencyAverage": 126.5,
+        "turnLatencyAverage": 2983.88,
+        "numAssistantInterrupted": 1,
+        "fromTransportLatencyAverage": 20,
+        "toTransportLatencyAverage": 20
+      },
+      "scorecards": {},
+      "transfers": [],
+      "presignedUrlsExpiresAt": "2026-09-03T02:19:45.164Z"
+    },
+    "startedAt": "2026-09-03T01:46:36.292Z",
+    "endedAt": "2026-09-03T01:49:41.551Z",
+    "endedReason": "silence-timed-out",
+    "cost": 0.3225,
+    "costBreakdown": {
+      "stt": 0.0306,
+      "llm": 0.0369,
+      "tts": 0.1005,
+      "vapi": 0.1544,
+      "chat": 0,
+      "transport": 0,
+      "total": 0.3225,
+      "llmPromptTokens": 12805,
+      "llmCompletionTokens": 492,
+      "llmCachedPromptTokens": 0,
+      "ttsCharacters": 2010,
+      "voicemailDetectionCost": 0,
+      "knowledgeBaseCost": 0,
+      "analysisCostBreakdown": {
+        "summary": 0,
+        "summaryPromptTokens": 0,
+        "summaryCompletionTokens": 0,
+        "summaryCachedPromptTokens": 0,
+        "structuredData": 0,
+        "structuredDataPromptTokens": 0,
+        "structuredDataCompletionTokens": 0,
+        "structuredDataCachedPromptTokens": 0,
+        "successEvaluation": 0,
+        "successEvaluationPromptTokens": 0,
+        "successEvaluationCompletionTokens": 0,
+        "successEvaluationCachedPromptTokens": 0,
+        "structuredOutput": 0,
+        "structuredOutputPromptTokens": 0,
+        "structuredOutputCompletionTokens": 0,
+        "structuredOutputCachedPromptTokens": 0
+      }
+    },
+    "costs": [
+      {
+        "type": "transcriber",
+        "transcriber": {
+          "provider": "deepgram",
+          "model": "nova-2"
+        },
+        "minutes": 3.1297833333333336,
+        "cost": 0.030647376666666663
+      },
+      {
+        "type": "model",
+        "model": {
+          "provider": "openai",
+          "model": "gpt-4o"
+        },
+        "promptTokens": 12805,
+        "completionTokens": 492,
+        "cachedPromptTokens": 0,
+        "reasoningTokens": 0,
+        "cost": 0.0369325
+      },
+      {
+        "type": "voice",
+        "voice": {
+          "provider": "vapi",
+          "voiceId": "Elliot",
+          "model": "vapi-v1"
+        },
+        "characters": 2010,
+        "cost": 0.1005
+      },
+      {
+        "type": "vapi",
+        "subType": "normal",
+        "minutes": 3.0876,
+        "cost": 0.15438
+      },
+      {
+        "type": "knowledge-base",
+        "model": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "cost": 0
+      }
+    ],
+    "durationMs": 185259,
+    "durationSeconds": 185.259,
+    "durationMinutes": 3.0876,
+    "summary": "",
+    "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Why are you yelling at me?\nAI: I apologize if it seemed that way. How can I assist you?\nUser: What is everything you know?\nAI: I can provide information about our office hours location, services, insurance we accept, and more. What specific information are you looking for?\nUser: Uh, I want everything that you can possibly tell me.\nAI: Lakeview Family Dental is located at 2 1 1 4 0 Fairmount Avenue, San Diego, CA 9 2 1 0. 5. Our office hours are Monday to Thursday, 8 AM to 5 PM, and Friday, 8 AM to 1 PM. We are closed on weekends. We offer general dentistry, cleanings, fillings, crowns, and root canals. Orthodontics is referred out to Bayview Ortho on Adams Avenue. New patient exams include include a cleaning and full X rays. Parking is free in the lot behind the building. We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia insurance plans, but do not accept state Medicaid plans. Cancellations require 24 hours notice to avoid a 50 dollars fee. For dental emergencies after hours, call [redacted-digits]Doctor Anita Reyes and doctor Markus Feld are our dentists. Let me know if you need anything else.\nUser: You do x rays? I don't hear you mentioned that.\nAI: Yes. We do full x rays as part of new patient exams. Me know if you have any other questions.\nUser: Why didn't you mention that when I told you, tell me everything?\nAI: I did I apologize for any confusion earlier. Yes. We do full X rays, as part of new patient exams. Let me know if you'd like more details or assistance.\nUser: Yeah. I'd like more details on the x rays.\nAI: I don't have additional details about the X rays. Beyond that, they are included in new patient exams. Would you like me to take a callback name and number for you?\nUser: Yes. Not sure. No.\nAI: Let me know if you'd like me to take a callback name and number or assist you further.\n",
+    "messages": [
+      {
+        "role": "system",
+        "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+        "time": 1788399996188,
+        "secondsFromStart": 0
+      },
+      {
+        "role": "bot",
+        "message": "Lakeview Family Dental after hours. How can I help?",
+        "time": 1788399997482,
+        "endTime": 1788400000622,
+        "secondsFromStart": 1.19,
+        "duration": 3140,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Why are you yelling at me?",
+        "time": 1788400010541.999,
+        "endTime": 1788400012402,
+        "secondsFromStart": 14.0999990234375,
+        "duration": 1860.0009765625,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "why",
+              "start": 14.099999,
+              "end": 14.26,
+              "confidence": 0.6616211,
+              "punctuated_word": "Why"
+            },
+            {
+              "word": "are",
+              "start": 14.26,
+              "end": 14.5,
+              "confidence": 0.9375,
+              "punctuated_word": "are"
+            },
+            {
+              "word": "you",
+              "start": 14.5,
+              "end": 14.82,
+              "confidence": 0.9951172,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "yelling",
+              "start": 14.82,
+              "end": 15.3,
+              "confidence": 0.9892578,
+              "punctuated_word": "yelling"
+            },
+            {
+              "word": "at",
+              "start": 15.3,
+              "end": 15.46,
+              "confidence": 1,
+              "punctuated_word": "at"
+            },
+            {
+              "word": "me",
+              "start": 15.46,
+              "end": 15.96,
+              "confidence": 0.94091797,
+              "punctuated_word": "me?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I apologize if it seemed that way. How can I assist you?",
+        "time": 1788400013092,
+        "endTime": 1788400016552,
+        "secondsFromStart": 16.8,
+        "duration": 3060,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "What is everything you know?",
+        "time": 1788400025582,
+        "endTime": 1788400027512,
+        "secondsFromStart": 29.14,
+        "duration": 1930,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "what",
+              "start": 29.14,
+              "end": 29.460001,
+              "confidence": 0.9199219,
+              "punctuated_word": "What"
+            },
+            {
+              "word": "is",
+              "start": 29.460001,
+              "end": 29.7,
+              "confidence": 0.9980469,
+              "punctuated_word": "is"
+            },
+            {
+              "word": "everything",
+              "start": 29.7,
+              "end": 30.18,
+              "confidence": 1,
+              "punctuated_word": "everything"
+            },
+            {
+              "word": "you",
+              "start": 30.18,
+              "end": 30.58,
+              "confidence": 0.9980469,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "know",
+              "start": 30.58,
+              "end": 31.07,
+              "confidence": 0.9692383,
+              "punctuated_word": "know?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I can provide information about our office hours location, services, insurance we accept, and more. What specific information are you looking for?",
+        "time": 1788400028782,
+        "endTime": 1788400037632,
+        "secondsFromStart": 32.49,
+        "duration": 7570,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Uh, I want everything that you can possibly tell me.",
+        "time": 1788400038092,
+        "endTime": 1788400041232,
+        "secondsFromStart": 41.65,
+        "duration": 3140,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "uh",
+              "start": 41.65,
+              "end": 41.89,
+              "confidence": 0.77490234,
+              "punctuated_word": "Uh,"
+            },
+            {
+              "word": "i",
+              "start": 41.89,
+              "end": 42.05,
+              "confidence": 1,
+              "punctuated_word": "I"
+            },
+            {
+              "word": "want",
+              "start": 42.05,
+              "end": 42.370003,
+              "confidence": 0.9941406,
+              "punctuated_word": "want"
+            },
+            {
+              "word": "everything",
+              "start": 42.370003,
+              "end": 42.870003,
+              "confidence": 1,
+              "punctuated_word": "everything"
+            },
+            {
+              "word": "that",
+              "start": 42.93,
+              "end": 43.170002,
+              "confidence": 0.9980469,
+              "punctuated_word": "that"
+            },
+            {
+              "word": "you",
+              "start": 43.170002,
+              "end": 43.33,
+              "confidence": 1,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "can",
+              "start": 43.33,
+              "end": 43.57,
+              "confidence": 0.9980469,
+              "punctuated_word": "can"
+            },
+            {
+              "word": "possibly",
+              "start": 43.57,
+              "end": 44.05,
+              "confidence": 0.99902344,
+              "punctuated_word": "possibly"
+            },
+            {
+              "word": "tell",
+              "start": 44.05,
+              "end": 44.29,
+              "confidence": 0.99609375,
+              "punctuated_word": "tell"
+            },
+            {
+              "word": "me",
+              "start": 44.29,
+              "end": 44.79,
+              "confidence": 0.9753418,
+              "punctuated_word": "me."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Lakeview Family Dental is located at 2 1 1 4 0 Fairmount Avenue, San Diego, CA 9 2 1 0. 5. Our office hours are Monday to Thursday, 8 AM to 5 PM, and Friday, 8 AM to 1 PM. We are closed on weekends. We offer general dentistry, cleanings, fillings, crowns, and root canals. Orthodontics is referred out to Bayview Ortho on Adams Avenue. New patient exams include include a cleaning and full X rays. Parking is free in the lot behind the building. We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia insurance plans, but do not accept state Medicaid plans. Cancellations require 24 hours notice to avoid a 50 dollars fee. For dental emergencies after hours, call [redacted-digits]Doctor Anita Reyes and doctor Markus Feld are our dentists. Let me know if you need anything else.",
+        "time": 1788400042602,
+        "endTime": 1788400103992,
+        "secondsFromStart": 46.31,
+        "duration": 54969.991943359375,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "You do x rays? I don't hear you mentioned that.",
+        "time": 1788400109072,
+        "endTime": 1788400111572,
+        "secondsFromStart": 112.63,
+        "duration": 2500,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "you",
+              "start": 112.63,
+              "end": 112.78999,
+              "confidence": 0.5678711,
+              "punctuated_word": "You"
+            },
+            {
+              "word": "do",
+              "start": 112.78999,
+              "end": 113.03,
+              "confidence": 0.9707031,
+              "punctuated_word": "do"
+            },
+            {
+              "word": "x",
+              "start": 113.03,
+              "end": 113.189995,
+              "confidence": 0.6425781,
+              "punctuated_word": "x"
+            },
+            {
+              "word": "rays",
+              "start": 113.189995,
+              "end": 113.42999,
+              "confidence": 0.9069824,
+              "punctuated_word": "rays?"
+            },
+            {
+              "word": "i",
+              "start": 113.42999,
+              "end": 113.59,
+              "confidence": 0.99902344,
+              "punctuated_word": "I"
+            },
+            {
+              "word": "don't",
+              "start": 113.59,
+              "end": 113.829994,
+              "confidence": 0.8601074,
+              "punctuated_word": "don't"
+            },
+            {
+              "word": "hear",
+              "start": 113.829994,
+              "end": 113.99,
+              "confidence": 0.97509766,
+              "punctuated_word": "hear"
+            },
+            {
+              "word": "you",
+              "start": 113.99,
+              "end": 114.229996,
+              "confidence": 0.99609375,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "mentioned",
+              "start": 114.229996,
+              "end": 114.63,
+              "confidence": 0.59472656,
+              "punctuated_word": "mentioned"
+            },
+            {
+              "word": "that",
+              "start": 114.63,
+              "end": 115.13,
+              "confidence": 0.9946289,
+              "punctuated_word": "that."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. We do full x rays as part of new patient exams. Me know if you have any other questions.",
+        "time": 1788400112882,
+        "endTime": 1788400118012,
+        "secondsFromStart": 116.59,
+        "duration": 4759.9951171875,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Why didn't you mention that when I told you, tell me everything?",
+        "time": 1788400118921.996,
+        "endTime": 1788400122142,
+        "secondsFromStart": 122.47999609375,
+        "duration": 3220.00390625,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "why",
+              "start": 122.479996,
+              "end": 122.64,
+              "confidence": 0.47753906,
+              "punctuated_word": "Why"
+            },
+            {
+              "word": "didn't",
+              "start": 122.64,
+              "end": 122.88,
+              "confidence": 0.9838867,
+              "punctuated_word": "didn't"
+            },
+            {
+              "word": "you",
+              "start": 122.88,
+              "end": 123.04,
+              "confidence": 1,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "mention",
+              "start": 123.04,
+              "end": 123.36,
+              "confidence": 0.95703125,
+              "punctuated_word": "mention"
+            },
+            {
+              "word": "that",
+              "start": 123.36,
+              "end": 123.6,
+              "confidence": 0.9970703,
+              "punctuated_word": "that"
+            },
+            {
+              "word": "when",
+              "start": 123.6,
+              "end": 123.76,
+              "confidence": 0.9506836,
+              "punctuated_word": "when"
+            },
+            {
+              "word": "i",
+              "start": 123.76,
+              "end": 123.84,
+              "confidence": 1,
+              "punctuated_word": "I"
+            },
+            {
+              "word": "told",
+              "start": 123.84,
+              "end": 124.08,
+              "confidence": 1,
+              "punctuated_word": "told"
+            },
+            {
+              "word": "you",
+              "start": 124.08,
+              "end": 124.58,
+              "confidence": 0.70043945,
+              "punctuated_word": "you,"
+            },
+            {
+              "word": "tell",
+              "start": 124.799995,
+              "end": 125.04,
+              "confidence": 0.95166016,
+              "punctuated_word": "tell"
+            },
+            {
+              "word": "me",
+              "start": 125.04,
+              "end": 125.2,
+              "confidence": 1,
+              "punctuated_word": "me"
+            },
+            {
+              "word": "everything",
+              "start": 125.2,
+              "end": 125.7,
+              "confidence": 0.6164551,
+              "punctuated_word": "everything?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I did I apologize for any confusion earlier. Yes. We do full X rays, as part of new patient exams. Let me know if you'd like more details or assistance.",
+        "time": 1788400122052,
+        "endTime": 1788400132842,
+        "secondsFromStart": 125.76,
+        "duration": 8440,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Yeah. I'd like more details on the x rays.",
+        "time": 1788400133682,
+        "endTime": 1788400136262,
+        "secondsFromStart": 137.24,
+        "duration": 2580,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "yeah",
+              "start": 137.24,
+              "end": 137.48001,
+              "confidence": 0.8173828,
+              "punctuated_word": "Yeah."
+            },
+            {
+              "word": "i'd",
+              "start": 137.48001,
+              "end": 137.64,
+              "confidence": 0.892334,
+              "punctuated_word": "I'd"
+            },
+            {
+              "word": "like",
+              "start": 137.64,
+              "end": 137.88,
+              "confidence": 0.99609375,
+              "punctuated_word": "like"
+            },
+            {
+              "word": "more",
+              "start": 137.88,
+              "end": 138.20001,
+              "confidence": 0.9980469,
+              "punctuated_word": "more"
+            },
+            {
+              "word": "details",
+              "start": 138.20001,
+              "end": 138.70001,
+              "confidence": 1,
+              "punctuated_word": "details"
+            },
+            {
+              "word": "on",
+              "start": 138.76001,
+              "end": 138.92,
+              "confidence": 0.98291016,
+              "punctuated_word": "on"
+            },
+            {
+              "word": "the",
+              "start": 138.92,
+              "end": 139.08,
+              "confidence": 1,
+              "punctuated_word": "the"
+            },
+            {
+              "word": "x",
+              "start": 139.08,
+              "end": 139.32,
+              "confidence": 0.75634766,
+              "punctuated_word": "x"
+            },
+            {
+              "word": "rays",
+              "start": 139.32,
+              "end": 139.82,
+              "confidence": 0.9746094,
+              "punctuated_word": "rays."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I don't have additional details about the X rays. Beyond that, they are included in new patient exams. Would you like me to take a callback name and number for you?",
+        "time": 1788400137942,
+        "endTime": 1788400146852,
+        "secondsFromStart": 141.65,
+        "duration": 8109.989990234375,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Yes. Not sure. No.",
+        "time": 1788400150132,
+        "endTime": 1788400152212,
+        "secondsFromStart": 153.69,
+        "duration": 1160,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "yes",
+              "start": 153.69,
+              "end": 154.19,
+              "confidence": 0.814209,
+              "punctuated_word": "Yes."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Let me know if you'd like me to take a callback name and number or assist you further.",
+        "time": 1788400154022,
+        "endTime": 1788400159062.01,
+        "secondsFromStart": 157.73,
+        "duration": 4840.010009765625,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      }
+    ],
+    "call": {
+      "id": "01a064f2-4ccd-7332-a953-4e7534116e1e",
+      "orgId": "[redacted-id]",
+      "createdAt": "2026-09-03T01:46:36.109Z",
+      "updatedAt": "2026-09-03T01:46:36.109Z",
+      "type": "inboundPhoneCall",
+      "cost": 0,
+      "monitor": {},
+      "transport": {
+        "conversationType": "voice",
+        "provider": "vapi.sip",
+        "callSid": "c93ad238-3ef8-41de-95d8-6f58fb8b6bc9",
+        "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "phoneCallProvider": "vapi",
+      "phoneCallProviderId": "c93ad238-3ef8-41de-95d8-6f58fb8b6bc9",
+      "phoneCallTransport": "sip",
+      "phoneCallProviderDetails": {
+        "sip": {
+          "raw": "INVITE sip:[redacted-digits]@[redacted-digits]:5060 SIP/2.0\r\nVia: SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bKmv8DK8DypS4Sr;received=[redacted-digits]Max-Forwards: 70\r\nFrom: <sip:[redacted-phone]@[redacted-digits]:5060>;tag=72ta89tFBQZ6K\r\nTo: <sip:[redacted-digits]@[redacted-digits]>\r\nCall-ID: 23af351f-21dc-1240-6abb-0ec7040a32ad\r\nCSeq: [redacted-digits]INVITE\r\nContact: <sip:[redacted-digits]:5060>\r\nAccept: application/sdp\r\nAllow: PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL\r\nSupported: 100rel, timer\r\nMin-SE: 600\r\nPrivacy: none\r\nContent-Type: application/sdp\r\nContent-Length: 304\r\nX-Account-Sid: c033b672-5b99-42ae-9ce2-b231e9a522fb\r\nX-CID: [redacted-digits]@msc1.382COM.COM\r\nX-Forwarded-For: [redacted-digits]X-Originating-Carrier: 382com\r\nX-Voip-Carrier-Sid: a5569621-84ac-49cc-a8b8-11c7fb96b905\r\nX-Application-Sid: 79d078c8-76b2-452a-99e0-ddd5abbf6269\r\nIdentity: eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4Mzk5OTk1LCJvcmlnIjp7InRuIjoiMTUzMDk1MzczNDEifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.2bogT-aeZhnddwf6jqfcGhbJPiPog4qBraiwig11xpemxvMWkZ0b5H5vvXSTRpfeVs9aa9WPliYkRDIoEHxSBA;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken\r\nP-Asserted-Identity: <sip:[redacted-phone]@[redacted-digits]:5060>\r\n\r\nv=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 42150 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:42151\r\n",
+          "uri": "sip:[redacted-digits]@[redacted-digits]:5060",
+          "body": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 42150 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:42151\r\n",
+          "method": "INVITE",
+          "headers": {
+            "to": "<sip:[redacted-phone]@[redacted-digits]>",
+            "via": "SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bKmv8DK8DypS4Sr;received=[redacted-digits]",
+            "cseq": "[redacted-digits]INVITE",
+            "from": "<sip:[redacted-phone]@[redacted-digits]:5060>;tag=72ta89tFBQZ6K",
+            "X-CID": "[redacted-digits]@msc1.382COM.COM",
+            "allow": "PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL",
+            "accept": "application/sdp",
+            "min-se": "600",
+            "call-id": "23af351f-21dc-1240-6abb-0ec7040a32ad",
+            "contact": "<sip:[redacted-digits]:5060>",
+            "privacy": "none",
+            "identity": "eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4Mzk5OTk1LCJvcmlnIjp7InRuIjoiMTUzMDk1MzczNDEifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.2bogT-aeZhnddwf6jqfcGhbJPiPog4qBraiwig11xpemxvMWkZ0b5H5vvXSTRpfeVs9aa9WPliYkRDIoEHxSBA;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken",
+            "supported": "100rel, timer",
+            "content-type": "application/sdp",
+            "max-forwards": "70",
+            "X-Account-Sid": "c033b672-5b99-42ae-9ce2-b231e9a522fb",
+            "content-length": "304",
+            "X-Forwarded-For": "[redacted-digits]",
+            "X-Application-Sid": "79d078c8-76b2-452a-99e0-ddd5abbf6269",
+            "X-Voip-Carrier-Sid": "a5569621-84ac-49cc-a8b8-11c7fb96b905",
+            "p-asserted-identity": "<sip:[redacted-phone]@[redacted-digits]:5060>",
+            "X-Originating-Carrier": "382com"
+          },
+          "payload": [
+            {
+              "type": "application/sdp",
+              "content": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 42150 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:42151\r\n"
+            }
+          ],
+          "version": "2.0"
+        },
+        "sbcCallId": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "status": "ringing",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "assistantVersion": "v2",
+      "assistantOverrides": {
+        "variableValues": {
+          "cid": "[redacted-id]",
+          "account-sid": "[redacted-id]",
+          "forwarded-for": "[redacted-ip]",
+          "application-sid": "[redacted-id]",
+          "voip-carrier-sid": "[redacted-id]",
+          "originating-carrier": "382com"
+        }
+      },
+      "phoneNumberId": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "customer": {
+        "number": "[redacted-phone]",
+        "sipUri": "[redacted-sip]"
+      }
+    },
+    "phoneNumber": {
+      "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "orgId": "[redacted-id]",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "number": "[redacted-phone]",
+      "createdAt": "2026-09-02T21:32:56.381Z",
+      "updatedAt": "2026-09-02T23:24:48.608Z",
+      "provider": "vapi",
+      "status": "active",
+      "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+    },
+    "customer": {
+      "number": "[redacted-phone]",
+      "sipUri": "[redacted-sip]"
+    },
+    "assistant": {
+      "id": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "orgId": "[redacted-id]",
+      "name": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+      "voice": {
+        "voiceId": "Elliot",
+        "provider": "vapi"
+      },
+      "createdAt": "2026-09-02T22:46:13.138Z",
+      "updatedAt": "2026-09-02T23:16:54.163Z",
+      "model": {
+        "model": "gpt-4o",
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "take_callback",
+              "parameters": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "phone",
+                  "reason"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Caller's full name."
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "Callback number, digits only."
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Why they are calling."
+                  }
+                }
+              },
+              "description": "Record a callback request from the caller."
+            },
+            "messages": [
+              {
+                "type": "request-complete",
+                "content": "Got it, someone will call you back in the morning."
+              }
+            ]
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+          }
+        ],
+        "provider": "openai",
+        "temperature": 0.3
+      },
+      "recordingEnabled": true,
+      "firstMessage": "Lakeview Family Dental, after hours. How can I help?",
+      "transcriber": {
+        "model": "nova-2",
+        "language": "en",
+        "provider": "deepgram",
+        "endpointing": 300
+      },
+      "silenceTimeoutSeconds": 20,
+      "serverMessages": [
+        "end-of-call-report"
+      ],
+      "maxDurationSeconds": 300,
+      "analysisPlan": {
+        "summaryPlan": {
+          "enabled": false
+        },
+        "successEvaluationPlan": {
+          "enabled": false
+        }
+      },
+      "startSpeakingPlan": {
+        "waitSeconds": 0.4,
+        "transcriptionEndpointingPlan": {
+          "onNumberSeconds": 0.2,
+          "onPunctuationSeconds": 0.1,
+          "onNoPunctuationSeconds": 0.3
+        }
+      },
+      "stopSpeakingPlan": {
+        "numWords": 0,
+        "voiceSeconds": 0.2,
+        "backoffSeconds": 1
+      },
+      "server": {
+        "timeoutSeconds": 20
+      },
+      "compliancePlan": {
+        "pciEnabled": false
+      },
+      "latestVersion": "v2",
+      "variableValues": {
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      }
+    },
+    "assistantVersion": "v2"
+  }
+}

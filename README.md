@@ -2,10 +2,16 @@
 
 LLM-leg latency measurement for voice agents.
 
-Measures **one term** of the voice latency budget. Endpointing, ASR, TTS and
-network sit outside this instrument, so the numbers are an input to the
-caller's experience, not a description of it — a 700ms time-to-first-token
-is not a 700ms pause for the person on the phone.
+Measures **one term** of a five-term budget: time to first token from the
+model. Endpointing, ASR, TTS and network sit outside this instrument, so on
+their own these numbers are an input to the caller's experience, not a
+description of it — a 700ms time-to-first-token is not a 700ms pause for the
+person on the phone.
+
+The lab results below measure the LLM leg in isolation.
+**[FIELD_STUDY.md](./FIELD_STUDY.md)** tests them against ~30 real phone
+calls — the prediction held within 5% on plain turns and was roughly 2×
+optimistic on tool calls.
 
 ---
 

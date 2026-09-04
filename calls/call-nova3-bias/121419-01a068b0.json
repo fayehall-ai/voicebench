@@ -1,0 +1,1117 @@
+{
+  "message": {
+    "timestamp": 1788462859532,
+    "type": "end-of-call-report",
+    "analysis": {},
+    "artifact": {
+      "messages": [
+        {
+          "role": "system",
+          "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+          "time": 1788462783510,
+          "secondsFromStart": 0
+        },
+        {
+          "role": "bot",
+          "message": "Lakeview Family Dental after hours. How can I help?",
+          "time": 1788462784450,
+          "endTime": 1788462787410,
+          "secondsFromStart": 0.814,
+          "duration": 2960,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Alright.",
+          "time": 1788462789310,
+          "endTime": 1788462789790,
+          "secondsFromStart": 5.66,
+          "duration": 480,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "alright",
+                "start": 5.66,
+                "end": 6.14,
+                "confidence": 0.74780273,
+                "punctuated_word": "Alright."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "If you have any questions or need assistance, feel free to let me know.",
+          "time": 1788462791590,
+          "endTime": 1788462794550,
+          "secondsFromStart": 7.954,
+          "duration": 2960,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "do you implement",
+          "time": 1788462796060,
+          "endTime": 1788462797340.001,
+          "secondsFromStart": 12.41,
+          "duration": 1280.0009765625,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "do",
+                "start": 12.41,
+                "end": 12.7300005,
+                "confidence": 0.3659668,
+                "punctuated_word": "do"
+              },
+              {
+                "word": "you",
+                "start": 12.7300005,
+                "end": 13.13,
+                "confidence": 0.99902344,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "implement",
+                "start": 13.13,
+                "end": 13.690001,
+                "confidence": 0.99902344,
+                "punctuated_word": "implement"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Could you please clarify what you mean by implement? If you have a specific question or need, let me know, and, uh, I'll do my best to assist you.",
+          "time": 1788462798980,
+          "endTime": 1788462807909.998,
+          "secondsFromStart": 15.344,
+          "duration": 7839.9990234375,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Are you implying I'm not talking?",
+          "time": 1788462809740,
+          "endTime": 1788462811980,
+          "secondsFromStart": 26.09,
+          "duration": 2240,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "are",
+                "start": 26.09,
+                "end": 26.41,
+                "confidence": 0.9526367,
+                "punctuated_word": "Are"
+              },
+              {
+                "word": "you",
+                "start": 26.41,
+                "end": 26.810001,
+                "confidence": 1,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "implying",
+                "start": 26.810001,
+                "end": 27.29,
+                "confidence": 0.98828125,
+                "punctuated_word": "implying"
+              },
+              {
+                "word": "i'm",
+                "start": 27.29,
+                "end": 27.69,
+                "confidence": 0.9765625,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "not",
+                "start": 27.69,
+                "end": 27.85,
+                "confidence": 0.99902344,
+                "punctuated_word": "not"
+              },
+              {
+                "word": "talking",
+                "start": 27.85,
+                "end": 28.33,
+                "confidence": 0.97094727,
+                "punctuated_word": "talking?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I apologize if it seemed that way. Um, I'm here to assist you. Please let me know how I can help.",
+          "time": 1788462813340,
+          "endTime": 1788462818580,
+          "secondsFromStart": 29.704,
+          "duration": 4799.99609375,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Do you implement return customer policy?",
+          "time": 1788462820700.003,
+          "endTime": 1788462825400,
+          "secondsFromStart": 37.0500029296875,
+          "duration": 3359.9951171875,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "do",
+                "start": 37.050003,
+                "end": 37.29,
+                "confidence": 0.9707031,
+                "punctuated_word": "Do"
+              },
+              {
+                "word": "you",
+                "start": 37.29,
+                "end": 37.61,
+                "confidence": 0.9951172,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "implement",
+                "start": 37.61,
+                "end": 38.25,
+                "confidence": 0.9980469,
+                "punctuated_word": "implement"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I don't have information about a return customer policy. Would you like me to take a callback request for you?",
+          "time": 1788462827119.997,
+          "endTime": 1788462833290,
+          "secondsFromStart": 43.4839970703125,
+          "duration": 5760.0029296875,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "What about implant?",
+          "time": 1788462837139.998,
+          "endTime": 1788462838420,
+          "secondsFromStart": 53.489998046875,
+          "duration": 1280.001953125,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "what",
+                "start": 53.489998,
+                "end": 53.81,
+                "confidence": 0.84228516,
+                "punctuated_word": "What"
+              },
+              {
+                "word": "about",
+                "start": 53.81,
+                "end": 54.13,
+                "confidence": 1,
+                "punctuated_word": "about"
+              },
+              {
+                "word": "implant",
+                "start": 54.13,
+                "end": 54.77,
+                "confidence": 0.9707031,
+                "punctuated_word": "implant?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "I don't have specific information about dental implants. Would you like me to, yeah, to take a callback request for you?",
+          "time": 1788462840810,
+          "endTime": 1788462847229.998,
+          "secondsFromStart": 57.174,
+          "duration": 5599.99609375,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "No. Thank you. Bye.",
+          "time": 1788462848850,
+          "endTime": 1788462850630,
+          "secondsFromStart": 65.2,
+          "duration": 1200,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "no",
+                "start": 65.2,
+                "end": 65.6,
+                "confidence": 0.99560547,
+                "punctuated_word": "No."
+              },
+              {
+                "word": "thank",
+                "start": 65.6,
+                "end": 65.76,
+                "confidence": 1,
+                "punctuated_word": "Thank"
+              },
+              {
+                "word": "you",
+                "start": 65.76,
+                "end": 66,
+                "confidence": 1,
+                "punctuated_word": "you."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "You're welcome. Have a good day.",
+          "time": 1788462852350.005,
+          "endTime": 1788462853710,
+          "secondsFromStart": 68.7140048828125,
+          "duration": 1359.9951171875,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        }
+      ],
+      "messagesOpenAIFormatted": [
+        {
+          "role": "system",
+          "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "Lakeview Family Dental after hours. How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "Alright."
+        },
+        {
+          "role": "assistant",
+          "content": "If you have any questions or need assistance, feel free to let me know."
+        },
+        {
+          "role": "user",
+          "content": "do you implement"
+        },
+        {
+          "role": "assistant",
+          "content": "Could you please clarify what you mean by implement? If you have a specific question or need, let me know, and, uh, I'll do my best to assist you."
+        },
+        {
+          "role": "user",
+          "content": "Are you implying I'm not talking?"
+        },
+        {
+          "role": "assistant",
+          "content": "I apologize if it seemed that way. Um, I'm here to assist you. Please let me know how I can help."
+        },
+        {
+          "role": "user",
+          "content": "Do you implement return customer policy?"
+        },
+        {
+          "role": "assistant",
+          "content": "I don't have information about a return customer policy. Would you like me to take a callback request for you?"
+        },
+        {
+          "role": "user",
+          "content": "What about implant?"
+        },
+        {
+          "role": "assistant",
+          "content": "I don't have specific information about dental implants. Would you like me to, yeah, to take a callback request for you?"
+        },
+        {
+          "role": "user",
+          "content": "No. Thank you. Bye."
+        },
+        {
+          "role": "assistant",
+          "content": "You're welcome. Have a good day."
+        }
+      ],
+      "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Alright.\nAI: If you have any questions or need assistance, feel free to let me know.\nUser: do you implement\nAI: Could you please clarify what you mean by implement? If you have a specific question or need, let me know, and, uh, I'll do my best to assist you.\nUser: Are you implying I'm not talking?\nAI: I apologize if it seemed that way. Um, I'm here to assist you. Please let me know how I can help.\nUser: Do you implement return customer policy?\nAI: I don't have information about a return customer policy. Would you like me to take a callback request for you?\nUser: What about implant?\nAI: I don't have specific information about dental implants. Would you like me to, yeah, to take a callback request for you?\nUser: No. Thank you. Bye.\nAI: You're welcome. Have a good day.\n",
+      "nodes": [],
+      "assistantActivations": [
+        {
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "assistantVersion": "v5"
+        }
+      ],
+      "variables": {
+        "now": "Sep 3, 2026, 7:13 PM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 7:13 PM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "7:13 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "31978a6c-647b-4960-bf3a-57a2daa57355",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a068b0-5bcf-7009-8db7-c189d25ce3aa",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T19:13:03.439Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "31978a6c-647b-4960-bf3a-57a2daa57355",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "variableValues": {
+        "now": "Sep 3, 2026, 7:13 PM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 7:13 PM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "7:13 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "31978a6c-647b-4960-bf3a-57a2daa57355",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a068b0-5bcf-7009-8db7-c189d25ce3aa",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T19:13:03.439Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "31978a6c-647b-4960-bf3a-57a2daa57355",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "performanceMetrics": {
+        "turnLatencies": [
+          {
+            "modelLatency": 725,
+            "voiceLatency": 446,
+            "transcriberLatency": 535,
+            "endpointingLatency": 100,
+            "turnLatency": 1849
+          },
+          {
+            "modelLatency": 519,
+            "voiceLatency": 720,
+            "transcriberLatency": 0,
+            "endpointingLatency": 381,
+            "turnLatency": 1645
+          },
+          {
+            "modelLatency": 594,
+            "voiceLatency": 579,
+            "transcriberLatency": 265,
+            "endpointingLatency": 101,
+            "turnLatency": 1566
+          },
+          {
+            "modelLatency": 1098,
+            "voiceLatency": 485,
+            "transcriberLatency": 40,
+            "endpointingLatency": 101,
+            "turnLatency": 1762
+          },
+          {
+            "modelLatency": 1099,
+            "voiceLatency": 446,
+            "transcriberLatency": 828,
+            "endpointingLatency": 102,
+            "turnLatency": 2502
+          },
+          {
+            "modelLatency": 730,
+            "voiceLatency": 278,
+            "transcriberLatency": 1600,
+            "endpointingLatency": 102,
+            "turnLatency": 2731
+          }
+        ],
+        "modelLatencyAverage": 794.17,
+        "voiceLatencyAverage": 492.33,
+        "transcriberLatencyAverage": 544.67,
+        "endpointingLatencyAverage": 147.83,
+        "turnLatencyAverage": 2009.17,
+        "numUserInterrupted": 1,
+        "fromTransportLatencyAverage": 20,
+        "toTransportLatencyAverage": 20
+      },
+      "scorecards": {},
+      "transfers": [],
+      "presignedUrlsExpiresAt": "2026-09-03T19:44:19.524Z"
+    },
+    "startedAt": "2026-09-03T19:13:03.636Z",
+    "endedAt": "2026-09-03T19:14:15.816Z",
+    "endedReason": "customer-ended-call",
+    "cost": 0.1346,
+    "costBreakdown": {
+      "stt": 0.0122,
+      "llm": 0.0312,
+      "tts": 0.031,
+      "vapi": 0.0602,
+      "chat": 0,
+      "transport": 0,
+      "total": 0.1346,
+      "llmPromptTokens": 6838,
+      "llmCompletionTokens": 158,
+      "llmCachedPromptTokens": 0,
+      "ttsCharacters": 620,
+      "voicemailDetectionCost": 0,
+      "knowledgeBaseCost": 0,
+      "analysisCostBreakdown": {
+        "summary": 0,
+        "summaryPromptTokens": 0,
+        "summaryCompletionTokens": 0,
+        "summaryCachedPromptTokens": 0,
+        "structuredData": 0,
+        "structuredDataPromptTokens": 0,
+        "structuredDataCompletionTokens": 0,
+        "structuredDataCachedPromptTokens": 0,
+        "successEvaluation": 0,
+        "successEvaluationPromptTokens": 0,
+        "successEvaluationCompletionTokens": 0,
+        "successEvaluationCachedPromptTokens": 0,
+        "structuredOutput": 0,
+        "structuredOutputPromptTokens": 0,
+        "structuredOutputCompletionTokens": 0,
+        "structuredOutputCachedPromptTokens": 0
+      }
+    },
+    "costs": [
+      {
+        "type": "transcriber",
+        "transcriber": {
+          "provider": "deepgram",
+          "model": "nova-3"
+        },
+        "minutes": 1.245,
+        "cost": 0.012198713333333331
+      },
+      {
+        "type": "model",
+        "model": {
+          "provider": "openai",
+          "model": "gpt-4o"
+        },
+        "promptTokens": 6838,
+        "completionTokens": 158,
+        "cachedPromptTokens": 0,
+        "reasoningTokens": 0,
+        "cost": 0.031205
+      },
+      {
+        "type": "voice",
+        "voice": {
+          "provider": "vapi",
+          "voiceId": "Elliot",
+          "model": "vapi-v1"
+        },
+        "characters": 620,
+        "cost": 0.031
+      },
+      {
+        "type": "vapi",
+        "subType": "normal",
+        "minutes": 1.203,
+        "cost": 0.06015
+      },
+      {
+        "type": "knowledge-base",
+        "model": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "cost": 0
+      }
+    ],
+    "durationMs": 72180,
+    "durationSeconds": 72.18,
+    "durationMinutes": 1.203,
+    "summary": "",
+    "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Alright.\nAI: If you have any questions or need assistance, feel free to let me know.\nUser: do you implement\nAI: Could you please clarify what you mean by implement? If you have a specific question or need, let me know, and, uh, I'll do my best to assist you.\nUser: Are you implying I'm not talking?\nAI: I apologize if it seemed that way. Um, I'm here to assist you. Please let me know how I can help.\nUser: Do you implement return customer policy?\nAI: I don't have information about a return customer policy. Would you like me to take a callback request for you?\nUser: What about implant?\nAI: I don't have specific information about dental implants. Would you like me to, yeah, to take a callback request for you?\nUser: No. Thank you. Bye.\nAI: You're welcome. Have a good day.\n",
+    "messages": [
+      {
+        "role": "system",
+        "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+        "time": 1788462783510,
+        "secondsFromStart": 0
+      },
+      {
+        "role": "bot",
+        "message": "Lakeview Family Dental after hours. How can I help?",
+        "time": 1788462784450,
+        "endTime": 1788462787410,
+        "secondsFromStart": 0.814,
+        "duration": 2960,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Alright.",
+        "time": 1788462789310,
+        "endTime": 1788462789790,
+        "secondsFromStart": 5.66,
+        "duration": 480,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "alright",
+              "start": 5.66,
+              "end": 6.14,
+              "confidence": 0.74780273,
+              "punctuated_word": "Alright."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "If you have any questions or need assistance, feel free to let me know.",
+        "time": 1788462791590,
+        "endTime": 1788462794550,
+        "secondsFromStart": 7.954,
+        "duration": 2960,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "do you implement",
+        "time": 1788462796060,
+        "endTime": 1788462797340.001,
+        "secondsFromStart": 12.41,
+        "duration": 1280.0009765625,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "do",
+              "start": 12.41,
+              "end": 12.7300005,
+              "confidence": 0.3659668,
+              "punctuated_word": "do"
+            },
+            {
+              "word": "you",
+              "start": 12.7300005,
+              "end": 13.13,
+              "confidence": 0.99902344,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "implement",
+              "start": 13.13,
+              "end": 13.690001,
+              "confidence": 0.99902344,
+              "punctuated_word": "implement"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Could you please clarify what you mean by implement? If you have a specific question or need, let me know, and, uh, I'll do my best to assist you.",
+        "time": 1788462798980,
+        "endTime": 1788462807909.998,
+        "secondsFromStart": 15.344,
+        "duration": 7839.9990234375,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Are you implying I'm not talking?",
+        "time": 1788462809740,
+        "endTime": 1788462811980,
+        "secondsFromStart": 26.09,
+        "duration": 2240,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "are",
+              "start": 26.09,
+              "end": 26.41,
+              "confidence": 0.9526367,
+              "punctuated_word": "Are"
+            },
+            {
+              "word": "you",
+              "start": 26.41,
+              "end": 26.810001,
+              "confidence": 1,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "implying",
+              "start": 26.810001,
+              "end": 27.29,
+              "confidence": 0.98828125,
+              "punctuated_word": "implying"
+            },
+            {
+              "word": "i'm",
+              "start": 27.29,
+              "end": 27.69,
+              "confidence": 0.9765625,
+              "punctuated_word": "I'm"
+            },
+            {
+              "word": "not",
+              "start": 27.69,
+              "end": 27.85,
+              "confidence": 0.99902344,
+              "punctuated_word": "not"
+            },
+            {
+              "word": "talking",
+              "start": 27.85,
+              "end": 28.33,
+              "confidence": 0.97094727,
+              "punctuated_word": "talking?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I apologize if it seemed that way. Um, I'm here to assist you. Please let me know how I can help.",
+        "time": 1788462813340,
+        "endTime": 1788462818580,
+        "secondsFromStart": 29.704,
+        "duration": 4799.99609375,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Do you implement return customer policy?",
+        "time": 1788462820700.003,
+        "endTime": 1788462825400,
+        "secondsFromStart": 37.0500029296875,
+        "duration": 3359.9951171875,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "do",
+              "start": 37.050003,
+              "end": 37.29,
+              "confidence": 0.9707031,
+              "punctuated_word": "Do"
+            },
+            {
+              "word": "you",
+              "start": 37.29,
+              "end": 37.61,
+              "confidence": 0.9951172,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "implement",
+              "start": 37.61,
+              "end": 38.25,
+              "confidence": 0.9980469,
+              "punctuated_word": "implement"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I don't have information about a return customer policy. Would you like me to take a callback request for you?",
+        "time": 1788462827119.997,
+        "endTime": 1788462833290,
+        "secondsFromStart": 43.4839970703125,
+        "duration": 5760.0029296875,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "What about implant?",
+        "time": 1788462837139.998,
+        "endTime": 1788462838420,
+        "secondsFromStart": 53.489998046875,
+        "duration": 1280.001953125,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "what",
+              "start": 53.489998,
+              "end": 53.81,
+              "confidence": 0.84228516,
+              "punctuated_word": "What"
+            },
+            {
+              "word": "about",
+              "start": 53.81,
+              "end": 54.13,
+              "confidence": 1,
+              "punctuated_word": "about"
+            },
+            {
+              "word": "implant",
+              "start": 54.13,
+              "end": 54.77,
+              "confidence": 0.9707031,
+              "punctuated_word": "implant?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "I don't have specific information about dental implants. Would you like me to, yeah, to take a callback request for you?",
+        "time": 1788462840810,
+        "endTime": 1788462847229.998,
+        "secondsFromStart": 57.174,
+        "duration": 5599.99609375,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "No. Thank you. Bye.",
+        "time": 1788462848850,
+        "endTime": 1788462850630,
+        "secondsFromStart": 65.2,
+        "duration": 1200,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "no",
+              "start": 65.2,
+              "end": 65.6,
+              "confidence": 0.99560547,
+              "punctuated_word": "No."
+            },
+            {
+              "word": "thank",
+              "start": 65.6,
+              "end": 65.76,
+              "confidence": 1,
+              "punctuated_word": "Thank"
+            },
+            {
+              "word": "you",
+              "start": 65.76,
+              "end": 66,
+              "confidence": 1,
+              "punctuated_word": "you."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "You're welcome. Have a good day.",
+        "time": 1788462852350.005,
+        "endTime": 1788462853710,
+        "secondsFromStart": 68.7140048828125,
+        "duration": 1359.9951171875,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      }
+    ],
+    "call": {
+      "id": "01a068b0-5bcf-7009-8db7-c189d25ce3aa",
+      "orgId": "[redacted-id]",
+      "createdAt": "2026-09-03T19:13:03.439Z",
+      "updatedAt": "2026-09-03T19:13:03.439Z",
+      "type": "inboundPhoneCall",
+      "cost": 0,
+      "monitor": {},
+      "transport": {
+        "conversationType": "voice",
+        "provider": "vapi.sip",
+        "callSid": "31978a6c-647b-4960-bf3a-57a2daa57355",
+        "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "phoneCallProvider": "vapi",
+      "phoneCallProviderId": "31978a6c-647b-4960-bf3a-57a2daa57355",
+      "phoneCallTransport": "sip",
+      "phoneCallProviderDetails": {
+        "sip": {
+          "raw": "INVITE sip:[redacted-digits]@[redacted-digits]:5060 SIP/2.0\r\nVia: SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bK6Zc5D4aU9XZ4c;received=[redacted-digits]Max-Forwards: 70\r\nFrom: <sip:[redacted-phone]@[redacted-digits]:5060>;tag=yFtQB6e7aU39r\r\nTo: <sip:[redacted-digits]@[redacted-digits]>\r\nCall-ID: 53d9b4c6-226e-1240-6abb-0ec7040a32ad\r\nCSeq: [redacted-digits]INVITE\r\nContact: <sip:[redacted-digits]:5060>\r\nAccept: application/sdp\r\nAllow: PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL\r\nSupported: 100rel, timer\r\nMin-SE: 600\r\nPrivacy: none\r\nContent-Type: application/sdp\r\nContent-Length: 306\r\nX-Account-Sid: c033b672-5b99-42ae-9ce2-b231e9a522fb\r\nX-CID: [redacted-digits]@msc1.382COM.COM\r\nX-Forwarded-For: [redacted-digits]X-Originating-Carrier: 382com\r\nX-Voip-Carrier-Sid: a5569621-84ac-49cc-a8b8-11c7fb96b905\r\nX-Application-Sid: 79d078c8-76b2-452a-99e0-ddd5abbf6269\r\nIdentity: eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4NDYyNzgzLCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.agE5WK6l8RngYM-x86_sfi6-RwwB6WqQbXOvZ0318I5A7OUxoFROOtFQfBj2ffItq4KCUiqLRFyTfyt6PIlA6g;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken\r\nP-Asserted-Identity: <sip:[redacted-phone]@[redacted-digits]:5060>\r\n\r\nv=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 55988 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:55989\r\n",
+          "uri": "sip:[redacted-digits]@[redacted-digits]:5060",
+          "body": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 55988 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:55989\r\n",
+          "method": "INVITE",
+          "headers": {
+            "to": "<sip:[redacted-phone]@[redacted-digits]>",
+            "via": "SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bK6Zc5D4aU9XZ4c;received=[redacted-digits]",
+            "cseq": "[redacted-digits]INVITE",
+            "from": "<sip:[redacted-phone]@[redacted-digits]:5060>;tag=yFtQB6e7aU39r",
+            "X-CID": "[redacted-digits]@msc1.382COM.COM",
+            "allow": "PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL",
+            "accept": "application/sdp",
+            "min-se": "600",
+            "call-id": "53d9b4c6-226e-1240-6abb-0ec7040a32ad",
+            "contact": "<sip:[redacted-digits]:5060>",
+            "privacy": "none",
+            "identity": "eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4NDYyNzgzLCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.agE5WK6l8RngYM-x86_sfi6-RwwB6WqQbXOvZ0318I5A7OUxoFROOtFQfBj2ffItq4KCUiqLRFyTfyt6PIlA6g;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken",
+            "supported": "100rel, timer",
+            "content-type": "application/sdp",
+            "max-forwards": "70",
+            "X-Account-Sid": "c033b672-5b99-42ae-9ce2-b231e9a522fb",
+            "content-length": "306",
+            "X-Forwarded-For": "[redacted-digits]",
+            "X-Application-Sid": "79d078c8-76b2-452a-99e0-ddd5abbf6269",
+            "X-Voip-Carrier-Sid": "a5569621-84ac-49cc-a8b8-11c7fb96b905",
+            "p-asserted-identity": "<sip:[redacted-phone]@[redacted-digits]:5060>",
+            "X-Originating-Carrier": "382com"
+          },
+          "payload": [
+            {
+              "type": "application/sdp",
+              "content": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 55988 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:55989\r\n"
+            }
+          ],
+          "version": "2.0"
+        },
+        "sbcCallId": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "status": "ringing",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "assistantVersion": "v5",
+      "assistantOverrides": {
+        "variableValues": {
+          "cid": "[redacted-id]",
+          "account-sid": "[redacted-id]",
+          "forwarded-for": "[redacted-ip]",
+          "application-sid": "[redacted-id]",
+          "voip-carrier-sid": "[redacted-id]",
+          "originating-carrier": "382com"
+        }
+      },
+      "phoneNumberId": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "customer": {
+        "number": "[redacted-phone]",
+        "sipUri": "[redacted-sip]"
+      }
+    },
+    "phoneNumber": {
+      "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "orgId": "[redacted-id]",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "number": "[redacted-phone]",
+      "createdAt": "2026-09-02T21:32:56.381Z",
+      "updatedAt": "2026-09-02T23:24:48.608Z",
+      "provider": "vapi",
+      "status": "active",
+      "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+    },
+    "customer": {
+      "number": "[redacted-phone]",
+      "sipUri": "[redacted-sip]"
+    },
+    "assistant": {
+      "id": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "orgId": "[redacted-id]",
+      "name": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+      "voice": {
+        "voiceId": "Elliot",
+        "provider": "vapi"
+      },
+      "createdAt": "2026-09-02T22:46:13.138Z",
+      "updatedAt": "2026-09-03T18:45:01.914Z",
+      "model": {
+        "model": "gpt-4o",
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "take_callback",
+              "parameters": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "phone",
+                  "reason"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Caller's full name."
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "Callback number, digits only."
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Why they are calling."
+                  }
+                }
+              },
+              "description": "Record a callback request from the caller."
+            },
+            "messages": [
+              {
+                "type": "request-complete",
+                "content": "Got it, someone will call you back in the morning."
+              }
+            ]
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+          }
+        ],
+        "provider": "openai",
+        "temperature": 0.3
+      },
+      "recordingEnabled": true,
+      "firstMessage": "Lakeview Family Dental, after hours. How can I help?",
+      "transcriber": {
+        "model": "nova-3",
+        "keyterm": [
+          "Aetna",
+          "Cigna",
+          "Reyes",
+          "Feld",
+          "Concordia",
+          "Guardian",
+          "MetLife",
+          "Delta Dental",
+          "implant",
+          "orthodontics",
+          "Fairmount",
+          "Lakeview",
+          "Bayview"
+        ],
+        "language": "en",
+        "provider": "deepgram",
+        "endpointing": 300
+      },
+      "silenceTimeoutSeconds": 20,
+      "serverMessages": [
+        "end-of-call-report"
+      ],
+      "maxDurationSeconds": 300,
+      "analysisPlan": {
+        "summaryPlan": {
+          "enabled": false
+        },
+        "successEvaluationPlan": {
+          "enabled": false
+        }
+      },
+      "startSpeakingPlan": {
+        "waitSeconds": 0,
+        "transcriptionEndpointingPlan": {
+          "onNumberSeconds": 0.2,
+          "onPunctuationSeconds": 0.1,
+          "onNoPunctuationSeconds": 0.3
+        }
+      },
+      "stopSpeakingPlan": {
+        "numWords": 0,
+        "voiceSeconds": 0.2,
+        "backoffSeconds": 1
+      },
+      "server": {
+        "timeoutSeconds": 20
+      },
+      "compliancePlan": {
+        "pciEnabled": false
+      },
+      "latestVersion": "v5",
+      "variableValues": {
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      }
+    },
+    "assistantVersion": "v5"
+  }
+}

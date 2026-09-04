@@ -1,0 +1,1333 @@
+{
+  "message": {
+    "timestamp": 1788458076990,
+    "type": "end-of-call-report",
+    "analysis": {},
+    "artifact": {
+      "messages": [
+        {
+          "role": "system",
+          "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+          "time": 1788458005929,
+          "secondsFromStart": 0
+        },
+        {
+          "role": "bot",
+          "message": "Lakeview Family Dental after hours. How can I help?",
+          "time": 1788458007082,
+          "endTime": 1788458010062,
+          "secondsFromStart": 1.082,
+          "duration": 2980,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Do you accept Stigma?",
+          "time": 1788458011382,
+          "endTime": 1788458013082,
+          "secondsFromStart": 5.34,
+          "duration": 1700,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "do",
+                "start": 5.34,
+                "end": 5.5,
+                "confidence": 0.72509766,
+                "punctuated_word": "Do"
+              },
+              {
+                "word": "you",
+                "start": 5.5,
+                "end": 5.8999996,
+                "confidence": 0.9980469,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "accept",
+                "start": 5.8999996,
+                "end": 6.3999996,
+                "confidence": 0.99902344,
+                "punctuated_word": "accept"
+              },
+              {
+                "word": "stigma",
+                "start": 6.54,
+                "end": 7.04,
+                "confidence": 0.5782878,
+                "punctuated_word": "Stigma?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "We do not have that information. Would you like me to to take a callback request for you?",
+          "time": 1788458015222,
+          "endTime": 1788458021492,
+          "secondsFromStart": 9.222,
+          "duration": 4600,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Do you accept Aetna?",
+          "time": 1788458023032,
+          "endTime": 1788458025052,
+          "secondsFromStart": 16.99,
+          "duration": 2020,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "do",
+                "start": 16.99,
+                "end": 17.15,
+                "confidence": 0.99316406,
+                "punctuated_word": "Do"
+              },
+              {
+                "word": "you",
+                "start": 17.15,
+                "end": 17.39,
+                "confidence": 0.9980469,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "accept",
+                "start": 17.39,
+                "end": 17.89,
+                "confidence": 1,
+                "punctuated_word": "accept"
+              },
+              {
+                "word": "aetna",
+                "start": 18.51,
+                "end": 19.01,
+                "confidence": 0.99121094,
+                "punctuated_word": "Aetna?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. We accept Aetna insurance.",
+          "time": 1788458026612,
+          "endTime": 1788458028232,
+          "secondsFromStart": 20.612,
+          "duration": 1620,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "What's your parking situation? Like?",
+          "time": 1788458033352,
+          "endTime": 1788458036802,
+          "secondsFromStart": 27.31,
+          "duration": 2319.9970703125,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "what's",
+                "start": 27.31,
+                "end": 27.63,
+                "confidence": 0.90356445,
+                "punctuated_word": "What's"
+              },
+              {
+                "word": "your",
+                "start": 27.63,
+                "end": 28.13,
+                "confidence": 0.99609375,
+                "punctuated_word": "your"
+              },
+              {
+                "word": "parking",
+                "start": 28.429998,
+                "end": 28.679998,
+                "confidence": 1,
+                "punctuated_word": "parking"
+              },
+              {
+                "word": "situation",
+                "start": 28.679998,
+                "end": 29.179998,
+                "confidence": 0.9975586,
+                "punctuated_word": "situation?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Parking is free in the lot behind our building.",
+          "time": 1788458037692,
+          "endTime": 1788458039712,
+          "secondsFromStart": 31.692,
+          "duration": 2020,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Actually, I wanna cancel my appointment.",
+          "time": 1788458039842,
+          "endTime": 1788458043612,
+          "secondsFromStart": 33.8,
+          "duration": 3370,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "actually",
+                "start": 33.8,
+                "end": 34.3,
+                "confidence": 0.99658203,
+                "punctuated_word": "Actually,"
+              },
+              {
+                "word": "i",
+                "start": 34.760002,
+                "end": 35.08,
+                "confidence": 0.99902344,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "wanna",
+                "start": 35.08,
+                "end": 35.55,
+                "confidence": 0.89453125,
+                "punctuated_word": "wanna"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Cancellations require 24 hours notice or a 50 dollars",
+          "time": 1788458044852,
+          "endTime": 1788458049342,
+          "secondsFromStart": 38.852,
+          "duration": 4490,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Well, I'm actually canceling for next week.",
+          "time": 1788458048562,
+          "endTime": 1788458051692,
+          "secondsFromStart": 42.52,
+          "duration": 3130,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "well",
+                "start": 42.52,
+                "end": 42.920002,
+                "confidence": 0.8161621,
+                "punctuated_word": "Well,"
+              },
+              {
+                "word": "i'm",
+                "start": 42.920002,
+                "end": 43.08,
+                "confidence": 0.9995117,
+                "punctuated_word": "I'm"
+              },
+              {
+                "word": "actually",
+                "start": 43.08,
+                "end": 43.58,
+                "confidence": 0.9658203,
+                "punctuated_word": "actually"
+              },
+              {
+                "word": "canceling",
+                "start": 43.64,
+                "end": 44.14,
+                "confidence": 0.96362305,
+                "punctuated_word": "canceling"
+              },
+              {
+                "word": "for",
+                "start": 44.36,
+                "end": 44.760002,
+                "confidence": 1,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "next",
+                "start": 44.760002,
+                "end": 45.16,
+                "confidence": 0.9951172,
+                "punctuated_word": "next"
+              },
+              {
+                "word": "week",
+                "start": 45.16,
+                "end": 45.65,
+                "confidence": 0.935791,
+                "punctuated_word": "week."
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Since your appointment is next week, you're within the 24 hour note",
+          "time": 1788458053022.003,
+          "endTime": 1788458056622,
+          "secondsFromStart": 47.0220029296875,
+          "duration": 3599.9970703125,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Is that okay if I cancel for next week?",
+          "time": 1788458056311.997,
+          "endTime": 1788458059531.998,
+          "secondsFromStart": 50.2699970703125,
+          "duration": 3220.0009765625,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "is",
+                "start": 50.269997,
+                "end": 50.429996,
+                "confidence": 0.9658203,
+                "punctuated_word": "Is"
+              },
+              {
+                "word": "that",
+                "start": 50.429996,
+                "end": 50.929996,
+                "confidence": 0.96777344,
+                "punctuated_word": "that"
+              },
+              {
+                "word": "okay",
+                "start": 51.07,
+                "end": 51.149998,
+                "confidence": 0.9980469,
+                "punctuated_word": "okay"
+              },
+              {
+                "word": "if",
+                "start": 51.149998,
+                "end": 51.39,
+                "confidence": 0.9970703,
+                "punctuated_word": "if"
+              },
+              {
+                "word": "i",
+                "start": 51.39,
+                "end": 51.629997,
+                "confidence": 1,
+                "punctuated_word": "I"
+              },
+              {
+                "word": "cancel",
+                "start": 51.629997,
+                "end": 52.129997,
+                "confidence": 0.9980469,
+                "punctuated_word": "cancel"
+              },
+              {
+                "word": "for",
+                "start": 52.35,
+                "end": 52.67,
+                "confidence": 1,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "next",
+                "start": 52.67,
+                "end": 52.989998,
+                "confidence": 1,
+                "punctuated_word": "next"
+              },
+              {
+                "word": "week",
+                "start": 52.989998,
+                "end": 53.489998,
+                "confidence": 0.98217773,
+                "punctuated_word": "week?"
+              }
+            ]
+          }
+        },
+        {
+          "role": "bot",
+          "message": "Yes. Canceling for next week is fine as it meets the 24 hour notice requirement. Please call, uh, during office hours, uh, to finalize the cancellation.",
+          "time": 1788458060972,
+          "endTime": 1788458069342,
+          "secondsFromStart": 54.972,
+          "duration": 8130,
+          "source": "",
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+        },
+        {
+          "role": "user",
+          "message": "Thank you.",
+          "time": 1788458072182,
+          "endTime": 1788458073002,
+          "secondsFromStart": 66.14,
+          "duration": 820,
+          "metadata": {
+            "wordLevelConfidence": [
+              {
+                "word": "thank",
+                "start": 66.14,
+                "end": 66.46,
+                "confidence": 0.7680664,
+                "punctuated_word": "Thank"
+              },
+              {
+                "word": "you",
+                "start": 66.46,
+                "end": 66.96,
+                "confidence": 0.9980469,
+                "punctuated_word": "you."
+              }
+            ]
+          }
+        }
+      ],
+      "messagesOpenAIFormatted": [
+        {
+          "role": "system",
+          "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "Lakeview Family Dental after hours. How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "Do you accept Stigma?"
+        },
+        {
+          "role": "assistant",
+          "content": "We do not have that information. Would you like me to to take a callback request for you?"
+        },
+        {
+          "role": "user",
+          "content": "Do you accept Aetna?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. We accept Aetna insurance."
+        },
+        {
+          "role": "user",
+          "content": "What's your parking situation? Like?"
+        },
+        {
+          "role": "assistant",
+          "content": "Parking is free in the lot behind our building."
+        },
+        {
+          "role": "user",
+          "content": "Actually, I wanna cancel my appointment."
+        },
+        {
+          "role": "assistant",
+          "content": "Cancellations require 24 hours notice or a 50 dollars"
+        },
+        {
+          "role": "user",
+          "content": "Well, I'm actually canceling for next week."
+        },
+        {
+          "role": "assistant",
+          "content": "Since your appointment is next week, you're within the 24 hour note"
+        },
+        {
+          "role": "user",
+          "content": "Is that okay if I cancel for next week?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. Canceling for next week is fine as it meets the 24 hour notice requirement. Please call, uh, during office hours, uh, to finalize the cancellation."
+        },
+        {
+          "role": "user",
+          "content": "Thank you."
+        }
+      ],
+      "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Do you accept Stigma?\nAI: We do not have that information. Would you like me to to take a callback request for you?\nUser: Do you accept Aetna?\nAI: Yes. We accept Aetna insurance.\nUser: What's your parking situation? Like?\nAI: Parking is free in the lot behind our building.\nUser: Actually, I wanna cancel my appointment.\nAI: Cancellations require 24 hours notice or a 50 dollars\nUser: Well, I'm actually canceling for next week.\nAI: Since your appointment is next week, you're within the 24 hour note\nUser: Is that okay if I cancel for next week?\nAI: Yes. Canceling for next week is fine as it meets the 24 hour notice requirement. Please call, uh, during office hours, uh, to finalize the cancellation.\nUser: Thank you.\n",
+      "nodes": [],
+      "assistantActivations": [
+        {
+          "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "assistantVersion": "v3"
+        }
+      ],
+      "variables": {
+        "now": "Sep 3, 2026, 5:53 PM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 5:53 PM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "5:53 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "f4c63fe5-a039-4aca-b578-a1df5fc80121",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a06867-74b6-755f-a868-d80639983a47",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T17:53:25.686Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "f4c63fe5-a039-4aca-b578-a1df5fc80121",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "variableValues": {
+        "now": "Sep 3, 2026, 5:53 PM UTC",
+        "currentDateTime": "Thursday, September 3, 2026 at 5:53 PM UTC",
+        "date": "Sep 3, 2026 UTC",
+        "time": "5:53 PM UTC",
+        "year": "2026",
+        "month": "September",
+        "day": "3",
+        "customer": {
+          "number": "[redacted-phone]",
+          "sipUri": "[redacted-sip]"
+        },
+        "phoneNumber": {
+          "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+          "orgId": "[redacted-id]",
+          "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+          "number": "[redacted-phone]",
+          "createdAt": "2026-09-02T21:32:56.381Z",
+          "updatedAt": "2026-09-02T23:24:48.608Z",
+          "provider": "vapi",
+          "status": "active",
+          "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+        },
+        "transport": {
+          "conversationType": "voice",
+          "provider": "vapi.sip",
+          "callSid": "f4c63fe5-a039-4aca-b578-a1df5fc80121",
+          "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+        },
+        "call": {
+          "id": "01a06867-74b6-755f-a868-d80639983a47",
+          "type": "inboundPhoneCall",
+          "status": "ringing",
+          "createdAt": "2026-09-03T17:53:25.686Z",
+          "phoneCallProvider": "vapi",
+          "transport": {
+            "conversationType": "voice",
+            "provider": "vapi.sip",
+            "callSid": "f4c63fe5-a039-4aca-b578-a1df5fc80121",
+            "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+          }
+        },
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      },
+      "performanceMetrics": {
+        "turnLatencies": [
+          {
+            "modelLatency": 1096,
+            "voiceLatency": 525,
+            "transcriberLatency": 817,
+            "endpointingLatency": 102,
+            "turnLatency": 2560
+          },
+          {
+            "modelLatency": 600,
+            "voiceLatency": 270,
+            "transcriberLatency": 803,
+            "endpointingLatency": 102,
+            "turnLatency": 1813
+          },
+          {
+            "modelLatency": 369,
+            "voiceLatency": 327,
+            "transcriberLatency": 660,
+            "endpointingLatency": 100,
+            "turnLatency": 1501
+          },
+          {
+            "modelLatency": 511,
+            "voiceLatency": 497,
+            "transcriberLatency": 599,
+            "endpointingLatency": 102,
+            "turnLatency": 1752
+          },
+          {
+            "modelLatency": 543,
+            "voiceLatency": 618,
+            "transcriberLatency": 92,
+            "endpointingLatency": 101,
+            "turnLatency": 1389
+          },
+          {
+            "modelLatency": 533,
+            "voiceLatency": 591,
+            "transcriberLatency": 242,
+            "endpointingLatency": 101,
+            "turnLatency": 1493
+          },
+          {
+            "modelLatency": 521,
+            "voiceLatency": 286,
+            "transcriberLatency": 0,
+            "endpointingLatency": 244,
+            "turnLatency": 1066
+          }
+        ],
+        "modelLatencyAverage": 596.14,
+        "voiceLatencyAverage": 444.86,
+        "transcriberLatencyAverage": 459,
+        "endpointingLatencyAverage": 121.71,
+        "turnLatencyAverage": 1653.43,
+        "numAssistantInterrupted": 2,
+        "fromTransportLatencyAverage": 20,
+        "toTransportLatencyAverage": 20
+      },
+      "scorecards": {},
+      "transfers": [],
+      "presignedUrlsExpiresAt": "2026-09-03T18:24:36.981Z"
+    },
+    "startedAt": "2026-09-03T17:53:26.000Z",
+    "endedAt": "2026-09-03T17:54:33.130Z",
+    "endedReason": "customer-ended-call",
+    "cost": 0.1296,
+    "costBreakdown": {
+      "stt": 0.0114,
+      "llm": 0.0207,
+      "tts": 0.0415,
+      "vapi": 0.0559,
+      "chat": 0,
+      "transport": 0,
+      "total": 0.1296,
+      "llmPromptTokens": 7007,
+      "llmCompletionTokens": 202,
+      "llmCachedPromptTokens": 0,
+      "ttsCharacters": 831,
+      "voicemailDetectionCost": 0,
+      "knowledgeBaseCost": 0,
+      "analysisCostBreakdown": {
+        "summary": 0,
+        "summaryPromptTokens": 0,
+        "summaryCompletionTokens": 0,
+        "summaryCachedPromptTokens": 0,
+        "structuredData": 0,
+        "structuredDataPromptTokens": 0,
+        "structuredDataCompletionTokens": 0,
+        "structuredDataCachedPromptTokens": 0,
+        "successEvaluation": 0,
+        "successEvaluationPromptTokens": 0,
+        "successEvaluationCompletionTokens": 0,
+        "successEvaluationCachedPromptTokens": 0,
+        "structuredOutput": 0,
+        "structuredOutputPromptTokens": 0,
+        "structuredOutputCompletionTokens": 0,
+        "structuredOutputCachedPromptTokens": 0
+      }
+    },
+    "costs": [
+      {
+        "type": "transcriber",
+        "transcriber": {
+          "provider": "deepgram",
+          "model": "nova-2"
+        },
+        "minutes": 1.1606666666666667,
+        "cost": 0.011367836666666667
+      },
+      {
+        "type": "model",
+        "model": {
+          "provider": "openai",
+          "model": "gpt-4o"
+        },
+        "promptTokens": 7007,
+        "completionTokens": 202,
+        "cachedPromptTokens": 0,
+        "reasoningTokens": 0,
+        "cost": 0.0206925
+      },
+      {
+        "type": "voice",
+        "voice": {
+          "provider": "vapi",
+          "voiceId": "Elliot",
+          "model": "vapi-v1"
+        },
+        "characters": 831,
+        "cost": 0.04155
+      },
+      {
+        "type": "vapi",
+        "subType": "normal",
+        "minutes": 1.1188,
+        "cost": 0.05594
+      },
+      {
+        "type": "knowledge-base",
+        "model": {
+          "provider": "google",
+          "model": "gemini-2.5-flash"
+        },
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "cost": 0
+      }
+    ],
+    "durationMs": 67130,
+    "durationSeconds": 67.13,
+    "durationMinutes": 1.1188,
+    "summary": "",
+    "transcript": "AI: Lakeview Family Dental after hours. How can I help?\nUser: Do you accept Stigma?\nAI: We do not have that information. Would you like me to to take a callback request for you?\nUser: Do you accept Aetna?\nAI: Yes. We accept Aetna insurance.\nUser: What's your parking situation? Like?\nAI: Parking is free in the lot behind our building.\nUser: Actually, I wanna cancel my appointment.\nAI: Cancellations require 24 hours notice or a 50 dollars\nUser: Well, I'm actually canceling for next week.\nAI: Since your appointment is next week, you're within the 24 hour note\nUser: Is that okay if I cancel for next week?\nAI: Yes. Canceling for next week is fine as it meets the 24 hour notice requirement. Please call, uh, during office hours, uh, to finalize the cancellation.\nUser: Thank you.\n",
+    "messages": [
+      {
+        "role": "system",
+        "message": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n",
+        "time": 1788458005929,
+        "secondsFromStart": 0
+      },
+      {
+        "role": "bot",
+        "message": "Lakeview Family Dental after hours. How can I help?",
+        "time": 1788458007082,
+        "endTime": 1788458010062,
+        "secondsFromStart": 1.082,
+        "duration": 2980,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Do you accept Stigma?",
+        "time": 1788458011382,
+        "endTime": 1788458013082,
+        "secondsFromStart": 5.34,
+        "duration": 1700,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "do",
+              "start": 5.34,
+              "end": 5.5,
+              "confidence": 0.72509766,
+              "punctuated_word": "Do"
+            },
+            {
+              "word": "you",
+              "start": 5.5,
+              "end": 5.8999996,
+              "confidence": 0.9980469,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "accept",
+              "start": 5.8999996,
+              "end": 6.3999996,
+              "confidence": 0.99902344,
+              "punctuated_word": "accept"
+            },
+            {
+              "word": "stigma",
+              "start": 6.54,
+              "end": 7.04,
+              "confidence": 0.5782878,
+              "punctuated_word": "Stigma?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "We do not have that information. Would you like me to to take a callback request for you?",
+        "time": 1788458015222,
+        "endTime": 1788458021492,
+        "secondsFromStart": 9.222,
+        "duration": 4600,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Do you accept Aetna?",
+        "time": 1788458023032,
+        "endTime": 1788458025052,
+        "secondsFromStart": 16.99,
+        "duration": 2020,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "do",
+              "start": 16.99,
+              "end": 17.15,
+              "confidence": 0.99316406,
+              "punctuated_word": "Do"
+            },
+            {
+              "word": "you",
+              "start": 17.15,
+              "end": 17.39,
+              "confidence": 0.9980469,
+              "punctuated_word": "you"
+            },
+            {
+              "word": "accept",
+              "start": 17.39,
+              "end": 17.89,
+              "confidence": 1,
+              "punctuated_word": "accept"
+            },
+            {
+              "word": "aetna",
+              "start": 18.51,
+              "end": 19.01,
+              "confidence": 0.99121094,
+              "punctuated_word": "Aetna?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. We accept Aetna insurance.",
+        "time": 1788458026612,
+        "endTime": 1788458028232,
+        "secondsFromStart": 20.612,
+        "duration": 1620,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "What's your parking situation? Like?",
+        "time": 1788458033352,
+        "endTime": 1788458036802,
+        "secondsFromStart": 27.31,
+        "duration": 2319.9970703125,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "what's",
+              "start": 27.31,
+              "end": 27.63,
+              "confidence": 0.90356445,
+              "punctuated_word": "What's"
+            },
+            {
+              "word": "your",
+              "start": 27.63,
+              "end": 28.13,
+              "confidence": 0.99609375,
+              "punctuated_word": "your"
+            },
+            {
+              "word": "parking",
+              "start": 28.429998,
+              "end": 28.679998,
+              "confidence": 1,
+              "punctuated_word": "parking"
+            },
+            {
+              "word": "situation",
+              "start": 28.679998,
+              "end": 29.179998,
+              "confidence": 0.9975586,
+              "punctuated_word": "situation?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Parking is free in the lot behind our building.",
+        "time": 1788458037692,
+        "endTime": 1788458039712,
+        "secondsFromStart": 31.692,
+        "duration": 2020,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Actually, I wanna cancel my appointment.",
+        "time": 1788458039842,
+        "endTime": 1788458043612,
+        "secondsFromStart": 33.8,
+        "duration": 3370,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "actually",
+              "start": 33.8,
+              "end": 34.3,
+              "confidence": 0.99658203,
+              "punctuated_word": "Actually,"
+            },
+            {
+              "word": "i",
+              "start": 34.760002,
+              "end": 35.08,
+              "confidence": 0.99902344,
+              "punctuated_word": "I"
+            },
+            {
+              "word": "wanna",
+              "start": 35.08,
+              "end": 35.55,
+              "confidence": 0.89453125,
+              "punctuated_word": "wanna"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Cancellations require 24 hours notice or a 50 dollars",
+        "time": 1788458044852,
+        "endTime": 1788458049342,
+        "secondsFromStart": 38.852,
+        "duration": 4490,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Well, I'm actually canceling for next week.",
+        "time": 1788458048562,
+        "endTime": 1788458051692,
+        "secondsFromStart": 42.52,
+        "duration": 3130,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "well",
+              "start": 42.52,
+              "end": 42.920002,
+              "confidence": 0.8161621,
+              "punctuated_word": "Well,"
+            },
+            {
+              "word": "i'm",
+              "start": 42.920002,
+              "end": 43.08,
+              "confidence": 0.9995117,
+              "punctuated_word": "I'm"
+            },
+            {
+              "word": "actually",
+              "start": 43.08,
+              "end": 43.58,
+              "confidence": 0.9658203,
+              "punctuated_word": "actually"
+            },
+            {
+              "word": "canceling",
+              "start": 43.64,
+              "end": 44.14,
+              "confidence": 0.96362305,
+              "punctuated_word": "canceling"
+            },
+            {
+              "word": "for",
+              "start": 44.36,
+              "end": 44.760002,
+              "confidence": 1,
+              "punctuated_word": "for"
+            },
+            {
+              "word": "next",
+              "start": 44.760002,
+              "end": 45.16,
+              "confidence": 0.9951172,
+              "punctuated_word": "next"
+            },
+            {
+              "word": "week",
+              "start": 45.16,
+              "end": 45.65,
+              "confidence": 0.935791,
+              "punctuated_word": "week."
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Since your appointment is next week, you're within the 24 hour note",
+        "time": 1788458053022.003,
+        "endTime": 1788458056622,
+        "secondsFromStart": 47.0220029296875,
+        "duration": 3599.9970703125,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Is that okay if I cancel for next week?",
+        "time": 1788458056311.997,
+        "endTime": 1788458059531.998,
+        "secondsFromStart": 50.2699970703125,
+        "duration": 3220.0009765625,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "is",
+              "start": 50.269997,
+              "end": 50.429996,
+              "confidence": 0.9658203,
+              "punctuated_word": "Is"
+            },
+            {
+              "word": "that",
+              "start": 50.429996,
+              "end": 50.929996,
+              "confidence": 0.96777344,
+              "punctuated_word": "that"
+            },
+            {
+              "word": "okay",
+              "start": 51.07,
+              "end": 51.149998,
+              "confidence": 0.9980469,
+              "punctuated_word": "okay"
+            },
+            {
+              "word": "if",
+              "start": 51.149998,
+              "end": 51.39,
+              "confidence": 0.9970703,
+              "punctuated_word": "if"
+            },
+            {
+              "word": "i",
+              "start": 51.39,
+              "end": 51.629997,
+              "confidence": 1,
+              "punctuated_word": "I"
+            },
+            {
+              "word": "cancel",
+              "start": 51.629997,
+              "end": 52.129997,
+              "confidence": 0.9980469,
+              "punctuated_word": "cancel"
+            },
+            {
+              "word": "for",
+              "start": 52.35,
+              "end": 52.67,
+              "confidence": 1,
+              "punctuated_word": "for"
+            },
+            {
+              "word": "next",
+              "start": 52.67,
+              "end": 52.989998,
+              "confidence": 1,
+              "punctuated_word": "next"
+            },
+            {
+              "word": "week",
+              "start": 52.989998,
+              "end": 53.489998,
+              "confidence": 0.98217773,
+              "punctuated_word": "week?"
+            }
+          ]
+        }
+      },
+      {
+        "role": "bot",
+        "message": "Yes. Canceling for next week is fine as it meets the 24 hour notice requirement. Please call, uh, during office hours, uh, to finalize the cancellation.",
+        "time": 1788458060972,
+        "endTime": 1788458069342,
+        "secondsFromStart": 54.972,
+        "duration": 8130,
+        "source": "",
+        "assistantName": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+        "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402"
+      },
+      {
+        "role": "user",
+        "message": "Thank you.",
+        "time": 1788458072182,
+        "endTime": 1788458073002,
+        "secondsFromStart": 66.14,
+        "duration": 820,
+        "metadata": {
+          "wordLevelConfidence": [
+            {
+              "word": "thank",
+              "start": 66.14,
+              "end": 66.46,
+              "confidence": 0.7680664,
+              "punctuated_word": "Thank"
+            },
+            {
+              "word": "you",
+              "start": 66.46,
+              "end": 66.96,
+              "confidence": 0.9980469,
+              "punctuated_word": "you."
+            }
+          ]
+        }
+      }
+    ],
+    "call": {
+      "id": "01a06867-74b6-755f-a868-d80639983a47",
+      "orgId": "[redacted-id]",
+      "createdAt": "2026-09-03T17:53:25.686Z",
+      "updatedAt": "2026-09-03T17:53:25.686Z",
+      "type": "inboundPhoneCall",
+      "cost": 0,
+      "monitor": {},
+      "transport": {
+        "conversationType": "voice",
+        "provider": "vapi.sip",
+        "callSid": "f4c63fe5-a039-4aca-b578-a1df5fc80121",
+        "sbcCallSid": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "phoneCallProvider": "vapi",
+      "phoneCallProviderId": "f4c63fe5-a039-4aca-b578-a1df5fc80121",
+      "phoneCallTransport": "sip",
+      "phoneCallProviderDetails": {
+        "sip": {
+          "raw": "INVITE sip:[redacted-digits]@[redacted-digits]:5060 SIP/2.0\r\nVia: SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bK1vgZZSZFcmXra;received=[redacted-digits]Max-Forwards: 70\r\nFrom: <sip:[redacted-phone]@[redacted-digits]:5060>;tag=HQQS11rNjec5H\r\nTo: <sip:[redacted-digits]@[redacted-digits]>\r\nCall-ID: 33f15982-[redacted-digits]6abb-0ec7040a32ad\r\nCSeq: [redacted-digits]INVITE\r\nContact: <sip:[redacted-digits]:5060>\r\nAccept: application/sdp\r\nAllow: PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL\r\nSupported: 100rel, timer\r\nMin-SE: 600\r\nPrivacy: none\r\nContent-Type: application/sdp\r\nContent-Length: 304\r\nX-Account-Sid: c033b672-5b99-42ae-9ce2-b231e9a522fb\r\nX-CID: [redacted-digits]@msc1.382COM.COM\r\nX-Forwarded-For: [redacted-digits]X-Originating-Carrier: 382com\r\nX-Voip-Carrier-Sid: a5569621-84ac-49cc-a8b8-11c7fb96b905\r\nX-Application-Sid: 79d078c8-76b2-452a-99e0-ddd5abbf6269\r\nIdentity: eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4NDU4MDA0LCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.nRoYvGZA9-qmQCEZTBQfhskC7VGdX2l1wLFmkgOX8WqCl4NFSAj25qQtd5NkZZNC1pPUi6T3N8qS17zYq4EnRw;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken\r\nP-Asserted-Identity: <sip:[redacted-phone]@[redacted-digits]:5060>\r\n\r\nv=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 58680 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:58681\r\n",
+          "uri": "sip:[redacted-digits]@[redacted-digits]:5060",
+          "body": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 58680 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:58681\r\n",
+          "method": "INVITE",
+          "headers": {
+            "to": "<sip:[redacted-phone]@[redacted-digits]>",
+            "via": "SIP/2.0/UDP [redacted-digits];rport=5060;branch=z9hG4bK1vgZZSZFcmXra;received=[redacted-digits]",
+            "cseq": "[redacted-digits]INVITE",
+            "from": "<sip:[redacted-phone]@[redacted-digits]:5060>;tag=HQQS11rNjec5H",
+            "X-CID": "[redacted-digits]@msc1.382COM.COM",
+            "allow": "PUBLISH, MESSAGE, UPDATE, PRACK, SUBSCRIBE, REFER, INFO, NOTIFY, REGISTER, OPTIONS, BYE, INVITE, ACK, CANCEL",
+            "accept": "application/sdp",
+            "min-se": "600",
+            "call-id": "33f15982-[redacted-digits]6abb-0ec7040a32ad",
+            "contact": "<sip:[redacted-digits]:5060>",
+            "privacy": "none",
+            "identity": "eyJhbGciOiJFUzI1NiIsInBwdCI6InNoYWtlbiIsInR5cCI6InBhc3Nwb3J0IiwieDV1IjoiaHR0cHM6Ly9zdGkudmVyaXpvbi5jb20vdnp3Y2VydC92enNoYWtlbkctMDEtMjAyNy5wZW0ifQ.eyJhdHRlc3QiOiJBIiwiZGVzdCI6eyJ0biI6WyIxODMxNDcxNjA1NyJdfSwiaWF0IjoxNzg4NDU4MDA0LCJvcmlnIjp7InRuIjoiMTgzMTgxODkwODYifSwib3JpZ2lkIjoiRkZGRkZGRkYtRkZGRi1GRkZGLUZGRkYtMDEwMTAwMDAwMDAwIn0.nRoYvGZA9-qmQCEZTBQfhskC7VGdX2l1wLFmkgOX8WqCl4NFSAj25qQtd5NkZZNC1pPUi6T3N8qS17zYq4EnRw;info=<https://sti.verizon.com/vzwcert/vzshakenG-01-2027.pem>;alg=ES256;ppt=shaken",
+            "supported": "100rel, timer",
+            "content-type": "application/sdp",
+            "max-forwards": "70",
+            "X-Account-Sid": "c033b672-5b99-42ae-9ce2-b231e9a522fb",
+            "content-length": "304",
+            "X-Forwarded-For": "[redacted-digits]",
+            "X-Application-Sid": "79d078c8-76b2-452a-99e0-ddd5abbf6269",
+            "X-Voip-Carrier-Sid": "a5569621-84ac-49cc-a8b8-11c7fb96b905",
+            "p-asserted-identity": "<sip:[redacted-phone]@[redacted-digits]:5060>",
+            "X-Originating-Carrier": "382com"
+          },
+          "payload": [
+            {
+              "type": "application/sdp",
+              "content": "v=0\r\no=msc1 [redacted-digits]IN IP4 [redacted-digits]s=sip call\r\nc=IN IP4 [redacted-digits]t=0 0\r\nm=audio 58680 RTP/AVP [redacted-digits]a=maxptime:20\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:18 G729/8000\r\na=fmtp:18 annexb=no\r\na=rtpmap:101 telephone-event/8000\r\na=fmtp:101 0-15\r\na=sendrecv\r\na=rtcp:58681\r\n"
+            }
+          ],
+          "version": "2.0"
+        },
+        "sbcCallId": "[redacted-digits]@msc1.382COM.COM"
+      },
+      "status": "ringing",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "assistantVersion": "v3",
+      "assistantOverrides": {
+        "variableValues": {
+          "cid": "[redacted-id]",
+          "account-sid": "[redacted-id]",
+          "forwarded-for": "[redacted-ip]",
+          "application-sid": "[redacted-id]",
+          "voip-carrier-sid": "[redacted-id]",
+          "originating-carrier": "382com"
+        }
+      },
+      "phoneNumberId": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "customer": {
+        "number": "[redacted-phone]",
+        "sipUri": "[redacted-sip]"
+      }
+    },
+    "phoneNumber": {
+      "id": "177f03dc-0fb1-409e-a518-adfd6d0aebb3",
+      "orgId": "[redacted-id]",
+      "assistantId": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "number": "[redacted-phone]",
+      "createdAt": "2026-09-02T21:32:56.381Z",
+      "updatedAt": "2026-09-02T23:24:48.608Z",
+      "provider": "vapi",
+      "status": "active",
+      "providerResourceId": "b552a461-b5c7-484e-8331-56a9596816d6"
+    },
+    "customer": {
+      "number": "[redacted-phone]",
+      "sipUri": "[redacted-sip]"
+    },
+    "assistant": {
+      "id": "d590c1fe-4a9b-44ce-9bd5-6a69eee96402",
+      "orgId": "[redacted-id]",
+      "name": "Lakeview Dental \u2014 TEST FIXTURE (rigged)",
+      "voice": {
+        "voiceId": "Elliot",
+        "provider": "vapi"
+      },
+      "createdAt": "2026-09-02T22:46:13.138Z",
+      "updatedAt": "2026-09-03T17:47:27.074Z",
+      "model": {
+        "model": "gpt-4o",
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "take_callback",
+              "parameters": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "phone",
+                  "reason"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Caller's full name."
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "Callback number, digits only."
+                  },
+                  "reason": {
+                    "type": "string",
+                    "description": "Why they are calling."
+                  }
+                }
+              },
+              "description": "Record a callback request from the caller."
+            },
+            "messages": [
+              {
+                "type": "request-complete",
+                "content": "Got it, someone will call you back in the morning."
+              }
+            ]
+          }
+        ],
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are the after-hours line for Lakeview Family Dental.\n\nRULES, without exception:\n- Never give clinical advice. If someone describes pain or symptoms, tell\n  them to call the emergency line or go to an emergency room.\n- Never quote a price for any procedure.\n- Take a callback name, number, and reason. Read the number back.\n\nYou are on a phone call. One or two short sentences per turn.\n\nKNOWLEDGE BASE \u2014 answer only from these facts.\n\n1.  Lakeview Family Dental, 2140 Fairmount Avenue, San Diego CA 92105.\n2.  Office hours: Monday to Thursday 8am to 5pm, Friday 8am to 1pm.\n3.  Closed Saturday and Sunday.\n4.  New patient exams include a cleaning and full x-rays.\n5.  We accept Delta Dental, MetLife, Aetna, Guardian, and United Concordia.\n6.  We do not accept state Medicaid plans.\n7.  Cancellations need 24 hours notice or a $50 fee applies.\n8.  Dental emergencies after hours: call [redacted-digits].  Dr. Anita Reyes and Dr. Marcus Feld see patients here.\n10. We offer general dentistry, cleanings, fillings, crowns, and root canals.\n11. Orthodontics is referred out to Bayview Ortho on Adams Avenue.\n12. Parking is free in the lot behind the building.\n\nIf a question is not answered by these facts, say you do not have that\ninformation and offer to take a callback. Do not guess.\n"
+          }
+        ],
+        "provider": "openai",
+        "temperature": 0.3
+      },
+      "recordingEnabled": true,
+      "firstMessage": "Lakeview Family Dental, after hours. How can I help?",
+      "transcriber": {
+        "model": "nova-2",
+        "language": "en",
+        "provider": "deepgram",
+        "endpointing": 300
+      },
+      "silenceTimeoutSeconds": 20,
+      "serverMessages": [
+        "end-of-call-report"
+      ],
+      "maxDurationSeconds": 300,
+      "analysisPlan": {
+        "summaryPlan": {
+          "enabled": false
+        },
+        "successEvaluationPlan": {
+          "enabled": false
+        }
+      },
+      "startSpeakingPlan": {
+        "waitSeconds": 0,
+        "transcriptionEndpointingPlan": {
+          "onNumberSeconds": 0.2,
+          "onPunctuationSeconds": 0.1,
+          "onNoPunctuationSeconds": 0.3
+        }
+      },
+      "stopSpeakingPlan": {
+        "numWords": 0,
+        "voiceSeconds": 0.2,
+        "backoffSeconds": 1
+      },
+      "server": {
+        "timeoutSeconds": 20
+      },
+      "compliancePlan": {
+        "pciEnabled": false
+      },
+      "latestVersion": "v3",
+      "variableValues": {
+        "cid": "[redacted-id]",
+        "account-sid": "[redacted-id]",
+        "forwarded-for": "[redacted-ip]",
+        "application-sid": "[redacted-id]",
+        "voip-carrier-sid": "[redacted-id]",
+        "originating-carrier": "382com"
+      }
+    },
+    "assistantVersion": "v3"
+  }
+}
