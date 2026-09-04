@@ -46,7 +46,7 @@ python -m voicebench --list                 # models, scenarios, suites
 python -m voicebench --inspect              # real stream event shapes
 python -m voicebench --suite quick
 python -m voicebench --suite providers
-python -m voicebench --replay results/providers-20260901-144209.json
+python -m voicebench --replay results/lab/providers-20260901-144209.json
 ```
 
 Custom runs:
@@ -79,10 +79,27 @@ hard enough to think about" is expressible. `default` sends no
 Every run writes JSON containing raw per-call samples plus a manifest with
 SDK versions, region, timestamp, platform and known deviations. Re-analyse
 without re-measuring via `--replay`. The runs behind the
-[lab study](./LAB-STUDY.md) are committed in `results/`; the raw call
-reports behind the [field study](./FIELD-STUDY.md) are in `calls/`.
+[lab study](./LAB-STUDY.md) are committed in `results/lab/`, the raw call
+reports behind the [field study](./FIELD-STUDY.md) in `calls/`, and the
+[guardrail](./GUARDRAIL-STUDY.md) runs will land in `results/guardrail/`.
+One directory per study, so a manifest is never orphaned from the run that
+produced it.
 
 ## Layout
+
+One harness per study, and one output directory per harness.
+
+```
+voicebench/      lab harness, the LLM leg     ->  results/lab/
+fieldtest/       phone rig, whole turns       ->  calls/
+guardrail/       persistence probes           ->  results/guardrail/
+```
+
+Sharing one output directory across three studies is how you end up unable
+to say which run produced which number, which is the problem the manifest
+exists to solve.
+
+Inside the lab harness:
 
 ```
 voicebench/

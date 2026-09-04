@@ -181,7 +181,7 @@ def main(argv: list[str] | None = None) -> int:
     report(results, args.runs)
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    out = args.out or Path("results") / f"{args.suite or 'custom'}-{stamp}.json"
+    out = args.out or Path("results/lab") / f"{args.suite or 'custom'}-{stamp}.json"
     saved = save(results, out, args.runs, args.gap, args.suite)
     print(f"  raw samples and manifest written to {saved}")
     print(f"  re-report without measuring:  voicebench --replay {saved}\n")

@@ -24,7 +24,7 @@ back and checks these numbers against a real phone line.*
    scheduler, not the model. [Findings 4, 5, 7]
 
 What a caller hears, and when. Every number below comes from a committed run
-in `results/`, named at the point it is used and re-checkable with
+in `results/lab/`, named at the point it is used and re-checkable with
 `--replay`.
 
 TTFT here is the `spoken` column: wall-clock from request start until the
@@ -138,7 +138,7 @@ TTFT.**
 
 ### 5. Strands adds no measurable overhead over raw Bedrock
 
-`results/frameworks-20260901-163231.json` — sonnet-4.5, n=7, `gap=6`
+`results/lab/frameworks-20260901-163231.json` — sonnet-4.5, n=7, `gap=6`
 
 | scenario / path | bedrock | strands | delta |
 |---|---|---|---|
@@ -170,7 +170,7 @@ absorbed-retry bulge from the tails.
 
 ### 6. A tool lookup costs ~1.2s, and the caller hears none of it
 
-`results/frameworks-20260901-163231.json` (`gap=6`) — sonnet-4.5,
+`results/lab/frameworks-20260901-163231.json` (`gap=6`) — sonnet-4.5,
 blocking, n=7
 
 | provider | plain | lookup (two hops) | penalty |
@@ -181,7 +181,7 @@ blocking, n=7
 An earlier contaminated run put this at 8943ms and +288%. That was
 throttling, not tool cost. **A second hop costs roughly 1.2s, not 6.6s.**
 
-`results/custom-20260901-165804.json` (`gap=12`) — lookup rows only, n=7
+`results/lab/custom-20260901-165804.json` (`gap=12`) — lookup rows only, n=7
 
 The interesting number is not the penalty but where it falls. On a
 lookup turn, first audible token arrives at **89-92% of total**:
@@ -215,7 +215,7 @@ tuning problem — but structural is not unavoidable: **finding 9 removes
 
 Not on a trivial turn, and not on a tool turn either.
 
-`results/effort-20260901-172130.json` — sonnet-5, plain, streaming, n=7
+`results/lab/effort-20260901-172130.json` — sonnet-5, plain, streaming, n=7
 
 | effort | TTFT | total p50 | tokens |
 |---|---|---|---|
@@ -236,7 +236,7 @@ two-row run reproduces the low-vs-medium half at 955ms vs 952ms.
 as "adaptive thinking had nothing to engage". Effort is an axis now, so
 the same sweep runs against a two-hop turn:
 
-`results/custom-20260901-180525.json` — sonnet-5, lookup, streaming, n=7,
+`results/lab/custom-20260901-180525.json` — sonnet-5, lookup, streaming, n=7,
 `gap=12`
 
 | effort | TTFT | vs default | spread | tokens |
@@ -267,7 +267,7 @@ adopting.
 
 ### 8. Prefill costs ~4 µs/token, and only haiku shows a clean curve
 
-`results/scaling-20260901-182612.json` — anthropic, streaming, n=7,
+`results/lab/scaling-20260901-182612.json` — anthropic, streaming, n=7,
 `gap=6`. Prompt sizes verified against the tokenizer, not estimated.
 
 | system prompt | haiku TTFT | marginal | sonnet TTFT | marginal |
@@ -308,7 +308,7 @@ added to the system prompt:
 > If you need to look something up, say so first in one short sentence,
 > then look it up.
 
-`results/preamble-20260901-192659.json` — anthropic, streaming, **n=19**,
+`results/lab/preamble-20260901-192659.json` — anthropic, streaming, **n=19**,
 `gap=8`
 
 | model | scenario | TTFT | total | tokens |
@@ -365,7 +365,7 @@ number rather than a hand-wave: caching a 30,035-token prompt should save
 about **123ms**, and caching a 3k prompt should save about 12ms — under
 the noise floor, invisible.
 
-`results/caching-20260901-193239.json` — anthropic, haiku-4.5, streaming,
+`results/lab/caching-20260901-193239.json` — anthropic, haiku-4.5, streaming,
 n=7, `gap=6`
 
 | scenario | prompt | TTFT | cache_read |
