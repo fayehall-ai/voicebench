@@ -11,3 +11,10 @@ wheels/
 
 # macOS
 .DS_Store
+
+# Lab-era scratch, superseded by voicebench/ and fieldtest/.
+# latency*.py are the drafts that became the package; agent*.py are
+# Bedrock/Strands experiments belonging to the product, not the benchmark.
+agent*.py
+latency*.py
+usecase.json
