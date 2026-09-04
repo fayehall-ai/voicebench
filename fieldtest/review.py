@@ -16,6 +16,11 @@ Does two things you cannot do by eye:
     python review.py calls/1423-a1b2c3d4.json
     python review.py --fields        # raw message keys on the first call
     python review.py --csv > labels.csv
+    python review.py --summary       # n and median per configuration
+
+--summary exists because the write-up once paired one configuration's turn
+count with another's median, and nothing recomputed the pair. Every latency
+figure quoted in FIELD_STUDY.md should be readable off its output.
 """
 
 from __future__ import annotations
@@ -25,7 +30,9 @@ import json
 import sys
 from pathlib import Path
 
-CALLS = Path("calls")
+# Relative to the repo, not the caller's cwd, so the scripts work from
+# either directory. Calls are filed one directory per configuration.
+CALLS = Path(__file__).resolve().parent.parent / "calls"
 SHORT_USER_TURN = 3          # words; fewer than this may be a truncation
 SLOW_AGENT_REPLY = 1.2       # seconds; past this the caller may talk over
 
@@ -82,6 +89,52 @@ def show_fields(path: Path) -> None:
     for m in messages(payload)[:4]:
         print(f"  {json.dumps(m)[:300]}")
     print()
+
+
+def reply_gaps(payload: dict) -> list[float]:
+    """Agent turn start minus the previous user turn end, in seconds.
+
+    prev_user_end is deliberately not cleared after a pairing: when the
+    agent takes two turns in a row, both are waiting on the same user
+    utterance and both count. show() reports the same way.
+    """
+    gaps = []
+    prev_user_end = None
+    for turn in turns(payload):
+        if turn["role"] == "user":
+            prev_user_end = turn["end"] if turn["end"] is not None else turn["start"]
+        elif prev_user_end is not None and turn["start"] is not None:
+            gap = turn["start"] - prev_user_end
+            if gap >= 0:
+                gaps.append(gap)
+    return gaps
+
+
+def summarise(paths: list[Path]) -> None:
+    """n and median reply gap per configuration, one row per calls/ subdir."""
+    by_config: dict[str, list[float]] = {}
+    for path in paths:
+        config = path.parent.name
+        by_config.setdefault(config, []).extend(
+            reply_gaps(json.loads(path.read_text())))
+
+    def median(values: list[float]) -> float:
+        values = sorted(values)
+        return values[len(values) // 2] * 1000      # as show() does
+
+    everything = []
+    print(f"{'configuration':<20} {'calls':>6} {'gaps':>6} {'median':>9}")
+    for config, gaps in sorted(by_config.items()):
+        if not gaps:
+            continue
+        everything += gaps
+        calls = sum(1 for p in paths if p.parent.name == config)
+        print(f"{config:<20} {calls:>6} {len(gaps):>6} {median(gaps):>7.0f}ms")
+    if everything:
+        print(f"{'all':<20} {len(paths):>6} {len(everything):>6} "
+              f"{median(everything):>7.0f}ms")
+    print("\n  (endpointer + ASR + model + TTS + network, end to end)")
+    print("  Medians are the upper of the two middle values, as show() reports.")
 
 
 def show(path: Path) -> None:
@@ -148,6 +201,8 @@ def main(argv: list[str] | None = None) -> int:
                         help=f"call JSON files (default: every {CALLS}/*.json)")
     parser.add_argument("--csv", action="store_true",
                         help="print the labels.csv header and exit")
+    parser.add_argument("--summary", action="store_true",
+                        help="n and median reply gap per configuration")
     parser.add_argument("--fields", action="store_true",
                         help="print raw message keys on the first call and exit")
     args = parser.parse_args(argv)
@@ -157,12 +212,19 @@ def main(argv: list[str] | None = None) -> int:
               "agent_did,cause,notes")
         return 0
 
-    paths = args.paths or sorted(CALLS.glob("*.json"))
+    # rglob, not glob: tune.py files each configuration under its own
+    # directory, so a flat calls/*.json matched nothing and printed the
+    # empty-corpus message on a corpus of 37 calls.
+    paths = args.paths or sorted(CALLS.rglob("*.json"))
     if not paths:
         sys.exit("no calls found — run webhook.py and make some calls first")
 
     if args.fields:
         show_fields(paths[0])
+        return 0
+
+    if args.summary:
+        summarise(paths)
         return 0
 
     for path in paths:

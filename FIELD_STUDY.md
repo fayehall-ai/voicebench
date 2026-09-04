@@ -2,8 +2,9 @@
 
 *Companion to the [lab study in the README](./README.md), which measured
 the LLM leg in isolation. This measures whole turns on a real phone line.
-One rigged test agent, ~30 calls from a cell phone over PSTN, 134 measured
-reply gaps. Raw call JSON is in `calls/`.*
+One rigged test agent, ~30 calls from a cell phone over PSTN, 213 measured
+reply gaps across five configurations — 134 of them in the baseline. Raw
+call JSON is in `calls/`.*
 
 The lab study measured one term of a five-term budget: time to first token
 from the model. Endpointing, ASR, TTS and network were outside the
@@ -21,12 +22,19 @@ turn.
 From component measurements plus published ranges for the stages I could
 not measure, I predicted a first-audio latency around 1375ms.
 
-Measured median across 134 real turns: **1435ms.**
+Measured median on the baseline fixture: **1527ms**, across 134 real turns.
+On the `waitSeconds: 0` configuration: **1435ms**, across 19.
 
-Within about 5%. That is the most useful thing in this document, because it
-means component benchmarking is not useless for voice — it is directionally
-right for the plain case, if you are honest about which terms you did not
-measure.
+So the prediction lands about 11% under the baseline and about 4% under the
+faster configuration. Those two medians are 92ms apart, and
+same-configuration replications in this corpus varied by 265ms — wider than
+the gap between them — so this data does not separate the two, and the
+prediction sits inside the same band as both.
+
+**Call it right to within roughly 10%.** That is the most useful thing in
+this document, because it means component benchmarking is not useless for
+voice — it is directionally right for the plain case, if you are honest
+about which terms you did not measure.
 
 It is also where the agreement stops.
 
@@ -46,12 +54,12 @@ User Audio -> VAD -> Transcription -> Start Speaking Decision
 I read that as additive and predicted that dropping `waitSeconds` from 0.4
 to 0 would save 400ms.
 
-Measured: 1520ms -> 1435ms. About 5%, inside noise.
+Measured: 1527ms (n=134) -> 1435ms (n=19). About 6%, inside noise.
 
 The SDK type definition explains it. `waitSeconds` is described there as a
 minimum that pipeline latency will exceed, intended as a stopgap for when
 the pipeline runs too fast. So the cost is `max(0, wait - processing)`, and
-at 400ms against a 1435ms pipeline that is zero.
+at 400ms against a ~1500ms pipeline that is zero.
 
 This matters because lowering `waitSeconds` is the standard advice in
 Vapi's own community threads when someone reports lag. On a cascaded phone
@@ -278,7 +286,8 @@ plausible ones.
 
 ## What this does not cover
 
-n=134 gaps for the baseline, far fewer per tuned configuration. One
+n=134 gaps for the baseline and 19 for `waitSeconds: 0`, far fewer per
+tuned configuration. One
 machine, one phone, one voice for most calls, one afternoon. Medians only —
 same-configuration replications varied by 265ms, so treat any delta below
 that as noise.
@@ -303,8 +312,19 @@ and low-confidence words flagged, `tune.py` changes one setting at a time,
 Raw call JSON is committed in `calls/`, scrubbed: recording, pcap and log
 URLs removed, phone numbers and Vapi account identifiers redacted, and
 spoken digit runs replaced. Names are deliberately kept, because the ASR
-findings are about proper nouns. No timing field is touched — every number
-above recomputes from the committed files with `review.py`.
+findings are about proper nouns. No timing field is touched — every latency
+figure above recomputes from the committed files with:
+
+```
+$ python fieldtest/review.py --summary
+configuration         calls   gaps    median
+call-nova2               21    134    1527ms
+call-nova2-bias           2      7    1974ms
+call-nova3                3     19    1821ms
+call-nova3-bias           4     34    1762ms
+call-waitime-0            7     19    1435ms
+all                      37    213    1602ms
+```
 
 The audio is not committed and cannot be, which is a real limit given that
 "[the transcript is not ground truth](#the-part-where-i-was-wrong)" is one

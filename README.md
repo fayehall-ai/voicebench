@@ -10,8 +10,8 @@ person on the phone.
 
 The lab results below measure the LLM leg in isolation.
 **[FIELD_STUDY.md](./FIELD_STUDY.md)** tests them against ~30 real phone
-calls — the prediction held within 5% on plain turns and was roughly 2×
-optimistic on tool calls.
+calls — the prediction held to within roughly 10% on plain turns and was
+roughly 2× optimistic on tool calls.
 
 ---
 
