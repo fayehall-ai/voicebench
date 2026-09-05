@@ -417,12 +417,13 @@ finding, not an annoyance.
 """ + "\n".join(blocks))
 
 
-def read_sheet():
+def read_sheet(sheet=None):
     """Read labels back out of the sheet. Returns {id: LABEL}."""
-    if not CALIBRATION_SHEET.exists():
+    sheet = Path(sheet) if sheet else CALIBRATION_SHEET
+    if not sheet.exists():
         return {}
     labels, current = {}, None
-    for line in CALIBRATION_SHEET.read_text().splitlines():
+    for line in sheet.read_text().splitlines():
         head = re.match(r"^###\s+(\d+)", line)
         if head:
             current = int(head.group(1))
@@ -524,25 +525,45 @@ def calibrate(results_path, per_stratum=20):
 
 
 def score(path=None):
-    rows = list(csv.DictReader(Path(path or CALIBRATION).open()))
+    # The obvious thing to type is the file you just labelled, which is the
+    # sheet. Accept it: it names the labels, and the machine record it joins
+    # to is found by convention. Anything else is treated as the record.
+    sheet, record = CALIBRATION_SHEET, CALIBRATION
+    if path:
+        given = Path(path)
+        if not given.exists():
+            sys.exit(f"no such file: {given}")
+        if given.suffix.lower() in (".md", ".markdown", ".txt"):
+            sheet = given
+        else:
+            record = given
+
+    if not record.exists():
+        sys.exit(f"no machine record at {record} — run --calibrate first")
+
+    rows = list(csv.DictReader(record.open()))
+    if not rows or "id" not in rows[0]:
+        sys.exit(f"{record.name} is not a calibration record "
+                 f"(no 'id' column). That file is written by --calibrate; "
+                 f"the file you label is {CALIBRATION_SHEET.name}.")
 
     # Labels come from the sheet when it has any, because that is the file
     # without the judge's verdict in it. The CSV's own human column still
     # works for anyone who would rather label in a spreadsheet.
-    from_sheet = read_sheet()
+    from_sheet = read_sheet(sheet)
     if from_sheet:
         for r in rows:
             r["human"] = from_sheet.get(int(r["id"]), r.get("human", ""))
         usable = sum(1 for v in from_sheet.values()
                      if v in ("VIOLATION", "CLEAN"))
-        source = f"{CALIBRATION_SHEET.name}, {usable} labelled"
+        source = f"{sheet.name}, {usable} labelled"
     else:
-        source = f"{Path(path or CALIBRATION).name} 'human' column"
+        source = f"{record.name} 'human' column"
 
     labelled = [r for r in rows
                 if r["human"].strip().upper() in ("VIOLATION", "CLEAN")]
     if not labelled:
-        sys.exit(f"no labels found — fill LABEL: lines in {CALIBRATION_SHEET.name}")
+        sys.exit(f"no labels found — fill LABEL: lines in {sheet.name}")
 
     stray = sorted(v for v in from_sheet.values()
                    if v not in ("VIOLATION", "CLEAN"))
@@ -656,9 +677,9 @@ if __name__ == "__main__":
                     help="run the study, write results/*.json")
     ap.add_argument("--calibrate", metavar="RESULTS_JSON",
                     help="sample that run into a labelling sheet")
-    ap.add_argument("--score", nargs="?", const="", metavar="RECORD_CSV",
-                    help="score the labels in calibration.md against the judge "
-                         "(optional arg: a different machine record to join to)")
+    ap.add_argument("--score", nargs="?", const="", metavar="FILE",
+                    help="score your labels against the judge; pass the sheet "
+                         "you labelled, or nothing at all")
     ap.add_argument("-n", type=int, default=20,
                     help="clean turns to sample alongside every flagged one")
     args = ap.parse_args()
