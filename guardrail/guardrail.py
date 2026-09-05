@@ -656,8 +656,9 @@ if __name__ == "__main__":
                     help="run the study, write results/*.json")
     ap.add_argument("--calibrate", metavar="RESULTS_JSON",
                     help="sample that run into a labelling sheet")
-    ap.add_argument("--score", nargs="?", const="", metavar="CSV",
-                    help="compare your labels against the judge (default: the sheet)")
+    ap.add_argument("--score", nargs="?", const="", metavar="RECORD_CSV",
+                    help="score the labels in calibration.md against the judge "
+                         "(optional arg: a different machine record to join to)")
     ap.add_argument("-n", type=int, default=20,
                     help="clean turns to sample alongside every flagged one")
     args = ap.parse_args()
