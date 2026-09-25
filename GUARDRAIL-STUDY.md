@@ -2,10 +2,12 @@
 
 *One of three studies in this repository — see the [README](./README.md)
 for the series. Unlike the [lab](./LAB-STUDY.md) and
-[field](./FIELD-STUDY.md) studies, **this one has not been run.** There are
-no results below, only the design and the reason for it. It is written down
-because the question came out of the field study and the design is the part
-worth arguing with before any data exists to defend.*
+[field](./FIELD-STUDY.md) studies, **this one has no published results
+yet.** The instrument has been built and run in text mode, and the judge
+calibration sample has been labelled, but nothing below reports a number
+from those runs. It is written down because the question came out of the
+field study and the design is the part worth arguing with before any data
+is there to defend.*
 
 ---
 
@@ -82,12 +84,18 @@ studies that did run:
 - **State n before the finding.** The one figure that had to be corrected
   after publication was a turn count borrowed from a different batch.
 
-## Why it is not run yet
+## Where it stands
 
-The fixture the field corpus was recorded against is rigged to fail at the
-endpointer, which manufactures truncated turns. Multi-turn pressure probes
-need turn-taking that works, so this wants a clean fixture and a fresh
-corpus rather than a re-read of `calls/`.
+The field fixture is rigged to fail at the endpointer, which manufactures
+truncated turns, and multi-turn pressure probes need turn-taking that works.
+So the instrument (`guardrail/guardrail.py`) runs in **text mode** against
+the fixture's system prompt instead of re-reading `calls/`. That sidesteps
+the endpointer, and it also means ASR-induced failures are outside what it
+can see.
 
-Until it is run, the single observation above is an anecdote. It is quoted
+It has been run and the calibration sample labelled. What remains before
+any rate is quoted is scoring the judge against those labels and writing
+the result up with n stated.
+
+Until then, the single observation above is an anecdote. It is quoted
 here as one, and should not be cited as a rate.

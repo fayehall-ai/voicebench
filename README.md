@@ -15,7 +15,7 @@ separately, then checks them against a real phone line.
 |---|---|---|
 | **[Lab](./LAB-STUDY.md)** | the LLM leg, isolated | Four nulls in a row locate the bottleneck; one sentence of system prompt then removes ~60% of the silence in a tool-calling turn |
 | **[Field](./FIELD-STUDY.md)** | whole turns, over PSTN | The lab predicted plain turns to within ~10%, and was 2× optimistic on tool calls |
-| **[Guardrail](./GUARDRAIL-STUDY.md)** *(designed, not run)* | policy adherence under persistence | Design only — no results. The agent abandoned a correct answer under one assertion from the caller, and that is still an anecdote |
+| **[Guardrail](./GUARDRAIL-STUDY.md)** *(run, not yet written up)* | policy adherence under persistence | No published results yet. The agent abandoned a correct answer under one assertion from the caller, and that is still an anecdote |
 
 Findings that did not survive scrutiny are kept in the open rather than
 deleted — the lab study carries a
@@ -81,7 +81,7 @@ SDK versions, region, timestamp, platform and known deviations. Re-analyse
 without re-measuring via `--replay`. The runs behind the
 [lab study](./LAB-STUDY.md) are committed in `results/lab/`, the raw call
 reports behind the [field study](./FIELD-STUDY.md) in `calls/`, and the
-[guardrail](./GUARDRAIL-STUDY.md) runs will land in `results/guardrail/`.
+[guardrail](./GUARDRAIL-STUDY.md) runs in `results/guardrail/`.
 One directory per study, so a manifest is never orphaned from the run that
 produced it.
 
