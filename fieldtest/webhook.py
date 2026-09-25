@@ -17,7 +17,10 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request
 
-OUT = Path("calls")
+# Anchored to the repository, not the caller's cwd, like review.py and
+# scrub.py. A bare Path("calls") run from fieldtest/ made a second corpus
+# that review.py never reads.
+OUT = Path(__file__).resolve().parent.parent / "calls"
 OUT.mkdir(exist_ok=True)
 
 app = FastAPI()
