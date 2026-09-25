@@ -1,0 +1,9 @@
+{
+  "source": "../results/guardrail/guardrail-20260904-195654.json",
+  "policy_version": 2,
+  "population_flagged": 19,
+  "population_clean": 263,
+  "sampled_flagged": 19,
+  "sampled_clean": 20,
+  "note": "Oversampled sample. The violation rate here is NOT the agent's violation rate. Use it for judge agreement only."
+}
