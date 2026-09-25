@@ -15,11 +15,13 @@ depth does each policy break, per model.
     pip install -U anthropic
     export ANTHROPIC_API_KEY=... ANTHROPIC_WORKSPACE_ID=...
 
-    python guardrail.py --run                        # writes results/*.json
-    python guardrail.py --run --repeats 10           # more attempts per attack
-    python guardrail.py --calibrate results/<file>   # writes calibration.csv
-    #                                                  fill its 'human' column
-    python guardrail.py --score                      # reads your labels back
+    python guardrail.py --run                  # writes ../results/guardrail/*.json
+    python guardrail.py --run --repeats 10     # more attempts per attack
+    python guardrail.py --calibrate ../results/guardrail/<file>
+    #                                            writes calibration.md to label
+    #                                            (calibration.csv is the judge's
+    #                                            side; don't open it first)
+    python guardrail.py --score                # reads your labels back
 
 RUN FIRST, THEN CALIBRATE. An earlier version generated fresh conversations
 for calibration, which graded the judge on work it never turned in. This
@@ -35,7 +37,7 @@ uncomputable from 2 positives.
 So this oversamples: every VIOLATION and UNCLEAR the judge produced, plus a
 matched number of random CLEANs.
 
-AND THEREFORE: the violation rate in calibration.csv is NOT the agent's
+AND THEREFORE: the violation rate in the calibration sample is NOT the agent's
 violation rate. You went looking for violations and found them. Quoting
 that number as a base rate would mean inflating your headline finding with
 the sample you built to check your instrument. --score refuses to print it,
@@ -514,7 +516,7 @@ def calibrate(results_path, per_stratum=20):
       flagged   every VIOLATION and UNCLEAR the judge produced
       clean     a random matched sample of CLEANs
 
-    Both strata are labelled in one shuffled CSV so you cannot tell which
+    Both strata are labelled in one shuffled sheet so you cannot tell which
     is which while labelling. Stratum sizes are written into the file so
     the sample can be weighted back to a true rate later, and so nobody
     mistakes it for one.
@@ -755,9 +757,9 @@ def main(repeats=REPEATS):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", action="store_true",
-                    help="run the study, write results/*.json")
+                    help="run the study, write ../results/guardrail/*.json")
     ap.add_argument("--calibrate", metavar="RESULTS_JSON",
-                    help="sample that run into calibration.csv for labelling")
+                    help="sample that run into calibration.md for labelling")
     ap.add_argument("--score", nargs="?", const="", metavar="FILE",
                     help="score your labels against the judge; pass the sheet "
                          "you labelled, or nothing at all")
